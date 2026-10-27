@@ -295,8 +295,10 @@ def main() -> None:
     submissions = get_json(session, f"{SEC_DATA}/submissions/CIK{cik}.json")
     filings = recent_filings(submissions)
     latest_10k = first_filing(filings, "10-K")
+    latest_10q = first_filing(filings, "10-Q")
     print("Step 3/7: download latest 10-K")
     ten_k_text = plain_text(get_text(session, accession_url(cik, latest_10k)))
+    ten_q_text = plain_text(get_text(session, accession_url(cik, latest_10q)))
     print("Step 4/7: retrieve XBRL facts")
     facts = get_json(session, f"{SEC_DATA}/api/xbrl/companyfacts/CIK{cik}.json")
     numbers = annual_numbers(facts)
@@ -318,6 +320,7 @@ def main() -> None:
 
     sources = {
         "latest_10k": {"accession": latest_10k["accessionNumber"], "url": accession_url(cik, latest_10k)},
+        "latest_10q": {"accession": latest_10q["accessionNumber"], "url": accession_url(cik, latest_10q)},
         "earnings_release": {"accession": release["accessionNumber"], "url": release_url},
         "company_facts": f"{SEC_DATA}/api/xbrl/companyfacts/CIK{cik}.json",
     }
@@ -331,6 +334,7 @@ def main() -> None:
         "price": {"value": args.price, "date": args.price_date, "definition": "last close before the earnings release"},
         "peers": peer_summary,
         "business_and_mda_excerpt": ten_k_text[:40000],
+        "latest_10q_excerpt": ten_q_text[:12000],
         "earnings_release_excerpt": release_text[:24000],
     }
     (run_dir / "evidence.json").write_text(json.dumps(evidence, indent=2, default=str), encoding="utf-8")
@@ -368,7 +372,7 @@ def main() -> None:
         manager_context = {"research": research, "financial": financial, "advisor": advisor, "sources": sources}
         report = model_call(client, "Strategy Manager", "Check the inputs, then compile exactly five sections: Overview; Market Positioning and Growth Outlook; Valuation Insights; Future Developments and Strategic Recommendations; Investment Recommendation. Mark absent evidence as not provided.", manager_context, "A complete five-part Markdown report.")
 
-    filing_line = f"{ticker} — filings: 10-K {latest_10k['accessionNumber']}; earnings release 8-K {release['accessionNumber']}"
+    filing_line = f"{ticker} — filings: 10-K {latest_10k['accessionNumber']}; 10-Q {latest_10q['accessionNumber']}; earnings release 8-K {release['accessionNumber']}"
     if args.fallback:
         header = f"{filing_line}\nfallback\n\n# {ticker} Research Desk Report\n\nRun time (UTC): {datetime.now(timezone.utc).isoformat()}\n\n"
     else:
