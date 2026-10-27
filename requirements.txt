@@ -1,0 +1,3 @@
+google-genai>=2.33.0
+requests>=2.32.0
+
