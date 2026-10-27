@@ -1,6 +1,8 @@
 NFLX — filings: 10-K 0001065280-26-000034; 10-Q 0001065280-26-000291; earnings release 8-K 0001065280-26-000290
 fallback
 
+Partner check: Claim 1 — Correct; Claim 9 — Correct.
+
 # NFLX Research Desk Report
 
 Run time (UTC): 2026-10-27T12:56:44.426425+00:00
