@@ -63,8 +63,8 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
         if name in {"research_analyst", "financial_analyst"}:
             evidence = state["evidence"]
             if name == "research_analyst":
-                context["evidence"] = {"sources": evidence["sources"], "business_and_mda_excerpt": evidence["business_and_mda_excerpt"],
-                                       "latest_10q_excerpt": evidence["latest_10q_excerpt"], "earnings_release_excerpt": evidence["earnings_release_excerpt"],
+                context["evidence"] = {"sources": evidence["sources"], "business_and_mda_excerpt": evidence["business_and_mda_excerpt"][:4000],
+                                       "latest_10q_excerpt": evidence["latest_10q_excerpt"][:4000], "earnings_release_excerpt": evidence["earnings_release_excerpt"][:4000],
                                        "annual_numbers": evidence["annual_numbers"], "ratios_calculated_in_code": evidence["ratios_calculated_in_code"]}
             else:
                 context["evidence"] = {"sources": evidence["sources"], "annual_numbers": evidence["annual_numbers"],

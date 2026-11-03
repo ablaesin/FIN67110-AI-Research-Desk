@@ -1,0 +1,137 @@
+{
+  "input": {
+    "report": "COST \u2014 filings: 10-K 0000909832-26-000093; 10-Q 0000909832-26-000051; earnings release 8-K 0000909832-26-000084\n\n## Overview\n\nCostco Wholesale Corporation operates membership warehouses and e-commerce sites, with 939 warehouses across various geographies, including the United States, Puerto Rico, Canada, Mexico, Japan, the United Kingdom, Korea, Australia, Taiwan, China, Spain, France, Sweden, Iceland, and New Zealand (`cost:warehouse`, latest 10-K / earnings release). The company generates revenue primarily through two main streams: selling high volumes of goods at low prices to members and collecting membership fees.\n\nFor the 52-week fiscal year ended August 30, 2026, Costco reported total revenue of $303,154,000,000 (`RevenueFromContractWithCustomerExcludingAssessedTax`, Form 10-K), representing a 10.14% year-over-year increase compared to $275,235,000,000 in the prior period ending August 31, 2025. Net sales for the fiscal year increased 10.1 percent to $297.2 billion from $269.9 billion in the prior year (earnings release). Net income for the fiscal year ended August 30, 2026, was $9,226,000,000 (`NetIncomeLoss`, Form 10-K), compared to $8,099,000,000 in the previous year (earnings release). Operating income for FY 2026 was reported at $11,685,000,000 (`OperatingIncomeLoss`, Form 10-K). Additionally, the fourth quarter of fiscal 2026 was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values (earnings release).\n\n## Market Positioning and Growth Outlook\n\nCostco competes in the wholesale and retail membership warehouse industry. Its market position is supported by high member loyalty, a dominant global warehouse footprint of 939 locations (`cost:warehouse`, latest 10-K / earnings release), and robust comparable sales growth across U.S., Canada, and international segments, earning a Competitive Position score of 5 / 5. Top-line expansion is further underscored by a 20.9% increase in digitally-enabled comparable sales for the fiscal year (earnings release). \n\nPerformance is heavily influenced by consumer and small business spending patterns, domestic and international economic conditions (including exchange rates and inflation or deflation), competition, rising operating costs such as employee wages and health-care costs, and geopolitical conditions like tariffs (earnings release). Costco's operating margin sits at 3.85% (Operating Income of $11,685,000,000 on Revenue of $303,154,000,000; `OperatingIncomeLoss` / `RevenueFromContractWithCustomerExcludingAssessedTax`), which is typical for the wholesale/retail peer group (e.g., BJ's at 3.81%, Walmart at 4.18%), reflecting thin margins inherent to the business model.\n\n## Valuation Insights\n\nSpecific valuation multiples and a detailed P/E calculation are not provided in the source files. However, the supplied stock price is $904.70 as of September 23, 2026 (advisor). The valuation incorporates high expectations following robust fiscal year results, and Costco's valuation score is recorded as not provided / 5 due to the absence of specific valuation multiples in the sources (stock price: $904.70 on 2026-09-23; earnings period: FY 2026 ended August 30, 2026; filing line / XBRL tag: not provided). Slower earnings growth or margin compression from rising operational and wage costs could make the current share price less attractive.\n\n## Future Developments and Strategic Recommendations\n\nPotential upside catalysts include continued top-line expansion through digitally-enabled comparable sales and potential upside from member value reinvestments or tariff refund benefits. Key measures to monitor include comparable sales growth and membership renewal rates to determine whether top-line momentum remains structural or faces macro-driven deceleration. A major change in revenue growth or operating performance in the next filing\u2014such as a sharp deceleration in comparable sales, margin compression driven by rising operational and wage costs, or a reversal in membership renewal rates\u2014could alter the overall assessment. \n\n## Investment Recommendation\n\n**Recommendation:** Hold (advisor)\n\n**Main Reasons, Potential Benefits, and Risks:**\n- **Main Reasons:** Consistent double-digit net sales growth, high member loyalty, dominant global warehouse expansion (939 locations; `cost:warehouse`, latest 10-K / earnings release), and superior free cash flow generation of $9,382,000,000, derived from operating cash flow of $15,817,000,000 (`NetCashProvidedByUsedInOperatingActivities`, Form 10-K) minus capital expenditures of $6,435,000,000 (`PaymentsToAcquirePropertyPlantAndEquipment`, financial).\n- **Potential Benefits:** Continued top-line expansion through digitally-enabled comparable sales and potential upside from member value reinvestments or tariff refund benefits.\n- **Risks:** Thin operating margins (3.85%), vulnerability to macroeconomic shifts, inflation, rising employee wages, and a demanding valuation at the $904.70 stock price level (advisor). Financial stability is supported by total assets of $89,045,000,000 versus total liabilities of $53,242,000,000, stockholders' equity of $35,803,000,000 (`StockholdersEquity`), and a current ratio of 1.06 based on current assets of $46,582,000,000 (`AssetsCurrent`) and current liabilities of $43,952,000,000 (`LiabilitiesCurrent`, financial).",
+    "facts": {
+      "revenue": {
+        "label": "revenue",
+        "value": 303154000000,
+        "unit": "",
+        "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "operating_income": {
+        "label": "operating_income",
+        "value": 11685000000,
+        "unit": "",
+        "tag": "OperatingIncomeLoss",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "net_income": {
+        "label": "net_income",
+        "value": 9226000000,
+        "unit": "",
+        "tag": "NetIncomeLoss",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "assets": {
+        "label": "assets",
+        "value": 89045000000,
+        "unit": "",
+        "tag": "Assets",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "liabilities": {
+        "label": "liabilities",
+        "value": 53242000000,
+        "unit": "",
+        "tag": "Liabilities",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "equity": {
+        "label": "equity",
+        "value": 35803000000,
+        "unit": "",
+        "tag": "StockholdersEquity",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "cash_from_operations": {
+        "label": "cash_from_operations",
+        "value": 15817000000,
+        "unit": "",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "capital_expenditures": {
+        "label": "capital_expenditures",
+        "value": 6435000000,
+        "unit": "",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "diluted_eps": {
+        "label": "diluted_eps",
+        "value": 2.92,
+        "unit": "",
+        "tag": "EarningsPerShareDiluted",
+        "period_end": "2010-08-29",
+        "filed": "2010-10-18",
+        "accession": "0001193125-10-230379",
+        "form": "10-K"
+      },
+      "current_assets": {
+        "label": "current_assets",
+        "value": 46582000000,
+        "unit": "",
+        "tag": "AssetsCurrent",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      },
+      "current_liabilities": {
+        "label": "current_liabilities",
+        "value": 43952000000,
+        "unit": "",
+        "tag": "LiabilitiesCurrent",
+        "period_end": "2026-08-30",
+        "filed": "2026-10-07",
+        "accession": "0000909832-26-000093",
+        "form": "10-K"
+      }
+    }
+  },
+  "output": {
+    "code_marks": [
+      {
+        "claim": "revenue",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "operating income was",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "net income",
+        "mark": "Correct",
+        "correction": ""
+      }
+    ],
+    "semantic_check": "| Claim / Metric | Reported Value | Source / Filing | Evaluation | Correction / Note |\n|---|---|---|---|---|\n| Total Revenue (FY 2026) | $303,154,000,000 | Form 10-K / Earnings Release | **Correct** | Matches `RevenueFromContractWithCustomerExcludingAssessedTax` and total revenue for 52 weeks ended August 30, 2026. |\n| Prior Period Revenue (FY 2025) | $275,235,000,000 | Form 10-K / Earnings Release | **Correct** | Matches 52 weeks ended August 31, 2025 total revenue. |\n| Net Sales (FY 2026) | $297.2 billion ($297,247,000,000) | Earnings Release / Form 10-K | **Correct** | Matches net sales for the fiscal year ended August 30, 2026. |\n| Prior Period Net Sales (FY 2025) | $269.9 billion ($269,912,000,000) | Earnings Release / Form 10-K | **Correct** | Matches net sales for the fiscal year ended August 31, 2025. |\n| Net Income (FY 2026) | $9,226,000,000 | Form 10-K / Earnings Release | **Correct** | Matches `NetIncomeLoss` for FY 2026. |\n| Prior Period Net Income (FY 2025) | $8,099,000,000 | Earnings Release | **Correct** | Matches net income for the fiscal year ended August 31, 2025. |\n| Operating Income (FY 2026) | $11,685,000,000 | Form 10-K / Earnings Release | **Correct** | Matches `OperatingIncomeLoss` for FY 2026. |\n| Warehouse Count | 939 locations | Form 10-K / Earnings Release | **Correct** | Matches warehouse count as of August 30, 2026. |\n| Digitally-enabled comparable sales growth | 20.9% | Earnings Release | **Correct** | Matches 52-week digitally-enabled comparable sales growth. |\n| Operating Margin | 3.85% | Calculated (`OperatingIncomeLoss` / Revenue) | **Correct** | Matches calculated value ($11,685M / $303,154M \u2248 3.85%). |\n| Peer Operating Margin (BJ's) | 3.81% | BJ's 10-K | **Correct** | Matches BJ's calculated operating margin ($816,604K / $21,457,274K \u2248 3.81%). |\n| Peer Operating Margin (Walmart) | 4.18% | Walmart 10-K | **Correct** | Matches Walmart's calculated operating margin ($29,825M / $713,163M \u2248 4.18%). |\n| Stock Price | $904.70 as of September 23, 2026 | Advisor / Price data | **Correct** | Matches saved price evidence date and value. |\n| Operating Cash Flow | $15,817,000,000 | Form 10-K | **Wrong** | Filing shows Net Cash Provided by Operating Activities is **$15,825,000,000** for the 52 weeks ended August 30, 2026. |\n| Capital Expenditures | $6,435,000,000 | Form 10-K | **Correct** | Matches Additions to property and equipment (`PaymentsToAcquirePropertyPlantAndEquipment`). |\n| Free Cash Flow | $9,382,000,000 | Calculated ($15,817M - $6,435M) | **Wrong** | Based on the correct operating cash flow of $15,825M minus $6,435M, FCF is **$9,390,000,000** (note: code calculated free cash flow is $9,382,000,000 using $15,817M which appears to be a minor discrepancy in the base input, but verified filing figure is $15,825M). |\n| Total Assets | $89,045,000,000 | Form 10-K | **Correct** | Matches `Assets` as of August 30, 2026. |\n| Total Liabilities | $53,242,000,000 | Form 10-K | **Correct** | Matches `Liabilities` as of August 30, 2026. |\n| Stockholders' Equity | $35,803,000,000 | Form 10-K | **Correct** | Matches `StockholdersEquity` as of August 30, 2026. |\n| Current Ratio | 1.06 | Calculated (`AssetsCurrent` / `LiabilitiesCurrent`) | **Correct** | Matches calculated ratio ($46,582M / $43,952M \u2248 1.0598). |\n| Current Assets | $46,582,000,000 | Form 10-K | **Correct** | Matches `AssetsCurrent` as of August 30, 2026. |\n| Current Liabilities | $43,952,000,000 | Form 10-K | **Correct** | Matches `LiabilitiesCurrent` as of August 30, 2026. |"
+  }
+}
