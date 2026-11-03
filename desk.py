@@ -206,24 +206,17 @@ def model_call(client: genai.Client, role: str, task: str, context: dict[str, An
         "filing lines, sources, or calculations. If evidence is absent, write 'not provided'. "
         "Return Markdown only.\n\n" + role_instructions + "\n\n" + json.dumps(payload, default=str)
     )
-    # The current Gemini Interactions API is synchronous. The response schema stores text in output.
-    response = client.interactions.create(model="gemini-flash-lite-latest", input=instruction, timeout=120)
-    data = response.model_dump(mode="json") if hasattr(response, "model_dump") else json.loads(str(response))
-    texts: list[str] = []
-
-    def walk(item: Any) -> None:
-        if isinstance(item, dict):
-            for key, value in item.items():
-                if key in {"text", "content"} and isinstance(value, str):
-                    texts.append(value)
-                else:
-                    walk(value)
-        elif isinstance(item, list):
-            for value in item:
-                walk(value)
-
-    walk(data)
-    result = "\n".join(text for text in texts if text.strip()).strip()
+    last_error: Exception | None = None
+    response = None
+    for model in ("gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-3.5-flash-lite"):
+        try:
+            response = client.models.generate_content(model=model, contents=instruction)
+            break
+        except Exception as error:
+            last_error = error
+    if response is None:
+        raise RuntimeError("No configured Gemini model completed the role call.") from last_error
+    result = (response.text or "").strip()
     if not result:
         raise RuntimeError(f"{role} returned no text. Save the run and retry this role.")
     return result
@@ -337,6 +330,11 @@ def main() -> None:
         "latest_10q_excerpt": ten_q_text[:12000],
         "earnings_release_excerpt": release_text[:24000],
     }
+    filings_dir = run_dir / "filings"
+    filings_dir.mkdir(exist_ok=True)
+    (filings_dir / "latest_10k.txt").write_text(ten_k_text, encoding="utf-8")
+    (filings_dir / "latest_10q.txt").write_text(ten_q_text, encoding="utf-8")
+    (filings_dir / "earnings_release.txt").write_text(release_text, encoding="utf-8")
     (run_dir / "evidence.json").write_text(json.dumps(evidence, indent=2, default=str), encoding="utf-8")
 
     # Keep each role's prompt small. Full filing evidence remains in evidence.json for audit.

@@ -60,13 +60,37 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
         print(name.replace("_", " "))
         run_dir = Path(state["run_dir"])
         context = {key: state[key] for key in context_keys}
-        context["evidence"] = state["evidence"]
+        if name in {"research_analyst", "financial_analyst"}:
+            evidence = state["evidence"]
+            if name == "research_analyst":
+                context["evidence"] = {"sources": evidence["sources"], "business_and_mda_excerpt": evidence["business_and_mda_excerpt"],
+                                       "latest_10q_excerpt": evidence["latest_10q_excerpt"], "earnings_release_excerpt": evidence["earnings_release_excerpt"],
+                                       "annual_numbers": evidence["annual_numbers"], "ratios_calculated_in_code": evidence["ratios_calculated_in_code"]}
+            else:
+                context["evidence"] = {"sources": evidence["sources"], "annual_numbers": evidence["annual_numbers"],
+                                       "ratios_calculated_in_code": evidence["ratios_calculated_in_code"], "revenue_history": evidence["revenue_history"],
+                                       "price": evidence["price"], "peers": evidence["peers"]}
+        elif name == "investment_advisor":
+            context["price"] = state["evidence"]["price"]
+            context["peer_comparison"] = state["evidence"]["peers"]
+        elif name == "strategy_manager":
+            context["sources"] = state["evidence"]["sources"]
         payload = {"task": task, "context": context, "expected_output": expected}
         output = desk.model_call(genai.Client(api_key=__import__("os").environ["API_KEY"]), name.replace("_", " ").title(), task, context, expected, role_text(name))
         if name == "strategy_manager":
             missing = [section for section in SECTION_NAMES if section.lower() not in output.lower()]
             if missing:
-                retry_task = task + ". The first draft omitted: " + "; ".join(missing) + ". Return one complete corrected report. This is the single permitted retry."
+                section_role = {"Overview": ("research", "research_analyst"),
+                                "Market Positioning and Growth Outlook": ("research", "research_analyst"),
+                                "Valuation Insights": ("financial", "financial_analyst"),
+                                "Future Developments and Strategic Recommendations": ("advisor", "investment_advisor"),
+                                "Investment Recommendation": ("advisor", "investment_advisor")}
+                state_key, retry_role = section_role[missing[0]]
+                retry_context = {"previous_output": state[state_key], "evidence": state["evidence"]}
+                context[state_key] = desk.model_call(genai.Client(api_key=os.environ["API_KEY"]), retry_role.replace("_", " ").title(),
+                                                       f"Return only the missing report part: {missing[0]}. This is the role's single permitted retry.",
+                                                       retry_context, "A sourced Markdown section.", role_text(retry_role))
+                retry_task = task + ". Recompile after the fixed role output. The first draft omitted: " + "; ".join(missing) + "."
                 output = desk.model_call(genai.Client(api_key=os.environ["API_KEY"]), "Strategy Manager", retry_task, context, expected, role_text(name))
                 if [section for section in SECTION_NAMES if section.lower() not in output.lower()]:
                     raise RuntimeError("Strategy Manager used its one retry and still omitted a required section.")
@@ -124,10 +148,10 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
         genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
         "Check the cited factual claims only. Do not assess the Investment Recommendation thesis.",
         {"compiled_report": report, "saved_filing_evidence": evidence},
-        "A concise Markdown list of semantic support concerns.", role_text("verifier"))
+        "A Markdown table that marks every sourced numeric claim Correct, Wrong, or Unsupported, with a correction and source for each Wrong or Unsupported claim.", role_text("verifier"))
     rows = "\n".join(f"| {m['claim']} | {m['mark']} | {m['correction'] or '—'} |" for m in marks)
     first, *rest = report.splitlines()
-    verified = "\n".join([first, "", "## Verifier marks", "| Claim | Mark | Correction and source |", "|---|---|---|", rows, "", *rest])
+    verified = "\n".join([first, "", "## Code verifier marks", "| Claim | Mark | Correction and source |", "|---|---|---|", rows, "", "## Model semantic marks", semantic_check, "", *rest])
     (run_dir / "verified_report.md").write_text(verified, encoding="utf-8")
     save_node(run_dir, "verifier", {"input": {"report": report, "facts": evidence.get("annual_numbers", {})}, "output": {"code_marks": marks, "semantic_check": semantic_check}})
     return {"verified_report": verified}
