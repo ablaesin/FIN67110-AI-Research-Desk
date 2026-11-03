@@ -33,6 +33,8 @@ class TeamState(TypedDict, total=False):
     advisor: str
     report: str
     verified_report: str
+    retry_role: str
+    retry_section: str
 
 
 def save_node(run_dir: Path, name: str, payload: dict[str, Any]) -> None:
@@ -55,7 +57,7 @@ def node_steps(state: TeamState) -> dict[str, Any]:
     return {}
 
 
-def call_node(name: str, output_key: str, task: str, context_keys: list[str], expected: str):
+def call_node(name: str, output_key: str, task: str, context_keys: list[str], expected: str, save_name: str | None = None):
     def run(state: TeamState) -> dict[str, Any]:
         print(name.replace("_", " "))
         run_dir = Path(state["run_dir"])
@@ -82,8 +84,54 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
             output = (f"{state['ticker']} — filings: 10-K {sources['latest_10k']['accession']}; "
                       f"10-Q {sources['latest_10q']['accession']}; earnings release 8-K "
                       f"{sources['earnings_release']['accession']}\n\n" + output)
-        save_node(run_dir, name, {"input": payload, "output": output})
+        save_node(run_dir, save_name or name, {"input": payload, "output": output})
         return {output_key: output}
+    return run
+
+
+def missing_sections(report: str) -> list[str]:
+    """Return required report sections that the Manager did not compile."""
+    lower = report.lower()
+    return [section for section in SECTION_NAMES if section.lower() not in lower]
+
+
+def node_manager(state: TeamState) -> dict[str, Any]:
+    """Compile once, then request at most one scoped analyst repair through the graph."""
+    result = call_node(
+        "strategy_manager", "report",
+        "Compile exactly these five sections: " + "; ".join(SECTION_NAMES),
+        ["research", "financial", "advisor"], "A five-part report.",
+    )(state)
+    missing = missing_sections(result["report"])
+    if not missing:
+        return result
+    section = missing[0]
+    owner = {
+        "Overview": "research_analyst",
+        "Market Positioning and Growth Outlook": "research_analyst",
+        "Valuation Insights": "financial_analyst",
+        "Future Developments and Strategic Recommendations": "investment_advisor",
+        "Investment Recommendation": "investment_advisor",
+    }[section]
+    result.update({"retry_role": owner, "retry_section": section})
+    return result
+
+
+def route_after_manager(state: TeamState) -> str:
+    """The code, not a model, chooses the one permitted retry edge."""
+    return state.get("retry_role", "verifier")
+
+
+def retry_task(role: str, output_key: str):
+    def run(state: TeamState) -> dict[str, Any]:
+        section = state["retry_section"]
+        return call_node(
+            role, output_key,
+            f"The Manager found the required '{section}' section missing. Return only evidence-supported material that lets the Manager add that section. Do not invent facts.",
+            ["research", "financial"] if role == "investment_advisor" else [],
+            f"A concise, sourced repair for '{section}'.",
+            save_name=f"retry_{role}",
+        )(state)
     return run
 
 
@@ -130,7 +178,9 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
     filing_texts = {path.name: path.read_text(encoding="utf-8") for path in (run_dir / "filings").glob("*.txt")}
     semantic_check = desk.model_call(
         genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
-        "Check the cited factual claims only. Do not assess the Investment Recommendation thesis.",
+        "Check cited factual claims only. Do not assess the Investment Recommendation thesis. "
+        "Treat a number as Correct when it agrees after ordinary display rounding (for example, 10.1% versus 10.128%, or 3.85% versus 3.8545%). "
+        "Do not invent a different number or source; quote the supplied source when marking Wrong or Unsupported.",
         {"compiled_report": report, "saved_facts": evidence, "saved_filing_texts": filing_texts},
         "A Markdown table that marks every sourced numeric claim Correct, Wrong, or Unsupported, with a correction and source for each Wrong or Unsupported claim.", role_text("verifier"))
     rows = "\n".join(f"| {m['claim']} | {m['mark']} | {m['correction'] or '—'} |" for m in marks)
@@ -147,10 +197,17 @@ def build_graph():
     graph.add_node("research_analyst", call_node("research_analyst", "research", "Write the research section from supplied filing evidence.", [], "A sourced Markdown research section."))
     graph.add_node("financial_analyst", call_node("financial_analyst", "financial", "Analyze supplied facts and code ratios only.", [], "A sourced Markdown financial section."))
     graph.add_node("investment_advisor", call_node("investment_advisor", "advisor", "Write the thesis using the two analyst outputs only.", ["research", "financial"], "A Markdown investment view."))
-    graph.add_node("strategy_manager", call_node("strategy_manager", "report", "Compile exactly these five sections: " + "; ".join(SECTION_NAMES), ["research", "financial", "advisor"], "A five-part report."))
+    graph.add_node("strategy_manager", node_manager)
+    graph.add_node("retry_research", retry_task("research_analyst", "research"))
+    graph.add_node("retry_financial", retry_task("financial_analyst", "financial"))
+    graph.add_node("retry_advisor", retry_task("investment_advisor", "advisor"))
+    graph.add_node("strategy_manager_retry", call_node("strategy_manager", "report", "Compile exactly these five sections: " + "; ".join(SECTION_NAMES) + ". This is the one allowed repair pass; do not request another retry.", ["research", "financial", "advisor"], "A complete five-part report.", save_name="strategy_manager_retry"))
     graph.add_node("verifier", node_verifier)
     graph.add_edge(START, "steps"); graph.add_edge("steps", "research_analyst"); graph.add_edge("research_analyst", "financial_analyst")
-    graph.add_edge("financial_analyst", "investment_advisor"); graph.add_edge("investment_advisor", "strategy_manager"); graph.add_edge("strategy_manager", "verifier"); graph.add_edge("verifier", END)
+    graph.add_edge("financial_analyst", "investment_advisor"); graph.add_edge("investment_advisor", "strategy_manager")
+    graph.add_conditional_edges("strategy_manager", route_after_manager, {"research_analyst": "retry_research", "financial_analyst": "retry_financial", "investment_advisor": "retry_advisor", "verifier": "verifier"})
+    graph.add_edge("retry_research", "strategy_manager_retry"); graph.add_edge("retry_financial", "strategy_manager_retry"); graph.add_edge("retry_advisor", "strategy_manager_retry")
+    graph.add_edge("strategy_manager_retry", "verifier"); graph.add_edge("verifier", END)
     return graph.compile()
 
 
