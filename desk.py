@@ -208,12 +208,17 @@ def model_call(client: genai.Client, role: str, task: str, context: dict[str, An
     )
     last_error: Exception | None = None
     response = None
-    for model in ("gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-3.5-flash-lite"):
-        try:
-            response = client.models.generate_content(model=model, contents=instruction)
+    for attempt, delay in enumerate((0, 2, 5)):
+        if delay:
+            time.sleep(delay)
+        for model in ("gemini-flash-lite-latest", "gemini-3.1-flash-lite", "gemini-3.5-flash-lite"):
+            try:
+                response = client.models.generate_content(model=model, contents=instruction)
+                break
+            except Exception as error:
+                last_error = error
+        if response is not None:
             break
-        except Exception as error:
-            last_error = error
     if response is None:
         raise RuntimeError("No configured Gemini model completed the role call.") from last_error
     result = (response.text or "").strip()

@@ -232,10 +232,10 @@ def main() -> None:
         original = args.seed_eps_error
         evidence = json.loads((original / "evidence.json").read_text(encoding="utf-8"))
         report = (original / "report.md").read_text(encoding="utf-8")
-        match = re.search(r"\$([0-9]+(?:\.[0-9]{2})?)\s+per diluted share", report, re.I)
-        if not match:
-            raise RuntimeError("The report did not contain a diluted-EPS per-share line to seed.")
-        eps = float(match.group(1))
+        matches = re.findall(r"\$([0-9]+(?:\.[0-9]{2})?)\s+per diluted share", evidence.get("earnings_release_excerpt", ""), re.I)
+        if not matches:
+            raise RuntimeError("The earnings release did not contain a diluted-EPS per-share line to seed.")
+        eps = max(map(float, matches))
         seeded = original.parent / f"{original.name}-seeded-eps-error-{datetime.now(timezone.utc).strftime('%H%M%S')}"
         if seeded.exists():
             raise SystemExit(f"Seeded run already exists: {seeded}")
@@ -243,7 +243,7 @@ def main() -> None:
         report_path = seeded / "report.md"
         changed = report.replace(f"${eps:.2f}", f"${eps + 1:.2f}")
         if changed == report:
-            raise RuntimeError("The report did not contain the diluted-EPS figure to seed.")
+            raise RuntimeError("The report did not contain the current diluted-EPS figure to seed.")
         report_path.write_text(changed, encoding="utf-8")
         node_verifier({"run_dir": str(seeded), "report": changed, "evidence": evidence})
         print(seeded / "verified_report.md")

@@ -1,0 +1,163 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "accession": "0000909832-26-000093",
+            "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm"
+          },
+          "latest_10q": {
+            "accession": "0000909832-26-000051",
+            "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000051/cost-20260510.htm"
+          },
+          "earnings_release": {
+            "accession": "0000909832-26-000084",
+            "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json"
+        },
+        "business_and_mda_excerpt": "cost-20260830 false August 30, 2026 2026 FY COSTCO WHOLESALE CORP /NEW 0000909832 08/30 0.005 0.005 100,000,000 100,000,000 \u2014 \u2014 \u2014 \u2014 0.005 0.005 900,000,000 900,000,000 443,266,000 443,237,000 443,266,000 443,237,000 P5Y P3Y P5Y 1 1 953 26 15 994 953 26 15 994 953 26 15 994 http://fasb.org/us-gaap/2026#OtherAssetsNoncurrent http://fasb.org/us-gaap/2026#OtherAssetsNoncurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesCurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesCurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesCurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesCurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesNoncurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesNoncurrent http://xbrl.sec.gov/country/2026#US 3 iso4217:USD xbrli:shares iso4217:USD xbrli:shares cost:warehouse cost:states xbrli:pure cost:Reportable_segment 0000909832 2025-09-01 2026-08-30 0000909832 2026-02-15 0000909832 2026-09-29 0000909832 us-gaap:ProductMember 2025-09-01 2026-08-30 0000909832 us-gaap:ProductMember 2024-09-02 2025-08-31 0000909832 us-gaap:ProductMember 2023-09-04 2024-09-01 0000909832 us-gaap:MembershipMember 2025-09-01 2026-08-30 0000909832 us-gaap:MembershipMember 2024-09-02 2025-08-31 0000909832 us-gaap:MembershipMember 2023-09-04 2024-09-01 0000909832 2024-09-02 2025-08-31 0000909832 2023-09-04 2024-09-01 0000909832 2026-08-30 0000909832 2025-08-31 0000909832 us-gaap:CommonStockMember 2023-09-03 0000909832 us-gaap:AdditionalPaidInCapitalMember 2023-09-03 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-09-03 0000909832 us-gaap:RetainedEarningsMember 2023-09-03 0000909832 2023-09-03 0000909832 us-gaap:RetainedEarningsMember 2023-09-04 2024-09-01 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-09-04 2024-09-01 0000909832 us-gaap:AdditionalPaidInCapitalMember 2023-09-04 2024-09-01 0000909832 us-gaap:CommonStockMember 2023-09-04 2024-09-01 0000909832 us-gaap:CommonStockMember 2024-09-01 0000909832 us-gaap:AdditionalPaidInCapitalMember 2024-09-01 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-01 0000909832 us-gaap:RetainedEarningsMember 2024-09-01 0000909832 2024-09-01 0000909832 us-gaap:RetainedEarningsMember 2024-09-02 2025-08-31 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-02 2025-08-31 0000909832 us-gaap:AdditionalPaidInCapitalMember 2024-09-02 2025-08-31 0000909832 us-gaap:CommonStockMember 2024-09-02 2025-08-31 0000909832 us-gaap:CommonStockMember 2025-08-31 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-08-31 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-08-31 0000909832 us-gaap:RetainedEarningsMember 2025-08-31 0000909832 us-gaap:RetainedEarningsMember 2025-09-01 2026-08-30 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-09-01 2026-08-30 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-09-01 2026-08-30 0000909832 us-gaap:CommonStockMember 2025-09-01 2026-08-30 0000909832 us-gaap:CommonStockMember 2026-08-30 0000909832 us-gaap:AdditionalPaidInCapitalMember 2026-08-30 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-08-30 0000909832 us-gaap:RetainedEarningsMember 2026-08-30 0000909832 country:US 2026-08-30 0000909832 country:CA 2026-08-30 0000909832 country:MX 2026-08-30 0000909832 country:JP 2026-08-30 0000909832 country:GB 2026-08-30 0000909832 country:KR 2026-08-30 0000909832 country:AU 2026-08-30 0000909832 country:TW 2026-08-30 0000909832 country:CN 2026-08-30 0000909832 country:ES 2026-08-30 0000909832 country:FR 2026-08-30 0000909832 country:SE 2026-08-30 0000909832 country:IS 2026-08-30 0000909832 country:US 2025-08-31 0000909832 country:CA 2025-08-31 0000909832 cost:OtherInternationalMember 2026-08-30 0000909832 cost:OtherInternationalMember 2025-08-31 0000909832 srt:MinimumMember us-gaap:BuildingAndBuildingImprovementsMember 2026-08-30 0000909832 srt:MaximumMember us-gaap:BuildingAndBuildingImprovementsMember 2026-08-30 0000909832 srt:MinimumMember us-gaap:Furniture",
+        "latest_10q_excerpt": "cost-20260510 FALSE 2026 Q3 COSTCO WHOLESALE CORP /NEW 0000909832 8/30 0.005 0.005 100,000,000 100,000,000 \u2014 \u2014 \u2014 \u2014 0.005 0.005 900,000,000 900,000,000 443,514,000 443,237,000 443,514,000 443,237,000 1 3 xbrli:shares iso4217:USD iso4217:USD xbrli:shares cost:warehouse cost:states xbrli:pure cost:Reportable_segment 0000909832 2025-09-01 2026-05-10 0000909832 2026-05-27 0000909832 us-gaap:ProductMember 2026-02-16 2026-05-10 0000909832 us-gaap:ProductMember 2025-02-17 2025-05-11 0000909832 us-gaap:ProductMember 2025-09-01 2026-05-10 0000909832 us-gaap:ProductMember 2024-09-02 2025-05-11 0000909832 us-gaap:MembershipMember 2026-02-16 2026-05-10 0000909832 us-gaap:MembershipMember 2025-02-17 2025-05-11 0000909832 us-gaap:MembershipMember 2025-09-01 2026-05-10 0000909832 us-gaap:MembershipMember 2024-09-02 2025-05-11 0000909832 2026-02-16 2026-05-10 0000909832 2025-02-17 2025-05-11 0000909832 2024-09-02 2025-05-11 0000909832 2026-05-10 0000909832 2025-08-31 0000909832 us-gaap:CommonStockMember 2026-02-15 0000909832 us-gaap:AdditionalPaidInCapitalMember 2026-02-15 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-02-15 0000909832 us-gaap:RetainedEarningsMember 2026-02-15 0000909832 2026-02-15 0000909832 us-gaap:RetainedEarningsMember 2026-02-16 2026-05-10 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-02-16 2026-05-10 0000909832 us-gaap:AdditionalPaidInCapitalMember 2026-02-16 2026-05-10 0000909832 us-gaap:CommonStockMember 2026-02-16 2026-05-10 0000909832 us-gaap:CommonStockMember 2026-05-10 0000909832 us-gaap:AdditionalPaidInCapitalMember 2026-05-10 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-05-10 0000909832 us-gaap:RetainedEarningsMember 2026-05-10 0000909832 us-gaap:CommonStockMember 2025-02-16 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-02-16 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-16 0000909832 us-gaap:RetainedEarningsMember 2025-02-16 0000909832 2025-02-16 0000909832 us-gaap:RetainedEarningsMember 2025-02-17 2025-05-11 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-17 2025-05-11 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-02-17 2025-05-11 0000909832 us-gaap:CommonStockMember 2025-02-17 2025-05-11 0000909832 us-gaap:CommonStockMember 2025-05-11 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-05-11 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-05-11 0000909832 us-gaap:RetainedEarningsMember 2025-05-11 0000909832 2025-05-11 0000909832 us-gaap:CommonStockMember 2025-08-31 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-08-31 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-08-31 0000909832 us-gaap:RetainedEarningsMember 2025-08-31 0000909832 us-gaap:RetainedEarningsMember 2025-09-01 2026-05-10 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-09-01 2026-05-10 0000909832 us-gaap:AdditionalPaidInCapitalMember 2025-09-01 2026-05-10 0000909832 us-gaap:CommonStockMember 2025-09-01 2026-05-10 0000909832 us-gaap:CommonStockMember 2024-09-01 0000909832 us-gaap:AdditionalPaidInCapitalMember 2024-09-01 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-01 0000909832 us-gaap:RetainedEarningsMember 2024-09-01 0000909832 2024-09-01 0000909832 us-gaap:RetainedEarningsMember 2024-09-02 2025-05-11 0000909832 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-02 2025-05-11 0000909832 us-gaap:AdditionalPaidInCapitalMember 2024-09-02 2025-05-11 0000909832 us-gaap:CommonStockMember 2024-09-02 2025-05-11 0000909832 country:US 2026-05-10 0000909832 country:CA 2026-05-10 0000909832 country:MX 2026-05-10 0000909832 country:JP 2026-05-10 0000909832 country:GB 2026-05-10 0000909832 country:KR 2026-05-10 0000909832 country:AU 2026-05-10 0000909832 country:TW 2026-05-10 0000909832 country:CN 2026-05-10 0000909832 country:ES 2026-05-10 0000909832 country:FR 2026-05-10 0000909832 country:SE 2026-05-10 0000909832 country:IS 2026-05-10 0000909832 c",
+        "earnings_release_excerpt": "EX-99.1 2 costex9918-k92426.htm EX-99.1 Document Exhibit 99.1 Press Release COSTCO WHOLESALE CORPORATION REPORTS FOURTH QUARTER AND FISCAL YEAR 2026 OPERATING RESULTS ISSAQUAH, Wash., September 24, 2026 - Costco Wholesale Corporation (\u201cCostco\u201d or the \u201cCompany\u201d) (Nasdaq: COST) today announced its operating results for the 16-week fourth quarter and the 52-week fiscal year ended August 30, 2026. Net sales for the quarter increased 11.2 percent, to $93.9 billion, from $84.4 billion last year. Net sales for the fiscal year increased 10.1 percent, to $297.2 billion, from $269.9 billion last year. Comparable sales for the fourth quarter and fiscal year were as follows: 16 Weeks 16 Weeks 52 Weeks 52 Weeks Adjusted* Adjusted* U.S. 10.7% 7.2% 8.2% 6.6% Canada 5.0% 4.6% 7.8% 6.7% Other International 7.0% 6.2% 9.8% 6.5% Total Company 9.4% 6.7% 8.4% 6.6% Digitally-Enabled 19.5% 19.8% 20.9% 20.7% *Excluding the impacts from changes in gasoline prices and foreign exchange. Net income for the fourth quarter was $2.998 billion, $6.75 per diluted share, compared to $2.610 billion, $5.87 per diluted share, last year. This year's fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received in the quarter, less partial reinvestment of those refunds in increased member values. Net income for the fiscal year was $9.226 billion, $20.76 per diluted share, compared to $8.099 billion, $18.21 per diluted share, last year. Costco currently operates 939 warehouses, including 647 in the United States and Puerto Rico, 115 in Canada, 43 in Mexico, 37 in Japan, 29 in the United Kingdom, 20 in Korea, 15 in Australia, 14 in Taiwan, seven in China, five in Spain, three in France, two in Sweden, and one each in Iceland, and New Zealand. Costco also operates e-commerce sites in the U.S., Canada, the U.K., Mexico, Korea, Taiwan, Japan, Australia, and China. A conference call to discuss these results is scheduled for 2:00 p.m. (PT) today, September 24, 2026, and will be available via a webcast on investor.costco.com (click \u201cEvents & Presentations\u201d). Press Release Certain statements contained in this document constitute forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. For these purposes, forward-looking statements are statements that address activities, events, conditions or developments that the Company expects or anticipates may occur in the future. In some cases forward-looking statements can be identified because they contain words such as \u201canticipate,\u201d \u201cbelieve,\u201d \u201ccontinue,\u201d \u201ccould,\u201d \u201cestimate,\u201d \u201cexpect,\u201d \u201cintend,\u201d \u201clikely,\u201d \u201cmay,\u201d \u201cmight,\u201d \u201cplan,\u201d \u201cpotential,\u201d \u201cpredict,\u201d \u201cproject,\u201d \u201cseek,\u201d \u201cshould,\u201d \u201ctarget,\u201d \u201cwill,\u201d \u201cwould,\u201d or similar expressions and the negatives of those terms. Such forward-looking statements involve risks and uncertainties that may cause actual events, results or performance to differ materially from those indicated by such statements. These risks and uncertainties include, but are not limited to, domestic and international economic conditions, including exchange rates, inflation or deflation, the effects of competition and regulation, uncertainties in the financial markets, consumer and small business spending patterns and debt levels, breaches of security or privacy of member or business information, conditions affecting the acquisition, development, ownership or use of real estate, capital spending, actions of vendors, rising costs associated with employees (generally including health-care costs and wages), workforce interruptions, energy and certain commodities, geopolitical conditions (including tariffs and global conflicts), the ability to maintain effective internal control over financial reporting, regulatory and other impacts related to environmental and social matters, public-health related factors, and other risks identified from time to time in the Company\u2019s public statements and reports filed with the Securi",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 303154000000,
+            "unit": "",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": 11685000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": 9226000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 89045000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "liabilities": {
+            "label": "liabilities",
+            "value": 53242000000,
+            "unit": "",
+            "tag": "Liabilities",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 35803000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 15817000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 6435000000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": 20.76,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 46582000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 43952000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accession": "0000909832-26-000093",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": 0.038545
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": 0.030433
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": 0.103611
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 1.059838
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": 9382000000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "### Business Overview\nCostco Wholesale Corporation operates membership warehouses and e-commerce sites, offering low prices on a limited selection of nationally branded and private-label products in a wide range of merchandise categories. The company makes money primarily through two streams: selling products at discounted prices through its warehouse and digital channels, and collecting annual membership fees from its customers. For the fiscal year ended August 30, 2026, the company generated total revenue of $303,154,000,000 (XBRL tag: `RevenueFromContractWithCustomerExcludingAssessedTax`, source: Form 10-K).\n\n### Recent Developments\nFor the 52-week fiscal year ended August 30, 2026, net sales increased 10.1% to $297.2 billion from $269.9 billion in the prior fiscal year, while fourth-quarter net sales increased 11.2% to $93.9 billion (source: Earnings Release). Net income for the fiscal year reached $9,226,000,000, or $20.76 per diluted share, compared to $8,099,000,000, or $18.21 per diluted share, in the previous year (XBRL tag: `NetIncomeLoss`, source: Form 10-K; Earnings Release). Additionally, the fourth quarter was positively impacted by a non-recurring benefit of $0.15 per diluted share from IEEPA tariff refunds received during the quarter, offset in part by a partial reinvestment of those refunds into increased member values (source: Earnings Release). Costco operates 939 warehouses globally as of August 30, 2026 (source: Earnings Release). \n\n### Competitor Comparison & Performance Factors\nCompared to general retail competitors, Costco operates under a differentiated membership warehouse club model focused on high inventory turnover and thin margins. Key factors that could influence Costco's future performance include consumer and small business spending patterns, domestic and international economic conditions, inflation or deflation, foreign exchange rates, vendor actions, rising operational and employee costs (including health care and wages), energy and commodity costs, tariffs, and geopolitical conditions (source: Earnings Release).\n\n### Criteria Scores\n\n* **Revenue Growth: 4 / 5**\n  * *Financial Number:* $303,154,000,000 total revenue for FY 2026.\n  * *Filing Line / XBRL Tag:* `RevenueFromContractWithCustomerExcludingAssessedTax` (Form 10-K).\n  * *Explanation:* Annual revenue grew solidly, backed by a 10.1% increase in fiscal year net sales and strong digitally-enabled sales growth of 20.9% for the fiscal year (source: Earnings Release).\n\n* **Business Performance: 4 / 5**\n  * *Financial Number:* $9,226,000,000 net income for FY 2026.\n  * *Filing Line / XBRL Tag:* `NetIncomeLoss` (Form 10-K).\n  * *Explanation:* The company delivered higher net income and diluted EPS ($20.76 vs $18.21 prior year), alongside robust operating cash flows of $15,817,000,000 (`NetCashProvidedByUsedInOperatingActivities`, Form 10-K).\n\n* **Competitive Position: 5 / 5**\n  * *Financial Number:* 939 warehouses operating globally.\n  * *Filing Line / XBRL Tag:* not provided (sourced from Earnings Release).\n  * *Explanation:* Costco maintains an exceptional competitive moat driven by high membership renewal rates, massive scale, and value creation that continues to drive market share gains across domestic and international regions.\n\n### What Would Change the View\nA major shift in consumer spending patterns, sustained deceleration in comparable warehouse or digital sales growth, or adverse long-term pressures from rising labor and tariff costs in upcoming filings could alter the overall assessment. \n\nInsight: For the fiscal year ended August 30, 2026, payments to acquire property, plant, and equipment totaled $6,435,000,000, which matters because it reflects the capital intensity of Costco's ongoing warehouse expansion and global footprint growth. Filing Line / XBRL Tag: `PaymentsToAcquirePropertyPlantAndEquipment` (Form 10-K)."
+}
