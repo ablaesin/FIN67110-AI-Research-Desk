@@ -77,23 +77,6 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
             context["sources"] = state["evidence"]["sources"]
         payload = {"task": task, "context": context, "expected_output": expected}
         output = desk.model_call(genai.Client(api_key=__import__("os").environ["API_KEY"]), name.replace("_", " ").title(), task, context, expected, role_text(name))
-        if name == "strategy_manager":
-            missing = [section for section in SECTION_NAMES if section.lower() not in output.lower()]
-            if missing:
-                section_role = {"Overview": ("research", "research_analyst"),
-                                "Market Positioning and Growth Outlook": ("research", "research_analyst"),
-                                "Valuation Insights": ("financial", "financial_analyst"),
-                                "Future Developments and Strategic Recommendations": ("advisor", "investment_advisor"),
-                                "Investment Recommendation": ("advisor", "investment_advisor")}
-                state_key, retry_role = section_role[missing[0]]
-                retry_context = {"previous_output": state[state_key], "evidence": state["evidence"]}
-                context[state_key] = desk.model_call(genai.Client(api_key=os.environ["API_KEY"]), retry_role.replace("_", " ").title(),
-                                                       f"Return only the missing report part: {missing[0]}. This is the role's single permitted retry.",
-                                                       retry_context, "A sourced Markdown section.", role_text(retry_role))
-                retry_task = task + ". Recompile after the fixed role output. The first draft omitted: " + "; ".join(missing) + "."
-                output = desk.model_call(genai.Client(api_key=os.environ["API_KEY"]), "Strategy Manager", retry_task, context, expected, role_text(name))
-                if [section for section in SECTION_NAMES if section.lower() not in output.lower()]:
-                    raise RuntimeError("Strategy Manager used its one retry and still omitted a required section.")
         if output_key == "report":
             sources = state["evidence"]["sources"]
             output = (f"{state['ticker']} — filings: 10-K {sources['latest_10k']['accession']}; "
@@ -144,10 +127,11 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
     run_dir, report, evidence = Path(state["run_dir"]), state["report"], state["evidence"]
     marks = verifier_marks(report, evidence)
     desk.load_env()
+    filing_texts = {path.name: path.read_text(encoding="utf-8") for path in (run_dir / "filings").glob("*.txt")}
     semantic_check = desk.model_call(
         genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
         "Check the cited factual claims only. Do not assess the Investment Recommendation thesis.",
-        {"compiled_report": report, "saved_filing_evidence": evidence},
+        {"compiled_report": report, "saved_facts": evidence, "saved_filing_texts": filing_texts},
         "A Markdown table that marks every sourced numeric claim Correct, Wrong, or Unsupported, with a correction and source for each Wrong or Unsupported claim.", role_text("verifier"))
     rows = "\n".join(f"| {m['claim']} | {m['mark']} | {m['correction'] or '—'} |" for m in marks)
     first, *rest = report.splitlines()

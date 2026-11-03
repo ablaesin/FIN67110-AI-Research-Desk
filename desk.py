@@ -134,7 +134,7 @@ ANNUAL_TAGS: dict[str, tuple[str, ...]] = {
 def fact_units(facts: dict[str, Any], tag: str) -> list[dict[str, Any]]:
     item = facts.get("facts", {}).get("us-gaap", {}).get(tag, {})
     units = item.get("units", {})
-    return next(iter(units.values()), [])
+    return [fact for series in units.values() for fact in series]
 
 
 def pick_annual_fact(facts: dict[str, Any], tags: tuple[str, ...]) -> dict[str, Any] | None:
