@@ -199,15 +199,15 @@ def annual_revenue_history(facts: dict[str, Any]) -> list[dict[str, Any]]:
     return sorted(unique.values(), key=lambda row: row.get("end", ""), reverse=True)[:2]
 
 
-def model_call(client: genai.Client, role: str, task: str, context: dict[str, Any], expected_output: str) -> str:
+def model_call(client: genai.Client, role: str, task: str, context: dict[str, Any], expected_output: str, role_instructions: str = "") -> str:
     payload = {"task": task, "context": context, "expected_output": expected_output}
     instruction = (
         f"You are the {role}. Use only the supplied JSON. Do not invent facts, numbers, "
         "filing lines, sources, or calculations. If evidence is absent, write 'not provided'. "
-        "Return Markdown only.\n\n" + json.dumps(payload, default=str)
+        "Return Markdown only.\n\n" + role_instructions + "\n\n" + json.dumps(payload, default=str)
     )
     # The current Gemini Interactions API is synchronous. The response schema stores text in output.
-    response = client.interactions.create(model="gemini-3.8-flash", input=instruction, timeout=300)
+    response = client.interactions.create(model="gemini-flash-lite-latest", input=instruction, timeout=120)
     data = response.model_dump(mode="json") if hasattr(response, "model_dump") else json.loads(str(response))
     texts: list[str] = []
 

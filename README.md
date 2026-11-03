@@ -2,6 +2,10 @@
 
 Purdue University — Mastering AI for Finance
 
+## Team
+
+Abraham Blaesing, Brody Oliver, and Doug Buckeridge.
+
 ## Run the desk
 
 The desk reads SEC filings and XBRL data, calculates ratios in Python, then calls four
@@ -39,3 +43,38 @@ Before submission, copy the course report-audit table into a Markdown file. Mark
 eleven core claims against the filings by hand, then audit every other Financial
 Analyst number, the five-part template, and the recommendation. Do not use AI for
 the audit marks.
+
+## Checkpoint 2 — LangGraph agent team
+
+Install the packages:
+
+```bash
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+Run the fixed graph on the Lab 04 case:
+
+```bash
+.venv/bin/python agent_team.py COST --peers WMT,TGT,BJ --price 904.70 --price-date 2026-09-23
+```
+
+Verify one saved run only:
+
+```bash
+.venv/bin/python agent_team.py --verify-only runs/cost-YYYYMMDDTHHMMSSZ
+```
+
+Create the two verifier tests from a saved run:
+
+```bash
+.venv/bin/python agent_team.py --seed-eps-error runs/cost-YYYYMMDDTHHMMSSZ
+.venv/bin/python agent_team.py --invented-growth-error runs/cost-YYYYMMDDTHHMMSSZ
+```
+
+The graph order is fixed in code:
+
+```text
+steps → Research Analyst → Financial Analyst → Investment Advisor → Strategy Manager → Verifier
+```
+
+Code decides the order, inputs, storage, and that the Verifier runs. Each model role decides only its analysis from its assigned state. Each run saves evidence, node inputs and outputs, report, and verified report in its own timestamped folder.
