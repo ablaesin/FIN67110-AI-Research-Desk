@@ -114,21 +114,24 @@
       }
     }
   },
-  "output": [
-    {
-      "claim": "diluted EPS",
-      "mark": "Wrong",
-      "correction": "20.76 (XBRL `earnings-release per-share line`, period latest earnings release)"
-    },
-    {
-      "claim": "revenue",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "net income",
-      "mark": "Correct",
-      "correction": ""
-    }
-  ]
+  "output": {
+    "code_marks": [
+      {
+        "claim": "diluted EPS",
+        "mark": "Wrong",
+        "correction": "20.76 (XBRL `earnings-release per-share line`, period latest earnings release)"
+      },
+      {
+        "claim": "revenue",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "net income",
+        "mark": "Correct",
+        "correction": ""
+      }
+    ],
+    "semantic_check": "- **Supported**: Total revenue for the fiscal year ended August 30, 2026, of $303,154,000,000 (net sales of $297,247,000,000 and membership fees of $5,907,000,000), net income of $9,226,000,000, diluted EPS of $20.76 (reported in the Earnings Release as $20.76 for FY 2026, though the compiled report's text mentions \"$21.76\" in several places, which is not supported by the primary FY 2026 diluted EPS figure in the 10-K/Earnings Release table of $20.76).\n- **Supported**: Balance sheet figures (total assets $89,045,000,000, stockholders' equity $35,803,000,000, merchandise inventories $19,324,000,000, operating cash flow $15,817,000,000 / $15,825,000,000, and capital expenditures $6,435,000,000).\n- **Supported**: Warehouse count (939 worldwide as of August 30, 2026).\n- **Supported**: Paid members (84,100,000) and total cardholders (150,400,000) for 2026.\n- **Supported**: Revenue growth of 10.15% (calculated from $275,235,000,000 to $303,154,000,000).\n- **Unverified / Discrepancy**: Diluted EPS for FY 2026 is cited as $21.76 in multiple places within the report text, whereas the Earnings Release and financial statements explicitly report diluted net income per common share for the fiscal year ended August 30, 2026, as $20.76."
+  }
 }

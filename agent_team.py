@@ -63,6 +63,13 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
         context["evidence"] = state["evidence"]
         payload = {"task": task, "context": context, "expected_output": expected}
         output = desk.model_call(genai.Client(api_key=__import__("os").environ["API_KEY"]), name.replace("_", " ").title(), task, context, expected, role_text(name))
+        if name == "strategy_manager":
+            missing = [section for section in SECTION_NAMES if section.lower() not in output.lower()]
+            if missing:
+                retry_task = task + ". The first draft omitted: " + "; ".join(missing) + ". Return one complete corrected report. This is the single permitted retry."
+                output = desk.model_call(genai.Client(api_key=os.environ["API_KEY"]), "Strategy Manager", retry_task, context, expected, role_text(name))
+                if [section for section in SECTION_NAMES if section.lower() not in output.lower()]:
+                    raise RuntimeError("Strategy Manager used its one retry and still omitted a required section.")
         if output_key == "report":
             sources = state["evidence"]["sources"]
             output = (f"{state['ticker']} — filings: 10-K {sources['latest_10k']['accession']}; "
@@ -112,11 +119,17 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
     print("verifier")
     run_dir, report, evidence = Path(state["run_dir"]), state["report"], state["evidence"]
     marks = verifier_marks(report, evidence)
+    desk.load_env()
+    semantic_check = desk.model_call(
+        genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
+        "Check the cited factual claims only. Do not assess the Investment Recommendation thesis.",
+        {"compiled_report": report, "saved_filing_evidence": evidence},
+        "A concise Markdown list of semantic support concerns.", role_text("verifier"))
     rows = "\n".join(f"| {m['claim']} | {m['mark']} | {m['correction'] or '—'} |" for m in marks)
     first, *rest = report.splitlines()
     verified = "\n".join([first, "", "## Verifier marks", "| Claim | Mark | Correction and source |", "|---|---|---|", rows, "", *rest])
     (run_dir / "verified_report.md").write_text(verified, encoding="utf-8")
-    save_node(run_dir, "verifier", {"input": {"report": report, "facts": evidence.get("annual_numbers", {})}, "output": marks})
+    save_node(run_dir, "verifier", {"input": {"report": report, "facts": evidence.get("annual_numbers", {})}, "output": {"code_marks": marks, "semantic_check": semantic_check}})
     return {"verified_report": verified}
 
 

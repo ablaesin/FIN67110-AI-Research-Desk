@@ -114,26 +114,29 @@
       }
     }
   },
-  "output": [
-    {
-      "claim": "diluted EPS",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "revenue",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "net income",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "revenue-growth ratio",
-      "mark": "Wrong",
-      "correction": "10.14% from the quoted inputs"
-    }
-  ]
+  "output": {
+    "code_marks": [
+      {
+        "claim": "diluted EPS",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "revenue",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "net income",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "revenue-growth ratio",
+        "mark": "Wrong",
+        "correction": "10.14% from the quoted inputs"
+      }
+    ],
+    "semantic_check": "- **Claim:** Total revenue for the fiscal year ended August 30, 2026, was $303,154,000,000, consisting of $297,247,000,000 in net sales and $5,907,000,000 in membership fees.\n  - **Status:** Supported (Earnings Release / Consolidated Statements of Income report total revenue of $303,154 million, net sales of $297,247 million, and membership fees of $5,907 million for the 52 weeks ended August 30, 2026).\n\n- **Claim:** Net income for fiscal year 2026 reached $9,226,000,000, or $20.76 per diluted share.\n  - **Status:** Supported (Earnings Release / Consolidated Statements of Income report net income of $9,226 million and diluted earnings per share of $20.76 for the 52 weeks ended August 30, 2026).\n\n- **Claim:** Total revenue grew by 10.15% to $303,154,000,000 from $275,235,000,000 in fiscal 2025.\n  - **Status:** Supported (Earnings Release / Consolidated Statements of Income show FY26 total revenue of $303,154 million and FY25 total revenue of $275,235 million; calculation $(303,154 - 275,235) / 275,235 \\approx 10.143\\%$).\n\n- **Claim:** Paid members increased from 81,000,000 in 2025 to 84,100,000 in 2026, and executive members represented 42,300,000 of total paid members.\n  - **Status:** Supported (Form 10-K, Item 1 reports 84,100 thousand paid members in 2026, 81,000 thousand in 2025, and 42,300 thousand executive members in 2026).\n\n- **Claim:** Global member renewal rates stood at 89.8%, with the U.S. and Canada renewal rate at 92.3%.\n  - **Status:** Supported (Form 10-K, Item 1 reports a worldwide member renewal rate of 89.8% and a U.S. and Canada rate of 92.3% at the end of 2026).\n\n- **Claim:** Stock price of $904.70 as of September 23, 2026, and P/E ratio of approximately 43.57x.\n  - **Status:** Supported (Evidence provides price value of $904.70 on 2026-09-23; $904.70 / $20.76 diluted EPS $\\approx$ 43.579x).\n\n- **Claim:** Net cash provided by operating activities of $15,817,000,000 (or $15,825,000,000 per cash flow statement) and free cash flow of $9,382,000,000 after accounting for $6,435,000,000 in additions to property and equipment.\n  - **Status:** Supported (Form 10-K / Cash Flow Statement reports $15,825 million operating cash flow, $6,435 million property/equipment additions, and code-calculated free cash flow of $9,382 million; Item 7 references operating cash flow of $15,817 million).\n\n- **Claim:** Total assets of $89,045,000,000, stockholders' equity of $35,803,000,000, and a current ratio of 1.06.\n  - **Status:** Supported (Earnings Release / Balance Sheet reports total assets of $89,045 million and stockholders' equity of $35,803 million as of August 30, 2026; current ratio calculated as $46,582 / $43,952 $\\approx$ 1.0598).\n\n- **Claim:** U.S. and Canadian operations representing 86% of net sales and 83% of operating income in 2026, and California alone comprising 26% of U.S. net sales.\n  - **Status:** Supported (Form 10-K, Item 1A reports 86% of net sales and 83% of operating income for U.S. and Canadian operations, and 26% of U.S. net sales for California in 2026).\n\n- **Claim:** Inventories totaled $19,324,000,000 at the end of fiscal year 2026.\n  - **Status:** Supported (Earnings Release / Balance Sheet reports merchandise inventories of $19,324 million as of August 30, 2026)."
+  }
 }

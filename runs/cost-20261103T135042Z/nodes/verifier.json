@@ -114,21 +114,24 @@
       }
     }
   },
-  "output": [
-    {
-      "claim": "diluted EPS",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "revenue",
-      "mark": "Correct",
-      "correction": ""
-    },
-    {
-      "claim": "net income",
-      "mark": "Correct",
-      "correction": ""
-    }
-  ]
+  "output": {
+    "code_marks": [
+      {
+        "claim": "diluted EPS",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "revenue",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "net income",
+        "mark": "Correct",
+        "correction": ""
+      }
+    ],
+    "semantic_check": "- **Supported**: Total revenue of $303,154,000,000, net sales of $297,247,000,000, membership fees of $5,907,000,000, and net income of $9,226,000,000 ($20.76 diluted EPS) for the fiscal year ended August 30, 2026.\n- **Supported**: Paid members of 84,100,000 and total cardholders of 150,400,000 as of August 30, 2026.\n- **Supported**: Cash provided by operating activities of $15,817,000,000 (Form 10-K) / $15,825,000,000 (Earnings Release), capital expenditures (additions to property and equipment) of $6,435,000,000, and free cash flow of $9,382,000,000 for fiscal year 2026.\n- **Supported**: Balance sheet items as of August 30, 2026: total assets of $89,045,000,000, stockholders' equity of $35,803,000,000, and merchandise inventories of $19,324,000,000.\n- **Supported**: Stock price of $904.70 as of September 23, 2026, and resulting P/E ratio of ~43.57x based on FY 2026 diluted EPS of $20.76.\n- **Supported**: Return on assets of 10.36% and current ratio of 1.06 (code calculated as 1.0598)."
+  }
 }
