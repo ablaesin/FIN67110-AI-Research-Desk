@@ -115,9 +115,18 @@ def find_facts(body: str, url: str) -> dict[str, Any]:
 
 def exclusion_reason(body: str) -> str:
     low = body.lower()
-    if "investment company" in low or "closed-end fund" in low or "mutual fund" in low:
+    def stated_as(term: str) -> bool:
+        """Return true only for an affirmative description, not 'not an investment company'."""
+        for match in re.finditer(re.escape(term), low):
+            before = low[max(0, match.start() - 90):match.start()]
+            if re.search(r"\b(?:not|no)\s+(?:an?\s+)?$", before):
+                continue
+            if re.search(r"\b(?:is|are|was|were|as|a|an|the)\s+(?:registered\s+)?$", before):
+                return True
+        return False
+    if any(stated_as(term) for term in ("investment company", "closed-end fund", "mutual fund")):
         return "fund registrant"
-    if "shell company" in low or "blank check company" in low:
+    if any(stated_as(term) for term in ("shell company", "blank check company")):
         return "shell company"
     if "information statement" not in low:
         return "Form 10 has no information statement"

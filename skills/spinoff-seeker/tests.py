@@ -40,6 +40,10 @@ class SeekerRules(unittest.TestCase):
         self.assertEqual(seeker.exclusion_reason("This is a registered investment company."), "fund registrant")
         self.assertEqual(seeker.exclusion_reason("Ordinary Form 10 text."), "Form 10 has no information statement")
 
+    def test_not_an_investment_company_is_not_dropped_as_a_fund(self):
+        body = "The registrant is not an investment company and is not a shell company. Information statement."
+        self.assertEqual(seeker.exclusion_reason(body), "")
+
     def test_no_parent_distribution_evidence_is_not_a_spinoff(self):
         facts = seeker.find_facts("Information statement about ordinary registration.", "https://example.test")
         self.assertFalse(facts["parent"] or facts["distribution_date"] or facts["distribution_ratio"])
