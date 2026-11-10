@@ -31,7 +31,7 @@ Strategy Manager. It writes its evidence and a five-part Markdown report in `run
    contain a market close.
 
    ```bash
-   .venv/bin/python desk.py TICKER --peers PEER1,PEER2,PEER3 --price 123.45 --price-date YYYY-MM-DD
+   .venv/bin/python desk.py TICKER --peers PEER1,PEER2,PEER3 --price 123.45 --price-date YYYY-MM-DD --price-source "LSEG Workspace export"
    ```
 
 The report file begins with the filing accession numbers and run time. The matching
@@ -55,7 +55,7 @@ Install the packages:
 Run the fixed graph on the Lab 04 case:
 
 ```bash
-.venv/bin/python agent_team.py COST --peers WMT,TGT,BJ --price 904.70 --price-date 2026-09-23
+.venv/bin/python agent_team.py COST --peers WMT,TGT,BJ --price 904.70 --price-date 2026-09-23 --price-source "LSEG Workspace export"
 ```
 
 Verify one saved run only:

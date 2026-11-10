@@ -28,5 +28,9 @@ The closes reader uses an LSEG or WRDS CSV export stored outside the repository.
 `ticker,date,close`; the `close` must be the official daily close, not an adjusted close.
 
 ```bash
-.venv/bin/python skills/spinoff-seeker/closes_reader.py TICKER YYYY-MM-DD --csv /path/outside/repo/closes.csv
+.venv/bin/python skills/spinoff-seeker/closes_reader.py TICKER 2026-11-10T11:32:12Z --csv /path/outside/repo/closes.csv
 ```
+
+Use the EDGAR Accepted time where the task needs the last close before a filing. The reader treats
+a close as occurring at 4:00 PM Eastern and therefore returns the prior trading day's close for a
+pre-market filing.

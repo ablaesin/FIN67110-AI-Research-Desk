@@ -35,14 +35,13 @@ Each member creates a local `.env`. Never commit it and never send an API key in
 
 ## This week's live record
 
-- Target: CoreWeave, Inc. (`CRWV`). Nasdaq's Nov. 10, 2026 earnings calendar lists it after
-  hours.
-- Wait for its EDGAR 8-K and Exhibit 99.1. Record the EDGAR `Accepted` time on the filing index
-  page. Do not use the earnings-calendar time as the filing time.
-- The desk must run on the release and the verified report must go to Brightspace → Live record
-  within 24 hours of that Accepted time.
-- If CoreWeave does not file an earnings release this week, select another company that files an
-  earnings release during Nov. 9–15 and repeat the same rule.
+- Target: TransDigm Group Incorporated (`TDG`). Its Nov. 10, 2026 8-K with Items 2.02 and 9.01
+  was accepted by EDGAR at 6:32:12 AM Eastern. Its earnings release is Exhibit 99.1:
+  <https://www.sec.gov/Archives/edgar/data/1260221/000126022126000073/tdg-20261110.htm>
+- The last official close before that pre-market release was $1,218.85 on Nov. 9, 2026, from the
+  LSEG Workspace `TDG.N` regular-close export.
+- A verified report is saved locally in `runs/tdg-20261110T151542Z/verified_report.md`.
+- Upload that verified report to Brightspace → Live record by **6:32:12 AM Eastern on Nov. 11**.
 
 ## Initial work owners
 

@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import unittest
-from datetime import date
+from datetime import date, datetime, timezone
 from pathlib import Path
 import sys
 import tempfile
@@ -53,6 +53,13 @@ class SeekerRules(unittest.TestCase):
             export = Path(folder) / "closes.csv"
             export.write_text("ticker,date,close\nABC,2026-10-02,10\nABC,2026-10-05,11\n", encoding="utf-8")
             self.assertEqual(closes_reader.last_close(export, "abc", date(2026, 10, 3)), (date(2026, 10, 2), 10.0))
+
+    def test_pre_market_filing_uses_prior_trading_day_close(self):
+        with tempfile.TemporaryDirectory() as folder:
+            export = Path(folder) / "closes.csv"
+            export.write_text("ticker,date,close\nABC,2026-11-09,10\nABC,2026-11-10,11\n", encoding="utf-8")
+            accepted = datetime(2026, 11, 10, 11, 32, 12, tzinfo=timezone.utc)
+            self.assertEqual(closes_reader.last_close(export, "ABC", accepted), (date(2026, 11, 9), 10.0))
 
 
 if __name__ == "__main__":

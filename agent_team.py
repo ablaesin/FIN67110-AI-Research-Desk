@@ -180,6 +180,7 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
         genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
         "Check cited factual claims only. Do not assess the Investment Recommendation thesis. "
         "Treat a number as Correct when it agrees after ordinary display rounding (for example, 10.1% versus 10.128%, or 3.85% versus 3.8545%). "
+        "A price claim is supported when it matches saved_facts.price value and date, and its source is saved_facts.price source; a price is not expected to appear in an SEC filing. "
         "Do not invent a different number or source; quote the supplied source when marking Wrong or Unsupported.",
         {"compiled_report": report, "saved_facts": evidence, "saved_filing_texts": filing_texts},
         "A Markdown table that marks every sourced numeric claim Correct, Wrong, or Unsupported, with a correction and source for each Wrong or Unsupported claim.", role_text("verifier"))
@@ -217,6 +218,7 @@ def main() -> None:
     parser.add_argument("--peers")
     parser.add_argument("--price", type=float)
     parser.add_argument("--price-date")
+    parser.add_argument("--price-source")
     parser.add_argument("--verify-only", type=Path)
     parser.add_argument("--seed-eps-error", type=Path, metavar="RUN", help="Copy RUN, raise diluted EPS by $1, then verify the copy.")
     parser.add_argument("--invented-growth-error", type=Path, metavar="RUN", help="Copy RUN, add a growth claim four points too high, then verify the copy.")
@@ -263,14 +265,14 @@ def main() -> None:
         node_verifier({"run_dir": str(seeded), "report": report, "evidence": evidence})
         print(seeded / "verified_report.md")
         return
-    if not args.ticker or not args.peers or args.price is None or not args.price_date:
-        raise SystemExit("Provide TICKER --peers PEER1,PEER2 --price PRICE --price-date YYYY-MM-DD.")
+    if not args.ticker or not args.peers or args.price is None or not args.price_date or not args.price_source:
+        raise SystemExit("Provide TICKER --peers PEER1,PEER2 --price PRICE --price-date YYYY-MM-DD --price-source SOURCE.")
     # Reuse the audited seven code steps to collect and save SEC evidence. The fallback mode makes
     # no model calls; the LangGraph below is the only agent workflow used for the final report.
     desk.load_env()
     before = set(RUNS.glob(f"{args.ticker.lower()}-*"))
     subprocess.run([sys.executable, str(ROOT / "desk.py"), args.ticker, "--peers", args.peers,
-                    "--price", str(args.price), "--price-date", args.price_date, "--fallback"],
+                    "--price", str(args.price), "--price-date", args.price_date, "--price-source", args.price_source, "--fallback"],
                    check=True, cwd=ROOT)
     created = sorted(set(RUNS.glob(f"{args.ticker.lower()}-*")) - before)
     if len(created) != 1:

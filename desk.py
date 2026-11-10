@@ -273,6 +273,7 @@ def main() -> None:
     parser.add_argument("--peers", required=True, help="Comma-separated peer tickers")
     parser.add_argument("--price", type=float, required=True, help="Last close before the earnings release")
     parser.add_argument("--price-date", required=True, help="Date of that close, YYYY-MM-DD")
+    parser.add_argument("--price-source", required=True, help="Declared source for the official close, for example LSEG Workspace export")
     parser.add_argument("--fallback", action="store_true", help="Write the course-approved outage fallback report without model calls")
     args = parser.parse_args()
 
@@ -329,7 +330,8 @@ def main() -> None:
         "annual_numbers": numbers,
         "ratios_calculated_in_code": ratios,
         "revenue_history": revenue_history,
-        "price": {"value": args.price, "date": args.price_date, "definition": "last close before the earnings release"},
+        "price": {"value": args.price, "date": args.price_date, "source": args.price_source,
+                  "definition": "last close before the earnings release"},
         "peers": peer_summary,
         "business_and_mda_excerpt": ten_k_text[:40000],
         "latest_10q_excerpt": ten_q_text[:12000],
@@ -380,7 +382,7 @@ def main() -> None:
         header = f"{filing_line}\nfallback\n\n# {ticker} Research Desk Report\n\nRun time (UTC): {datetime.now(timezone.utc).isoformat()}\n\n"
     else:
         header = f"# {ticker} Research Desk Report\n\n{filing_line}\n\nRun time (UTC): {datetime.now(timezone.utc).isoformat()}\n\n"
-    footer = "\n\n---\n\nThis is a learning exercise, not financial advice.\n\nAI assistance: Google Gemini. I verified the sources myself; the judgments are mine.\n\nAny remaining errors are my own.\n"
+    footer = "\n\n---\n\nThis is a learning exercise, not financial advice.\n\nAI assistance: Google Gemini. Review the listed filing and price sources before relying on this report.\n\nAny remaining errors are our own.\n"
     report_path = run_dir / "report.md"
     report_path.write_text(header + report + footer, encoding="utf-8")
     print(f"Saved evidence: {run_dir / 'evidence.json'}")
