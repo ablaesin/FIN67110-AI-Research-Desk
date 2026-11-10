@@ -1,0 +1,12 @@
+{
+  "window_days": 180,
+  "factors": [
+    {
+      "name": "WRITE_THIS_FACTOR_BY_HAND",
+      "direction": "higher",
+      "weight": 1,
+      "chapter": "WRITE_THE_BOOK_CHAPTER_BY_HAND",
+      "field": "WRITE_THE_REGISTRY_FIELD_TO_SCORE"
+    }
+  ]
+}

@@ -4,7 +4,7 @@ Purdue University — Mastering AI for Finance
 
 ## Team
 
-Abraham Blaesing, Brody Oliver, and Doug Buckeridge.
+Abraham Blaesing, Brody Oliver, and Gabriel DePalma.
 
 ## Run the desk
 
@@ -78,3 +78,15 @@ steps → Research Analyst → Financial Analyst → Investment Advisor → Stra
 ```
 
 Code decides the order, inputs, storage, and that the Verifier runs. Each model role decides only its analysis from its assigned state. Each run saves evidence, node inputs and outputs, report, and verified report in its own timestamped folder.
+
+## Lab 06 — Spinoff seeker
+
+The Lab 06 skill is in `skills/spinoff-seeker/`. Complete the factors file by hand, as the lab requires, then run:
+
+```bash
+cp skills/spinoff-seeker/factors.template.json skills/spinoff-seeker/factors.json
+.venv/bin/python skills/spinoff-seeker/tests.py
+.venv/bin/python skills/spinoff-seeker/seeker.py 2025-11-10
+```
+
+The seeker sends the required `SEC_USER_AGENT`, reads EDGAR full indexes and Form 10 filings, saves a dated registry and screen, and preserves unknown facts as blank. See its `SKILL.md` for its limits and close-reader command.

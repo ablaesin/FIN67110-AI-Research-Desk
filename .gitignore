@@ -2,5 +2,6 @@
 .venv/
 __pycache__/
 runs/
+skills/spinoff-seeker/output/
+skills/spinoff-seeker/factors.json
 *.pyc
-
