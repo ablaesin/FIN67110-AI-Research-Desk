@@ -81,7 +81,9 @@ Code decides the order, inputs, storage, and that the Verifier runs. Each model 
 
 ## Lab 06 — Spinoff seeker
 
-The Lab 06 skill is in `skills/spinoff-seeker/`. Complete the factors file by hand, as the lab requires, then run:
+The Lab 06 skill is in `skills/spinoff-seeker/`. The project records for the worksheet, model
+cutoff check, and factor-check plan are in `lab06/`. Review the factor file before relying on a
+rank, then run:
 
 ```bash
 cp skills/spinoff-seeker/factors.template.json skills/spinoff-seeker/factors.json

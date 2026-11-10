@@ -62,3 +62,17 @@ These are starting roles. The team can change them in a commit.
 The factor file is a chapter-based, equal-weight starting hypothesis. It is not validated. The
 seeker must leave a name unranked when it lacks a required fact or official close. It must never
 estimate a fact. Every report ends: `screens, not recommendations`.
+
+## Week 4 project records
+
+- Worksheet method, rates, purchase-size rule, and conviction rule:
+  `lab06/worksheet-method.md`.
+- Six-part persona files: `roles/research_analyst.md`, `roles/financial_analyst.md`, and
+  `roles/investment_advisor.md`.
+- Team-owned factor check: `lab06/factor-check-plan.md`.
+- Fresh no-tool model cutoff check: `lab06/model-cutoff-check.md`.
+- Requirement-by-requirement status: `lab06/week4-readiness.md`.
+
+The team states that the instructor has permitted AI assistance for this project work. These files
+record the work transparently. They do not claim that a named teammate personally completed work
+that they did not complete.

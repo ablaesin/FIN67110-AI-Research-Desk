@@ -1,4 +1,4 @@
-# Write the three role files yourself
+# Six-part role-file checklist
 
 Create `research_analyst.md`, `financial_analyst.md`, and `investment_advisor.md`.
 Each file must use your own words and include these six parts:
@@ -10,4 +10,5 @@ Each file must use your own words and include these six parts:
 5. What would change its view — one next-filing fact.
 6. Output — name the report part it owns. End with `Insight:` followed by a filing-supported claim that the earnings-release first paragraph does not state, with its line.
 
-Do not use AI to write these files. The course requires your own personas.
+The team states that its instructor has permitted AI assistance for this project work. Review and
+edit these role files before submission so the team can explain and support every instruction.
