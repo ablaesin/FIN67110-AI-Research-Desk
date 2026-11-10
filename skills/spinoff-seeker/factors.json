@@ -1,0 +1,46 @@
+{
+  "window_days": 180,
+  "hypothesis": "A spinoff can trade below value in its first months when holders sell for reasons unrelated to value. This is a screen to prioritize filing review, not a recommendation or a validated return forecast.",
+  "factors": [
+    {
+      "name": "small relative to parent",
+      "direction": "lower",
+      "weight": 1,
+      "chapter": "Greenblatt (1997), Chapter 3, on spinoffs; Klarman (1991), Chapter 10, pages on spinoffs",
+      "field": "relative_size_to_parent_market_value",
+      "definition": "New company's market value divided by the parent's market value at distribution. Lower is better because the parent holders can be less likely to keep a small unwanted position."
+    },
+    {
+      "name": "weakness in first weeks",
+      "direction": "lower",
+      "weight": 1,
+      "chapter": "Greenblatt (1997), Chapter 3, on spinoffs; Klarman (1991), Chapter 10, pages on spinoffs",
+      "field": "return_since_distribution_pct",
+      "definition": "Return from the first official close after distribution through the screen price date. Lower is better because forced or indifferent selling can still be under way."
+    },
+    {
+      "name": "few analysts",
+      "direction": "lower",
+      "weight": 1,
+      "chapter": "Greenblatt (1997), Chapter 3, on spinoffs",
+      "field": "analyst_coverage_count",
+      "definition": "Count of named sell-side analysts or firms identified in a declared source on the screen date. Lower is better because the new company can have less initial coverage."
+    },
+    {
+      "name": "insiders buying",
+      "direction": "higher",
+      "weight": 1,
+      "chapter": "Greenblatt (1997), Chapter 3, on spinoffs",
+      "field": "insider_purchase_count",
+      "definition": "Count of Form 4 open-market or private purchases with transaction code P after distribution. Higher is better."
+    },
+    {
+      "name": "small absolute size",
+      "direction": "lower",
+      "weight": 1,
+      "chapter": "Greenblatt (1997), Chapter 3, on spinoffs; Klarman (1991), Chapter 10, pages on spinoffs",
+      "field": "market_value_usd",
+      "definition": "New company's market value on the screen price date. Lower is better because a small issue can be outside the mandate of some holders."
+    }
+  ]
+}
