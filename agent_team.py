@@ -138,6 +138,9 @@ def retry_task(role: str, output_key: str):
 def number_forms(value: Any) -> set[str]:
     value = float(value)
     forms = {str(value), f"{value:.2f}", f"${value:.2f}", f"${value / 1_000_000_000:.3f} billion", f"${value / 1_000_000_000:.2f} billion"}
+    if value < 0:
+        absolute = abs(value)
+        forms.update({f"-${absolute:.2f}", f"-${absolute:,.0f}", f"-${absolute / 1_000_000_000:.3f} billion", f"-${absolute / 1_000_000_000:.2f} billion"})
     if value.is_integer():
         forms.update({f"{value:,.0f}", f"${value:,.0f}"})
     return forms

@@ -1,0 +1,580 @@
+{
+  "ticker": "AMPX",
+  "company": "Amprius Technologies, Inc.",
+  "sources": {
+    "latest_10k": {
+      "accession": "0001899287-26-000015",
+      "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000015/ampx-20251231.htm"
+    },
+    "latest_10q": {
+      "accession": "0001899287-26-000059",
+      "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000059/ampx-20260630.htm"
+    },
+    "earnings_release": {
+      "accession": "0001899287-26-000069",
+      "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000069/ampx-2026x11x03x8kex991.htm"
+    },
+    "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001899287.json"
+  },
+  "annual_numbers": {
+    "revenue": {
+      "label": "revenue",
+      "value": 73011000,
+      "unit": "",
+      "tag": "Revenues",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "operating_income": {
+      "label": "operating_income",
+      "value": -46646000,
+      "unit": "",
+      "tag": "OperatingIncomeLoss",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "net_income": {
+      "label": "net_income",
+      "value": -44024000,
+      "unit": "",
+      "tag": "NetIncomeLoss",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "assets": {
+      "label": "assets",
+      "value": 156891000,
+      "unit": "",
+      "tag": "Assets",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "liabilities": {
+      "label": "liabilities",
+      "value": 53076000,
+      "unit": "",
+      "tag": "Liabilities",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "equity": {
+      "label": "equity",
+      "value": 103815000,
+      "unit": "",
+      "tag": "StockholdersEquity",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "cash_from_operations": {
+      "label": "cash_from_operations",
+      "value": -31134000,
+      "unit": "",
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "capital_expenditures": {
+      "label": "capital_expenditures",
+      "value": 4400000,
+      "unit": "",
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "diluted_eps": {
+      "label": "diluted_eps",
+      "value": -0.35,
+      "unit": "",
+      "tag": "EarningsPerShareDiluted",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "current_assets": {
+      "label": "current_assets",
+      "value": 126437000,
+      "unit": "",
+      "tag": "AssetsCurrent",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    },
+    "current_liabilities": {
+      "label": "current_liabilities",
+      "value": 17869000,
+      "unit": "",
+      "tag": "LiabilitiesCurrent",
+      "period_end": "2025-12-31",
+      "filed": "2026-03-06",
+      "accession": "0001899287-26-000015",
+      "form": "10-K"
+    }
+  },
+  "ratios_calculated_in_code": {
+    "operating_margin": {
+      "formula": "operating_income / revenue",
+      "value": -0.63889
+    },
+    "net_margin": {
+      "formula": "net_income / revenue",
+      "value": -0.602978
+    },
+    "return_on_assets": {
+      "formula": "net_income / assets",
+      "value": -0.280602
+    },
+    "current_ratio": {
+      "formula": "current_assets / current_liabilities",
+      "value": 7.075774
+    },
+    "free_cash_flow": {
+      "formula": "cash_from_operations - capital_expenditures",
+      "value": -35534000.0
+    }
+  },
+  "revenue_history": [
+    {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "val": 73011000,
+      "accn": "0001899287-26-000015",
+      "fy": 2025,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2026-03-06",
+      "frame": "CY2025",
+      "tag": "Revenues"
+    },
+    {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "val": 71911000,
+      "accn": "0001899287-26-000015",
+      "fy": 2025,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2026-03-06",
+      "frame": "CY2025",
+      "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+    }
+  ],
+  "price": {
+    "value": 9.17,
+    "date": "2026-11-10",
+    "source": "ChartExchange historical daily close",
+    "definition": "last close before the earnings release"
+  },
+  "peers": {
+    "QS": {
+      "numbers": {
+        "operating_income": {
+          "label": "operating_income",
+          "value": -472604000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": -435050000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 1308156000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "label": "liabilities",
+          "value": 139183000,
+          "unit": "",
+          "tag": "Liabilities",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 1168973000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": -242473000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "capital_expenditures": {
+          "label": "capital_expenditures",
+          "value": 36277000,
+          "unit": "",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": -0.76,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 981642000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 61546000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001193125-26-071556",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": -0.332567
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 15.949729
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": -278750000.0
+        }
+      }
+    },
+    "ENVX": {
+      "numbers": {
+        "revenue": {
+          "label": "revenue",
+          "value": 31821000,
+          "unit": "",
+          "tag": "Revenues",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "label": "operating_income",
+          "value": -177254000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": -156741000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 878975000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "label": "liabilities",
+          "value": 604964000,
+          "unit": "",
+          "tag": "Liabilities",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 271214000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": -95291000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "capital_expenditures": {
+          "label": "capital_expenditures",
+          "value": 18223000,
+          "unit": "",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": -0.75,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 542210000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 65016000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2025-12-28",
+          "filed": "2026-02-25",
+          "accession": "0001828318-26-000006",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "operating_margin": {
+          "formula": "operating_income / revenue",
+          "value": -5.570347
+        },
+        "net_margin": {
+          "formula": "net_income / revenue",
+          "value": -4.925709
+        },
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": -0.178322
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 8.339639
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": -113514000.0
+        }
+      }
+    },
+    "SLDP": {
+      "numbers": {
+        "revenue": {
+          "label": "revenue",
+          "value": 21747000,
+          "unit": "",
+          "tag": "Revenues",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "label": "operating_income",
+          "value": -100832000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": -93410000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 455092000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "label": "liabilities",
+          "value": 38918000,
+          "unit": "",
+          "tag": "Liabilities",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 415704000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": -73393000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "capital_expenditures": {
+          "label": "capital_expenditures",
+          "value": 10209000,
+          "unit": "",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": -0.51,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 267427000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 16795000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2025-12-31",
+          "filed": "2026-02-25",
+          "accession": "0001104659-26-019435",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "operating_margin": {
+          "formula": "operating_income / revenue",
+          "value": -4.636594
+        },
+        "net_margin": {
+          "formula": "net_income / revenue",
+          "value": -4.295305
+        },
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": -0.205255
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 15.923013
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": -83602000.0
+        }
+      }
+    }
+  },
+  "business_and_mda_excerpt": "ampx-20251231 0001899287 2025 FY false http://fasb.org/us-gaap/2025#NonoperatingIncomeExpense iso4217:USD xbrli:shares iso4217:USD xbrli:shares xbrli:pure ampx:platform ampx:vote ampx:day ampx:extensionOption ampx:lease utr:sqft 0001899287 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 ampx:RedeemableWarrantsMember 2025-01-01 2025-12-31 0001899287 2025-06-30 0001899287 2026-02-27 0001899287 2025-12-31 0001899287 2024-12-31 0001899287 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2023-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2023-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-12-31 0001899287 us-gaap:RetainedEarningsMember 2023-12-31 0001899287 2023-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2024-01-01 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-01-01 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-01-01 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-12-31 0001899287 ampx:AmpriusHoldingsMember 2024-10-23 0001899287 ampx:EquityIncentivePlansMember us-gaap:EmployeeStockOptionMember 2025-01-01 2025-12-31 0001899287 ampx:EquityIncentivePlansMember us-gaap:RestrictedStockUnitsRSUMember 2025-01-01 2025-12-31 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2025-12-31 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2024-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:AccountsReceivableMember 2025-01-01 2025-12-31 0001899287 ampx:CustomerTwoMember us-gaap:CustomerConcentrationRiskMember us-gaap:AccountsReceivableMember 2024-01-01 2024-12-31 0001899287 srt:MinimumMember ampx:ProductionEquipmentMember 2025-12-31 0001899287 srt:MaximumMember ampx:ProductionEquipmentMember 2025-12-31 0001899287 ampx:LaboratoryEquipmentMember 2025-12-31 0001899287 srt:MinimumMember us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 srt:MaximumMember us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 srt:NorthAmericaMember 2025-01-01 2025-12-31 0001899287 srt:NorthAmericaMember 2024-01-01 2024-12-31 0001899287 us-gaap:EMEAMember 2025-01-01 2025-12-31 0001899287 us-gaap:EMEAMember 2024-01-01 2024-12-31 0001899287 srt:AsiaPacificMember 2025-01-01 2025-12-31 0001899287 srt:AsiaPacificMember 2024-01-01 2024-12-31 0001899287 country:UA 2025-01-01 2025-12-31 0001899287 country:UA 2024-01-01 2024-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2025-01-01 2025-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2024-01-01 2024-12-31 0001899287 ampx:CustomerTwoMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2024-01-01 2024-12-31 0001899287 ampx:CustomerThreeMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2024-01-01 2024-12-31 0001899287 ampx:SaleOfBatteryProductsMember 2025-01-01 2025-12-31 0001899287 ampx:SaleOfBatteryProductsMember 2024-01-01 2024-12-31 0001899287 ampx:CustomizedDesignServicesMember 2025-01-01 2025-12-31 0001899287 ampx:CustomizedDesignServicesMember 2024-01-01 2024-12-31 0001899287 us-gaap:TransferredAtPointInTimeMember 2025-01-01 2025-12-31 0001899287 us-gaap:TransferredAtPointInTimeMember 2024-01-01 2024-12-31 0001899287 2024-01-01 0001899287 2023-01-01 0001899287 2026-01-01 2025-12-31 0001899287 ampx:ProductionEquipmentMember 2025-12-31 0001899287 ampx:ProductionEquipmentMember 2024-12-31 0001899287 ampx:LaboratoryEquipmentMember 2024-12-31 0001899287 us-gaap:LeaseholdImprovementsMember 2025-12-31 0001899287 us-gaap:LeaseholdImprovementsMember 2024-12-31 0001899287 us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 us-gaap:FurnitureAndFixturesMember 2024-12-31 0001899287 us-gaap:ConstructionInProgressMember 2025-12-31 0001899287 us-gaap:ConstructionInProgressMember 2024-12-31 0001899287 us-gaap:ConstructionInProgressMember 2025-01-01 2025-12-31 0001899287 ampx:TwentyTwentyTwoEquityIncentivePlanMember 2025-12-31 0001899287 ampx:EquityIncentivePlansMember 2025-01-01 2025-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2024-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2024-01-01 2024-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2025-01-01 2025-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2025-12-31 0001899287 ampx:TwentyTwentyTwoEquityIncentivePlanMember 2025-01-01 2025-12-31 0001899287 ampx:TwentyTwentyTwoEquityIncentivePlanMember 2024-01-01 2024-12-31 0001899287 ampx:AmpriusHoldingsSecondEquityIncentivePlanMember us-gaap:EmployeeStockOptionMember 2025-01-01 2025-12-31 0001899287 ampx:EquityIncentivePlansMember 2024-01-01 2024-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2024-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2025-01-01 2025-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2025-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2024-01-01 2024-12-31 0001899287 ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember us-gaap:EmployeeStockMember 2025-12-31 0001899287 us-gaap:EmployeeStockMember srt:MaximumMember ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember 2025-01-01 2025-12-31 0001899287 ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember us-gaap:EmployeeStockMember 2025-01-01 2025-12-31 0001899287 ampx:ExecutiveIncentiveCompensationPlanMember 2025-01-01 2025-12-31 0001899287 ampx:PublicWarrantsMember 2024-12-31 0001899287 ampx:PrivateWarrantsMember 2024-12-31 0001899287 ampx:PIPEWarrantsMember 2024-12-31 0001899287 ampx:PublicWarrantsMember 2025-01-01 2025-12-31 0001899287 ampx:PrivateWarrantsMember 2025-01-01 2025-12-31 0001899287 ampx:PIPEWarrantsMember 2025-01-01 2025-12-31 0001899287 ampx:PublicWarrantsMember 2025-12-31 0001899287 ampx:PrivateWarrantsMember 2025-12-31 0001899287 ampx:PIPEWarrantsMember 2025-12-31 0001899287 2024-05-13 0001899287 ampx:PublicWarrantsMember 2024-05-13 2024-05-13 0001899287 ampx:PrivateWarrantsMember 2024-05-13 2024-05-13 0001899287 ampx:PrivateWarrantsMember us-gaap:CommonStockMember 2024-06-24 2024-06-24 0001899287 ampx:PrivateWarrantsMember 2025-10-01 2025-12-31 0001899287 ampx:PrivateWarrantsMember 2024-06-24 2024-06-24 0001899287 2022-03-01 0001899287 ampx:PublicWarrantsMember 2022-09-14 2022-09-14 0001899287 ampx:PIPEWarrantsMember 2022-09-14 0001899287 ampx:PIPEWarrantsMember 2022-09-14 2022-09-14 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2023-10-02 2023-10-02 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2023-10-02 2025-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2023-10-02 2025-09-30 0001899287 us-gaap:CostOfSalesMember 2025-01-01 2025-12-31 0001899287 us-gaap:CostOfSalesMember 2024-01-01 2024-12-31 0001899287 us-gaap:ResearchAndDevelopmentExpenseMember 2025-01-01 2025-12-31 0001899287 us-gaap:ResearchAndDevelopmentExpenseMember 2024-01-01 2024-12-31 0001899287 us-gaap:SellingGeneralAndAdministrativeExpensesMember 2025-01-01 2025-12-31 0001899287 us-gaap:SellingGeneralAndAdministrativeExpensesMember 2024-01-01 2024-12-31 0001899287 country:CN 2025-01-01 2025-12-31 0001899287 us-gaap:DomesticCountryMember ampx:PostDecemberThirtyOneTwoThousandAndSeventeenMember 2025-12-31 0001899287 us-gaap:DomesticCountryMember ampx:PreJanuaryOneTwoThousandAndEighteenMember 2025-12-31 0001899287 us-gaap:StateAndLocalJurisdictionMember 2025-12-31 0001899287 us-gaap:ForeignCountryMember 2025-12-31 0001899287 us-gaap:DomesticCountryMember 2025-12-31 0001899287 srt:MinimumMember ampx:FremontCaliforniaLeaseMember 2025-12-31 0001899287 srt:MaximumMember ampx:FremontCaliforniaLeaseMember 2025-12-31 0001899287 srt:MinimumMember ampx:BrightonColoradoMember 2025-12-31 0001899287 srt:MaximumMember ampx:BrightonColoradoMember 2025-12-31 0001899287 ampx:BrightonColoradoMember 2025-12-31 0001899287 ampx:BrightonColoradoMember 2025-12-19 2025-12-19 0001899287 us-gaap:FairValueInputsLevel3Member 2025-12-19 2025-12-19 0001899287 us-gaap:WarrantMember 2025-01-01 2025-12-31 0001899287 us-gaap:WarrantMember 2024-01-01 2024-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2025-01-01 2025-12-31 0001899287 us-gaap:EmployeeStockOptionMember 2024-01-01 2024-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2025-01-01 2025-12-31 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2024-01-01 2024-12-31 0001899287 2023-04-30 0001899287 us-gaap:SubsequentEventMember 2026-01-30 0001899287 srt:ScenarioForecastMember us-gaap:SubsequentEventMember 2026-03-31 0001899287 srt:ScenarioForecastMember us-gaap:SubsequentEventMember 2026-01-01 2026-03-31 0001899287 2025-10-01 2025-12-31 Table of Contents Index to Consolidated Financial Statements UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 __________________________________ FORM 10-K __________________________________ (Mark One) x ANNUAL REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the fiscal year ended December 31 , 2025 OR o TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the transition period from ________ to ________ Commission file number 001-41314 __________________________________ A MPRIUS T ECHNOLOGIES, I NC. (Exact name of registrant as specified in its charter) __________________________________ Delaware 98-1591811 (State or other jurisdiction of incorporation or organization) (I.R.S. Employer Identification No.) 1180 Page Avenue , Fremont , California 94538 (Address of Principal Executive Offices) (Zip Code) (800) 425-8803 Registrant\u2019s telephone number, including area code __________________________________ Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common stock, $0.0001 par value AMPX The New York Stock Exchange Redeemable warrants, each exercisable for one share of common stock at an exercise price of $11.50 AMPX.W The New York Stock Exchange Securities registered pursuant to section 12(g) of the Act: None Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes o No x Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Act. Yes o No x Indicate by check mark whether the registrant: (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports); and (2) has been subject to such filing requirements for the past 90 days. Yes x No o Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (\u00a7232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). Yes x No o Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company, or an emerging growth company. See the definitions of \u201clarge accelerated filer,\u201d \u201caccelerated filer,\u201d \u201csmaller reporting company,\u201d and \u201cemerging growth company\u201d in Rule 12b-2 of the Exchange Act. Large accelerated filer o Accelerated filer o Non-accelerated filer x Smaller reporting company x Emerging growth company x If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. o Indicate by check mark whether the registrant has filed a report on and attestation to its management\u2019s assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. o If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the registrant included in the filing reflect the correction of an error to previously issued financial statements. o Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation received by any of the registrant\u2019s executive officers during the relevant recovery period pursuant to \u00a7240.10D-1(b). o Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Act). Yes o No x The aggregate market value of the voting and non-voting common equity held by non-affiliates of the Registrant, as of June 30, 2025 (the last business day of the registrant\u2019s most recently completed second fiscal quarter), was approximately $ 518.4 million. Solely for purposes of this disclosure, shares of common stock held by executive officers and directors and by each person who owns 5% or more of the outstanding common stock as of such date have been excluded because such persons may be deemed to be affiliates. This determination of affiliate status is not necessarily a conclusive determination for other purposes. The registrant had 137,019,004 sh ares of common stock outstanding as of February 27, 2026. DOCUMENTS INCORPORATED BY REFERENCE Portions of the registrant\u2019s definitive proxy statement for its 2026 Annual Meeting of Stockholders (the \u201cProxy Statement\u201d) to be filed with the Securities and Exchange Commission within 120 days after the end of the fiscal year covered by this Annual Report on Form 10-K, are incorporated by reference in Part III where indicated. Except with respect to information specifically incorporated by reference in this Annual Report, the Proxy Statement shall not be deemed to be filed as part hereof. 1 Table of Contents Index to Consolidated Financial Statements Table of Contents Page Number Cautionary Note Regarding Forward-Looking Statements 4 Part I 6 Item 1. Business 6 Item 1A. Risk Factors 17 Item 1B. Unresolved Staff Comments 45 Item 1C. Cybersecurity 45 Item 2. Properties 46 Item 3. Legal Proceedings 46 Item 4. Mine Safety Disclosures 46 Part II 47 Item 5. Market for Registrant\u2019s Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 47 Item 6. Reserved 47 Item 7. Management\u2019s Discussion and Analysis of Financial Condition and Results of Operations 47 Item 7A. Quantitative and Qualitative Disclosures About Market Risk 57 Item 8. Financial Statements and Supplementary Data 58 Item 9. Changes in and Disagreements With Accountants on Accounting and Financial Disclosures 85 Item 9A. Controls and Procedures 85 Item 9B. Other Information 85 Item 9C. Disclosure Regarding Foreign Jurisdictions that Prevent Inspections 85 Part III 87 Item 10. Directors, Executive Officers and Corporate Governance 87 Item 11. Executive Compensation 87 Item 12. Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters 87 Item 13. Certain Relationships and Related Transactions, and Director Independence 87 Item 14. Principal Accountant Fees and Services 87 Part IV 88 Item 15. Exhibit and Financial Statement Schedules 88 Item 16. Form 10-K Summary 90 Signatures 91 3 Table of Contents Index to Consolidated Financial Statements Cautionary Note Regarding Forward-Looking Statements Certain statements in this Annual Report on Form 10-K of Amprius Technologies, Inc. (hereafter referred to as \u201cAmprius,\u201d the \u201cCompany,\u201d \u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d) and in documents incorporated herein by reference may constitute \u201cforward-looking statements\u201d for purposes of the federal securities laws. Such forward-looking statements include, but are not limited to, statements regarding our expectations, beliefs, intentions or strategies regarding the future. In addition, any statements that refer to forecasts or other characterizations of future events or circumstances, including any underlying assumptions, are forward-looking statements. The words \u201canticipate,\u201d \u201cbelieve,\u201d \u201ccontinue,\u201d \u201ccould,\u201d \u201cestimate,\u201d \u201cexpect,\u201d \u201cintends,\u201d \u201cmay,\u201d \u201cmight,\u201d \u201cplan,\u201d \u201cpossible,\u201d \u201cpotential,\u201d \u201cpredict,\u201d \u201cproject,\u201d \u201cshould,\u201d \u201cwill,\u201d \u201cwould\u201d and similar expressions may identify forward-looking statements, but the absence of these words does not mean that a statement is not forward-looking. Forward-looking statements in this Annual Report on Form 10-K may include, for example, statements about: \u2022 our financial and business performance, including financial and business metrics; \u2022 changes in our strategy, future operations, financial position, estimated revenues and losses, projected costs, prospects and plans; \u2022 our ability to add manufacturing capacity and the costs and timing to add such capacity; \u2022 the expected addressable market for our products; \u2022 developments relating to our competitors and industry; \u2022 our expectations regarding our ability to obtain and maintain intellectual property protection and not infringe on the rights of others; \u2022 our future capital requirements and sources and uses of cash; \u2022 our ability to obtain funding for our operations; and \u2022 our business, expansion plans and opportunities. These forward-looking statements are based on information available as of the date of this Annual Report on Form 10-K, including current expectations, forecasts and assumptions, and involve a number of judgments, risks and uncertainties. Accordingly, forward-looking statements should not be relied upon as representing our views as of any subsequent date, and we do not undertake any obligation to update forward-looking statements to reflect events or circumstances after the date they were made, whether as a result of new information, future events or otherwise, except as may be required under applicable securities laws. In addition, statements that \u201cwe believe\u201d and similar statements reflect our beliefs and opinions on the relevant subject. These statements are based upon information available to us as of the date of this Annual Report on Form 10-K, and while we believe such information forms a reasonable basis for such statements, such information may be limited or incomplete, and our statements should not be read to indicate that we have conducted an exhaustive inquiry into, or review of, all potentially available relevant information. These statements are inherently uncertain and investors are cautioned not to unduly rely upon these statements. As a result of a number of known and unknown risks and uncertainties, our actual results or performance may be materially different from those expressed or implied by these forward-looking statements. Some factors that could cause actual results to differ include: \u2022 our ability to execute our business model and strategy, including expanding manufacturing capacity, developing production lines that meet our requirements and increasing the addressable market for our products and services; \u2022 our ability to raise capital; \u2022 the possibility that we may be adversely affected by economic, business or competitive factors, including supply chain interruptions and developments in alternative technologies, and may not be able to manage other risks and uncertainties; \u2022 the outcome of any legal proceedings that may be instituted against us; \u2022 changes in applicable laws or regulations; \u2022 the effect of macroeconomic factors, such as tariffs, trade barriers, abrupt political change, geopolitics, currency fluctuations, embargoes, shortages, terrorist activity, armed conflict and public health emergencies, on our business; 4 Table of Contents Index to Consolidated Financial Statements \u2022 risks related to any change in demand from existing customers; and \u2022 other risks and uncertainties described in this Annual Report on Form 10-K, including risk factors discussed in Part I, Item 1A under the heading, \u201cRisk Factors.\u201d 5 Table of Contents Index to Consolidated Financial Statements Part I Item 1. Business Overview Amprius Technologies, Inc. develops, manufactures and markets lithium-ion batteries for mobility applications, including aviation, ground and marine vehicles. Our disruptive silicon anode technology is intended to enable batteries with high energy density, high power density and fast charging capabilities over a wide range of operating temperatures. This results in our batteries providing superior performance compared to conventional graphite lithium-ion batteries. Our silicon anodes are a direct drop-in replacement of the graphite anode in traditional lithium-ion batteries, and our manufacturing processes leverage the manufacturing processes for conventional lithium-ion batteries and the related supply chain. Currently, our batteries are primarily used for existing and emerging aviation applications, including unmanned aerial systems or \u201cUAS\u201d, such as drones and high-altitude pseudo satellites or \u201cHAPS\u201d. We believe our proprietary technology has the potential for broad application in electric transportation. Our batteries and their performance specifications have been tested and validated for application by various customers, including AALTO Airbus, AeroVironment, BAE Systems, Kraus Hamdani Aerospace, Nokia Drone Networks, Nordic Wing, Teledyne FLIR and the U.S. Army. Our total customer engagements since inception grew to over 500 customers with shipments to hundreds of customers during the year ended December 31, 2025. In addition, from our inception through December 31, 2025, we have shipped over 4.2 million battery cells, which have enabled mission critical applications. Our proprietary silicon anode structures, battery cell designs and manufacturing processes are protected by our portfolio of patents, trade secrets and know-how developed over 15 years of research and development. Our SiCore batteries were developed in collaboration with Berzelius (Nanjing) Co., Ltd. (\u201cBerzelius\u201d), a former affiliated company. We began limited shipment of SiCore batteries in 2023, which generated a strong demand from our customers. In order to support such demand, we entered into a supply agreement with Berzelius in November 2023 (the \u201cExclusive Supply Agreement\u201d), which gives us exclusive rights to purchase its proprietary silicon anode materials in the United States, Canada and Mexico. In January 2024, we announced the full commercial launch of our SiCore batteries and accelerated engagement with our addressable markets. As of December 31, 2025, we had access, through our manufacturing supply agreements with our global contract manufacturers, including our participation in a consortium of South Korean companies that contribute capabilities across the lithium-ion battery value chain (the \u201cAmprius Korea Battery Alliance\u201d), to annual production exceeding 2.0 GWh of SiCore batteries in pouch, cylindrical and prismatic formats. These agreements provide us an opportunity to scale production and ship a large volume of SiCore batteries to our customers. During 2025, we manufactured our SiMaxx batteries in our facility in Fremont, California. To support increased demand of our SiCore batteries, as of December 2025 and going forward into 2026, we are expanding this facility to increase the capacity of our pilot line to 10 MWh and expand our capabilities to support quick turn SiCore customer prototypes. This expansion is accelerated by a $14.8 million contract awarded to us in July 2025, as amended, through the U.S. Government Defense Innovation Unit (\u201cDIU\u201d). In April 2023, we entered into a lease agreement to lease approximately 774,000 square feet of premises in Brighton, Colorado. As of December 31, 2025, due to larger industry dynamics, particularly our ability to access global contract manufacturing to rapidly service the demand from our customers, we recorded $19.1 million in impairment charges to the associated right-of-use asset and construction-in-progress to reflect our intention to terminate the lease of the Brighton facility. On January 30, 2026, we entered into an agreement with the lessor to terminate this lease in exchange for a one-time payment of $20.0 million. The termination of the lease will be reflected in our financial results in our fiscal first quarter of 2026. We believe that our outsource contract manufacturing strategy enables rapid capacity expansion with minimal capital investment. History, Corporate Information and Website We have been commercially producing batteries since 2018. On September 14, 2022, we completed a business combination pursuant to a Business Combination Agreement, dated May 11, 2022, by and among Amprius Technologies Operating, Inc. (formerly known as Amprius Technologies, Inc. or \u201cLegacy Amprius\u201d), Kensington Capital Acquisition Corp. IV (\u201cKensington\u201d), and Kensington Capital Merger Sub Corp. (a wholly owned subsidiary of Kensington or \u201cMerger Sub\u201d). The business combination was effected through the 6 Table of Contents Index to Consolidated Financial Statements merger of Merger Sub with and into Legacy Amprius, with Legacy Amprius surviving as a wholly owned subsidiary of Kensington. Upon consummation of the business combination, Kensington changed its jurisdiction of incorporation by domesticating as a corporation incorporated under the laws of the State of Delaware and changed its name to \u201cAmprius Technologies, Inc.\u201d The business combination was treated as a reverse recapitalization for financial reporting purposes, whereby Legacy Amprius was determined as the \u201caccounting acquirer\u201d and Kensington as the \u201caccounting acquiree.\u201d I mmediately prior to the closing of the business combination, a number of private investors purchased from us an aggregate of 2,052,000 units at a price of $10.00 per share (such transaction, the \u201cPIPE\u201d), pursuant to separate subscription agreements. Each PIPE unit consisted of (i) one share of common stock and (ii) one warrant (each, a \u201cPIPE warrant\u201d) to purchase one share of common stock at an exercise price of $12.50 per share. Please refer to Note 7 to our consolidated financial statements included elsewhere in this Annual Report on Form 10-K for additional information about the PIPE warrants. On October 23, 2024, our former majority stockholder and parent company, Amprius Holdings, which owned an aggregate of 65.2 million shares, or 58.6%, of our common stock at that time, voluntarily liquidated and dissolved. As a result of such liquidation and dissolution, Amprius Holdings distributed, on a pro rata basis, an aggregate of approximately 57.2 million shares of our common stock to its stockholders, and we assumed all of Amprius Holdings\u2019 outstanding options to purchase shares of Amprius Holdings\u2019 Class A common stock in exchange for, among other things, Amprius Holdings contributing to us a total of 5.5 million shares of our common stock that it owned, which were immediately cancelled and returned to our authorized but unissued share capital. Our principal executive offices are located at 1180 Page Avenue, Fremont, California 94538, and our telephone number is (800) 425-8803. Our website is www.amprius.com. We make available free of charge through our website our Annual Reports on Form 10-K, Quarterly Reports on Form 10-Q and Current Reports on Form 8-K, and amendments to these reports filed or furnished pursuant to Section 13(a) or 15(d) of the Securities Exchange Act of 1934, as amended (the \u201cExchange Act\u201d), as soon as reasonably practicable after we electronically file such material with, or furnish such material to, the Securities and Exchange Commission (the \u201cSEC\u201d). These reports and other information are also available, free of charge, at www.sec.gov . Information contained on, or that can be accessed through, the websites referenced in this Annual Report on Form 10-K are not a part of, and are not incorporated by reference into, this Annual Report on Form 10-K. Industry Background Traditional transportation has historically relied on fossil fuel-based internal combustion engines for propulsion which are considered to be significant contributors to greenhouse gas emissions. The growing emphasis on sustainable and resilient energy use in transportation is leading to increased capital investment, government incentives and commercial demand for the electrification of both passenger and payload mobility. This transition is particularly evident in the rapid advancement of UAS, commonly referred to as drones, as well as HAPS and electric vertical take-off and landing (\u201ceVTOL\u201d) aircraft. Beyond aerospace, the market is also experiencing robust growth in ground-based electric vehicles (\u201cEVs\u201d) and light electric vehicles (\u201cLEVs\u201d). Critical and breakthrough battery technologies are central to this shift, enabling mass adoption by improving energy density, accelerating fast charging capabilities, extending battery life, and enhancing safety. Aviation Industry Unmanned Aerial Systems: UAS are aircraft that operate with no crew or passengers onboard and are guided by remote control or autonomously. Examples of UAS include drones and HAPS. UAS are the next generation aerial transportation technology utilized for surveillance, assessment, logistics, delivery, communications, and imaging, among other uses. Leading batteries, such as Amprius\u2019 silicon anode battery, offer lighter weight and/or more energy, potentially overcoming current battery technology barriers, enabling longer flight times and faster adoption of UAS. Drones: Drones are the most common type of UAS and are increasingly being utilized across diverse industrial and government sectors, including military and defense, agricultural, energy and utilities, infrastructure and construction, logistics and delivery, and public safety. One of the key barriers to wider adoption is the existing battery technology, which limits the drones\u2019 flight range and payload capacity. Our batteries offer higher energy density, which enables longer range endurance, and, depending on customer specifications, lighter weight, which facilitates higher payload capacity. Amprius offers advanced battery technology suitable for application in drones designs, including multi-rotor, single-rotor, fixed wing and hybrid VTOL. High Altitude Pseudo Satellites: HAPS are alternatives for traditional satellites. When deployed, HAPS typically operate at stratospheric altitudes, approximately 12 miles (approximately 65,000 feet) above sea level. HAPS are 7 Table of Contents Index to Consolidated Financial Statements increasingly utilized to provide high-quality broadcast features, particularly in remote regions, which have limited terrestrial network coverage. HAPS generally use solar energy and battery storage as the power source to operate for long durations of time. As a result, lightweight, higher energy density batteries with the ability to operate in extreme temperature and pressure conditions are critical enablers. Amprius offers advanced battery technology suitable for application in HAPS, which is currently in use by prominent aerospace companies, including AALTO Airbus and BAE Systems. Electric Air Transportation : Population growth and urbanization are key megatrends that are stretching ground transportation infrastructure to its limits and resulting in significant greenhouse gas emissions. A potential mitigation strategy is expanding intracity and other short-distance travel into the air utilizing eVTOL vehicles, which include passenger aircraft that use electric power to hover, takeoff, and land vertically. Historically, the electrification of passenger and cargo aircraft has lagged the adoption of electric automobiles in part because of the greater technical challenges. However, over the last few years there have been significant advancements in key enabling technologies for eVTOL aircraft, including high energy density and robust performance batteries offered by Amprius. Continued improvements in battery energy density could allow eVTOL aircraft to increase their range, speed and payload, dramatically expanding the range of trips and further accelerating the adoption of electric air mobility. Light Electric Vehicle Industry The LEV market is expected to grow rapidly primarily due to the rising demand for electric two and three wheel vehicles. As this market grows, we expect an increase in demand for high-performance batteries across the LEV sector. We believe that the form factor and cost-competitiveness of our high-energy-density SiCore batteries can support such growing demand in the LEV sector. As of December 31, 2025 , we had access, through our manufacturing supply agreements with our global contract manufacturers, to annual production exceeding 2.0 GWh of SiCore batteries in pouch, cylindrical and prismatic formats . Electric Vehicle Industry The electrification of ground transportation is being accelerated by regulatory pressure to meet sustainability benchmarks and growing consumer preference. While multiple battery chemistries exist today that meet current EV specifications, we believe there is room for significant improvement. Our batteries have been tested and validated by the U.S. Advanced Battery Consortium (\u201cUSABC\u201d), as further described below. They have the potential to help address both sustainability and preference concerns. We are not focused on the EV market today. However, we plan to improve our battery cycle life, cost and production quantity, to allow us to better compete with existing commercially available EV batteries in the future. Battery Requirements for Electric Transportation Current battery technology creates a barrier in the near-term for the electric transportation market, especially for electric air mobility applications, as battery weight, size and recharging times would need to be improved for these operations to become commercial. The battery system must fulfill several key requirements: \u2022 high energy density and specific energy in order to achieve long range endurance while enabling lighter weight; \u2022 high power density to provide sufficient power at a specific instance, such as during aircraft take-off or landing; \u2022 fast charging capabilities to enable high infrastructure throughput; \u2022 operational in wide temperature and pressure ranges; \u2022 safe to operate in a wide variety of conditions; \u2022 a long calendar life and cycle life; and \u2022 acceptable cost, which varies by application. Our Solution Today\u2019s batteries typically utilize graphite as the anode material. Based on management\u2019s estimates, we believe that graphite anodes have reached their theoretical limits for energy storage. We estimate that lithium-ion batteries with graphite anodes have an upper limit capacity of 355 mAh/g. We believe additional increases in the energy density for lithium-ion batteries may be achieved by using active anode materials that have a higher capacity for lithium storage. Among such active materials, silicon is known to have the highest lithium storage capacity per unit mass or volume over any other element besides lithium itself. 8 Table of Contents Index to Consolidated Financial Statements Our batteries have replaced the graphite anode with a highly engineered silicon material that has a lithium storage capacity of approximately up to 3,400 mAh/g, nearly 10 times the highest capacity of known graphite anodes. By replacing graphite with silicon in the anode, we have significantly enhanced performance in batteries across energy density, power, charging time and ability to operate in extreme environments. Our Competitive Strengths SiCore and SiMaxx performance greatly exceeds conventional lithium-ion batteries commercially available today. We believe that our battery cells significantly outperform commercially available conventional graphite battery cells. As shown in the table below, as of December 31, 2025 , our batteries have approximately up to double the specific energy and energy density of graphite battery cells, and enable significantly faster charging time. We believe other next-generation battery technologies will require significant additional research, development and investment prior to being commercially viable. (1) Other than cycle life, based on a survey of 18650 technical datasheets (e.g., Panasonic NCR18650G), Sony VTC6 technical datasheet, iFixit reports on iPhone and Samsung batteries, and Y. Sun et al: Li-ion Battery Reliability \u2013 A Case Study of the Apple iPhone. For cycle life, based on Shmuel De-Leon: Li-Ion NCA/NMC Cylindrical Hard Case Cells Market 2021. Includes both released and unreleased SiMaxx and SiCore battery cells with high-energy, high-power, and balanced cell designs. Unique suitability for aviation markets that require high power, specific energy and energy density. We believe the increased performance of our batteries enable certain electric aviation applications. For example, our batteries have high specific energy and energy density to maximize payload and reduce weight, thereby extending flight radius; high power density, to enable vertical take-off and landing functionality; fast charge, to minimize the time required to recharge a battery; wide operating temperature, for high altitude applications operating in extremely low temperatures; and cycle life parity with graphite batteries, depending on customer specifications. In January 2025, we announced the expansion of our SiCore product platform with a SiCore battery cell that provides energy density of 360 Wh/kg, extending runtimes while still exceeding 3,000 W/kg, with discharge rates of up to 10C without cooling and 15C with active cooling. This SiCore battery cell ensures quick power delivery without compromising runtime, which makes it ideal for aviation applications, including drones and high-performance electric mobility applications that require both endurance and rapid energy delivery. In March 2023, we unveiled a prototype battery cell that delivers an energy density of >500 Wh/kg and >1,300 Wh/L at 25\u00b0C. The performance of this battery cell was verified by a leading testing house offering comprehensive battery regulatory compliance, safety and performance testing. At approximately half the weight and volume compared to other existing state-of-the-art, commercially available lithium-ion cells, we believe that this type of battery will deliver a potential industry-disrupting performance. As of December 31, 2025, this SiMaxx battery was in the development stage. We will continue to develop next-generation battery cells, and we believe that when they become commercially available, those battery cells will have the potential to expand boundaries for our customers and provide a tailored solution",
+  "latest_10q_excerpt": "ampx-20260630 0001899287 12-31 2026 Q2 false 276 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure ampx:vote ampx:day ampx:extensionOption ampx:lease 0001899287 2026-01-01 2026-06-30 0001899287 us-gaap:CommonStockMember 2026-01-01 2026-06-30 0001899287 ampx:RedeemableWarrantsMember 2026-01-01 2026-06-30 0001899287 2026-07-31 0001899287 2026-06-30 0001899287 2025-12-31 0001899287 2026-04-01 2026-06-30 0001899287 2025-04-01 2025-06-30 0001899287 2025-01-01 2025-06-30 0001899287 us-gaap:CommonStockMember 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-12-31 0001899287 us-gaap:CommonStockMember 2026-01-01 2026-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-01-01 2026-03-31 0001899287 2026-01-01 2026-03-31 0001899287 us-gaap:RetainedEarningsMember 2026-01-01 2026-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-01 2026-03-31 0001899287 us-gaap:CommonStockMember 2026-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-03-31 0001899287 us-gaap:RetainedEarningsMember 2026-03-31 0001899287 2026-03-31 0001899287 us-gaap:CommonStockMember ampx:AtMarketIssuanceSalesAgreementMember 2026-04-01 2026-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember ampx:AtMarketIssuanceSalesAgreementMember 2026-04-01 2026-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2026-04-01 2026-06-30 0001899287 us-gaap:CommonStockMember 2026-04-01 2026-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-04-01 2026-06-30 0001899287 us-gaap:RetainedEarningsMember 2026-04-01 2026-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-01 2026-06-30 0001899287 us-gaap:CommonStockMember 2026-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-06-30 0001899287 us-gaap:RetainedEarningsMember 2026-06-30 0001899287 us-gaap:CommonStockMember 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-12-31 0001899287 2024-12-31 0001899287 us-gaap:CommonStockMember ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-03-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-03-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-03-31 0001899287 2025-01-01 2025-03-31 0001899287 us-gaap:RetainedEarningsMember 2025-01-01 2025-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-01 2025-03-31 0001899287 us-gaap:CommonStockMember 2025-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-03-31 0001899287 us-gaap:RetainedEarningsMember 2025-03-31 0001899287 2025-03-31 0001899287 us-gaap:CommonStockMember ampx:AtMarketIssuanceSalesAgreementMember 2025-04-01 2025-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember ampx:AtMarketIssuanceSalesAgreementMember 2025-04-01 2025-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-04-01 2025-06-30 0001899287 us-gaap:CommonStockMember 2025-04-01 2025-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-04-01 2025-06-30 0001899287 us-gaap:RetainedEarningsMember 2025-04-01 2025-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-04-01 2025-06-30 0001899287 us-gaap:CommonStockMember 2025-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-06-30 0001899287 us-gaap:RetainedEarningsMember 2025-06-30 0001899287 2025-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2026-01-01 2026-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-06-30 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2026-06-30 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2025-12-31 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:TwoCustomersMember us-gaap:AccountsReceivableMember 2026-01-01 2026-06-30 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:OneCustomerMember us-gaap:AccountsReceivableMember 2025-01-01 2025-12-31 0001899287 2025-01-01 2025-12-31 0001899287 srt:NorthAmericaMember 2026-04-01 2026-06-30 0001899287 srt:NorthAmericaMember 2025-04-01 2025-06-30 0001899287 srt:NorthAmericaMember 2026-01-01 2026-06-30 0001899287 srt:NorthAmericaMember 2025-01-01 2025-06-30 0001899287 us-gaap:EMEAMember 2026-04-01 2026-06-30 0001899287 us-gaap:EMEAMember 2025-04-01 2025-06-30 0001899287 us-gaap:EMEAMember 2026-01-01 2026-06-30 0001899287 us-gaap:EMEAMember 2025-01-01 2025-06-30 0001899287 srt:AsiaPacificMember 2026-04-01 2026-06-30 0001899287 srt:AsiaPacificMember 2025-04-01 2025-06-30 0001899287 srt:AsiaPacificMember 2026-01-01 2026-06-30 0001899287 srt:AsiaPacificMember 2025-01-01 2025-06-30 0001899287 country:UA 2026-04-01 2026-06-30 0001899287 country:UA 2025-04-01 2025-06-30 0001899287 country:UA 2026-01-01 2026-06-30 0001899287 country:UA 2025-01-01 2025-06-30 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:TwoCustomersMember us-gaap:SalesRevenueNetMember 2026-04-01 2026-06-30 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:TwoCustomersMember us-gaap:SalesRevenueNetMember 2025-04-01 2025-06-30 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:ThreeCustomersMember us-gaap:SalesRevenueNetMember 2026-01-01 2026-06-30 0001899287 us-gaap:CustomerConcentrationRiskMember ampx:ThreeCustomersMember us-gaap:SalesRevenueNetMember 2025-01-01 2025-06-30 0001899287 ampx:SaleOfBatteryProductsMember 2026-04-01 2026-06-30 0001899287 ampx:SaleOfBatteryProductsMember 2025-04-01 2025-06-30 0001899287 ampx:SaleOfBatteryProductsMember 2026-01-01 2026-06-30 0001899287 ampx:SaleOfBatteryProductsMember 2025-01-01 2025-06-30 0001899287 ampx:CustomizedDesignServicesMember 2026-04-01 2026-06-30 0001899287 ampx:CustomizedDesignServicesMember 2025-04-01 2025-06-30 0001899287 ampx:CustomizedDesignServicesMember 2026-01-01 2026-06-30 0001899287 ampx:CustomizedDesignServicesMember 2025-01-01 2025-06-30 0001899287 us-gaap:TransferredAtPointInTimeMember ampx:SaleOfBatteryProductsMember 2026-04-01 2026-06-30 0001899287 us-gaap:TransferredAtPointInTimeMember ampx:SaleOfBatteryProductsMember 2026-01-01 2026-06-30 0001899287 us-gaap:TransferredAtPointInTimeMember ampx:SaleOfBatteryProductsMember 2025-04-01 2025-06-30 0001899287 us-gaap:TransferredAtPointInTimeMember ampx:SaleOfBatteryProductsMember 2025-01-01 2025-06-30 0001899287 us-gaap:TransferredAtPointInTimeMember 2026-06-30 0001899287 2026-07-01 2026-06-30 0001899287 ampx:ProductionEquipmentMember 2026-06-30 0001899287 ampx:ProductionEquipmentMember 2025-12-31 0001899287 ampx:LaboratoryEquipmentMember 2026-06-30 0001899287 ampx:LaboratoryEquipmentMember 2025-12-31 0001899287 us-gaap:LeaseholdImprovementsMember 2026-06-30 0001899287 us-gaap:LeaseholdImprovementsMember 2025-12-31 0001899287 us-gaap:FurnitureAndFixturesMember 2026-06-30 0001899287 us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 us-gaap:ConstructionInProgressMember 2026-06-30 0001899287 us-gaap:ConstructionInProgressMember 2025-12-31 0001899287 us-gaap:ConstructionInProgressMember 2025-01-01 2025-12-31 0001899287 ampx:TwentyTwentyTwoEquityIncentivePlanMember 2026-06-30 0001899287 ampx:EquityIncentivePlansMember 2026-01-01 2026-06-30 0001899287 ampx:EquityIncentivePlansMember us-gaap:EmployeeStockMember 2026-01-01 2026-06-30 0001899287 us-gaap:EmployeeStockOptionMember 2026-01-01 2026-06-30 0001899287 ampx:EquityIncentivePlansMember us-gaap:RestrictedStockUnitsRSUMember 2026-01-01 2026-06-30 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2026-06-30 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2026-01-01 2026-06-30 0001899287 ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember us-gaap:EmployeeStockMember 2026-06-30 0001899287 us-gaap:EmployeeStockMember srt:MaximumMember ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember 2026-01-01 2026-06-30 0001899287 ampx:TwentyTwentyTwoEmployeeStockPurchasePlanMember us-gaap:EmployeeStockMember 2026-01-01 2026-06-30 0001899287 ampx:PublicWarrantsMember 2025-12-31 0001899287 ampx:PrivateWarrantsMember 2025-12-31 0001899287 ampx:PIPEWarrantsMember 2025-12-31 0001899287 ampx:PublicWarrantsMember 2026-01-01 2026-06-30 0001899287 ampx:PrivateWarrantsMember 2026-01-01 2026-06-30 0001899287 ampx:PIPEWarrantsMember 2026-01-01 2026-06-30 0001899287 ampx:PublicWarrantsMember 2026-06-30 0001899287 ampx:PrivateWarrantsMember 2026-06-30 0001899287 ampx:PIPEWarrantsMember 2026-06-30 0001899287 2022-03-01 0001899287 ampx:PublicWarrantsMember 2022-09-14 2022-09-14 0001899287 ampx:PublicWarrantsMember 2026-04-01 2026-06-30 0001899287 ampx:PIPEWarrantsMember 2022-09-14 0001899287 ampx:PIPEWarrantsMember 2022-09-14 2022-09-14 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2023-10-02 2023-10-02 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-12-31 0001899287 us-gaap:CostOfRevenue 2026-04-01 2026-06-30 0001899287 us-gaap:CostOfRevenue 2025-04-01 2025-06-30 0001899287 us-gaap:CostOfRevenue 2026-01-01 2026-06-30 0001899287 us-gaap:CostOfRevenue 2025-01-01 2025-06-30 0001899287 us-gaap:ResearchAndDevelopmentExpense 2026-04-01 2026-06-30 0001899287 us-gaap:ResearchAndDevelopmentExpense 2025-04-01 2025-06-30 0001899287 us-gaap:ResearchAndDevelopmentExpense 2026-01-01 2026-06-30 0001899287 us-gaap:ResearchAndDevelopmentExpense 2025-01-01 2025-06-30 0001899287 us-gaap:SellingGeneralAndAdministrativeExpense 2026-04-01 2026-06-30 0001899287 us-gaap:SellingGeneralAndAdministrativeExpense 2025-04-01 2025-06-30 0001899287 us-gaap:SellingGeneralAndAdministrativeExpense 2026-01-01 2026-06-30 0001899287 us-gaap:SellingGeneralAndAdministrativeExpense 2025-01-01 2025-06-30 0001899287 ampx:FremontCaliforniaLeaseMember srt:MinimumMember 2026-06-30 0001899287 ampx:FremontCaliforniaLeaseMember srt:MaximumMember 2026-06-30 0001899287 ampx:BrightonColoradoFacilityMember 2026-06-30 0001899287 ampx:BrightonColoradoFacilityMember 2026-01-01 2026-06-30 0001899287 us-gaap:WarrantMember 2026-01-01 2026-06-30 0001899287 us-gaap:WarrantMember 2025-01-01 2025-06-30 0001899287 us-gaap:EmployeeStockOptionMember 2026-01-01 2026-06-30 0001899287 us-gaap:EmployeeStockOptionMember 2025-01-01 2025-06-30 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2026-01-01 2026-06-30 0001899287 us-gaap:RestrictedStockUnitsRSUMember 2025-01-01 2025-06-30 0001899287 ampx:PIPEWarrantsMember us-gaap:RelatedPartyMember 2026-01-01 2026-06-30 0001899287 ampx:Dr.KangSunMember 2026-04-01 2026-06-30 0001899287 ampx:Dr.KangSunMember 2026-06-30 0001899287 ampx:Dr.StevenChuMember 2026-04-01 2026-06-30 0001899287 ampx:Dr.StevenChuMember 2026-06-30 Table of Contents UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 _______________________ FORM 10-Q _______________________ (Mark One) \u2612 QUARTERLY REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the quarterly period ended June 30, 2026 OR \u2610 TRANSITION REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 For the transition period from to Commission file number 001-41314 _______________________ A MPRIUS T ECHNOLOGIES, I NC. (Exact name of registrant as specified in its charter) _______________________ Delaware 98-1591811 (State or other jurisdiction of incorporation or organization) (I.R.S. Employer Identification No.) 1180 Page Avenue , Fremont , California 94538 (Address of Principal Executive Offices) (Zip Code) ( 800 ) 425-8803 Registrant's telephone number, includ",
+  "earnings_release_excerpt": "EX-99.1 2 ampx-2026x11x03x8kex991.htm EX-99.1 Document Exhibit 99.1 Amprius Technologies Reports Third Quarter 2026 Financial Results and Recent Business Highlights \u2022 Q3 2026 revenue increased 83% year-over-year to $39.1 million \u2022 Net loss of $3.5 million, a 10% year-over-year improvement \u2022 Increasing 2026 revenue outlook to $145 million \u2022 U.S. revenues more than doubled quarter over quarter (QoQ) FREMONT, Calif. \u2014 November 10, 2026 \u2013 Amprius Technologies, Inc. (\"Amprius\" or the \"Company\") (NYSE: AMPX) , a leader in silicon anode lithium-ion batteries, today announced financial results for its third quarter ended September 30, 2026, and discussed recent business developments. Revenue for the third quarter of 2026 was $39.1 million, up 83% from $21.4 million in the third quarter of 2025. Net loss attributable to common stockholders was $3.5 million, compared to a net loss of $3.9 million in the third quarter of 2025. GAAP net loss per common share was $0.02, compared to net loss per share was $0.03 in the third quarter of 2025. Q3 2026 Financial Highlights \u2022 Record revenue of $39.1 million, up 15% sequentially and 83% year-over-year (YoY) \u2022 Gross profit of $10.5 million, up $7.2 million and 217% YoY \u2022 GAAP gross margin of 27%, improving from 15% in Q3 2025 \u2022 Net loss attributable to common stockholders of $3.5 million, a $0.4 million improvement YoY \u2022 Non-GAAP Adjusted EBITDA of $(1.0) million, a decrease from $0.2 million in Q3 2025 \u2022 U.S. revenues increased by 2.3X quarter-over-quarter (QoQ) to $12.2 million \u201cOur third quarter results demonstrate the strength of our company\u2019s technology leadership and our ability to convert growing customer demand into meaningful financial performance,\" said Amprius Technologies CEO Tom Stepien. \"We delivered record revenue, as we continued to deepen our relationships with customers across the drone, aviation, defense, and advanced mobility markets. Amprius introduced SiCore 500, a new battery model, with industry-leading energy density. The Company was selected for a competitive and significant contract to increase production in the U.S. in 2028. As our guidance suggests, Amprius enters the fourth quarter with strong momentum, driven by an expanding pipeline, and increased manufacturing scale.\u201d Reconciliations of GAAP net loss to non-GAAP adjusted net loss and non-GAAP adjusted EBITDA are provided in the financial schedules that are part of this press release. An explanation of these non-GAAP financial measures is also included below under the heading \u201cNon-GAAP Financial Measures.\u201d Quarterly Financial Comparison $ in millions Metric Q3 2026 Q3 2025 Delta Improvement Revenue 39.1 21.4 17.7 83% Gross Profit 10.5 3.3 7.2 217% % Margin 27% 15% GAAP Net Loss (3.5) (3.9) 0.4 10% % Margin (9%) (18%) Non-GAAP Adjusted EBITDA (1.0) 0.2 (1.2) NM % Margin (3%) 1% Business Highlights \u2022 Secured a $75 million U.S. Department of War competitive contract to produce cells in the U.S., $22.3 million of which is obligated, by supporting the conversion of an existing battery production line with planned output of up to 12 million NDAA-compliant cells annually in 2028. \u2022 Introduced SiCore\u00ae 500, a second-generation silicon anode cell delivering 500 Wh/kg on conventional lithium-ion manufacturing equipment, enabling a scalable path to large-scale commercial production to support aviation customers. \u2022 Expanded our relationship with Quantum Systems, a leading German developer of autonomous unmanned systems, with increased deployment of Amprius cells across its Vector and Twister ISR platforms. \u2022 Began supplying SiCore cells to a U.S. aerospace company producing a solar-powered stratospheric platform. Our cell supports extended-duration missions where energy density and weight are critical performance requirements. \u2022 Secured a design win with a global leader in maritime and defense technology, for an autonomous deep-sea underwater vehicle platform, extending the application of Amprius' SiCore technology into subsea defense and maritime markets. Updated 2026 Financial Outlook Amprius updates its 2026 financial outlook as follows: \u2022 Revenue is expected to be $145 million, raised from at least $140 million \u2022 Gross margin is expected to be at least 28% \u2022 Net loss is expected to be less than $10 million, including the Q2 $1.9 million non-cash fair value charge impact of the Warrant Exchange \u2022 Net loss per share is expected to be under $0.07 \u2022 Adjusted EBITDA is expected to be at least $2.5 million \u2022 Capital expenditure is expected to be under $10 million The Company's 2026 outlook assumes depreciation and amortization of $3.0 million, stock-based compensation expense of $9.5 million, $1.2 million of Colorado facility expenses, interest income of $1.7 million, government grant income of $8.0 million and weighted average shares outstanding of 143.4 million for the full year. Amprius\u2019 CFO Ricardo C. Rodriguez added: \u201cThe third quarter once again proved the scalability of our fabless technology and process-owning strategy. Our team continues to meet growing demand with an expanding family of high-performance cells, built in the right place at the right time, without the need for capital investment for manufacturing. The agreements and work that we are executing to establish additional NDAA-compliant production extend this model to the next levels of demand.\u201d Amprius may recognize additional charges, realize gains or losses, incur financing costs or interest expense, or experience other events in 2026, including those related to capacity expansion, supply chain disruptions, or further cost inflation, that could cause actual results to vary materially from this outlook. See Forward-Looking Statements below. Amprius has not provided a reconciliation of the 2026 outlook for non-GAAP Adjusted EBITDA in reliance on the unreasonable efforts exception provided under Item 10(e)(1)(i)(B) of Regulation S-K due to the uncertainty regarding, and the potential variability of, reconciling items such as, the amount and timing of potential non-recurring items. The Company is unable, without unreasonable efforts, to forecast certain items required to develop meaningful comparable GAAP financial measures. Conference Call and Webcast Notification A conference call with Amprius management to discuss third quarter 2026 results and recent business developments will be held on Wednesday, November 11, 2026, at 8:30 a.m. ET. During the call, management will respond to questions concerning, but not limited to, Amprius\u2019 financial performance, business conditions, and financial outlook. Management's discussion and responses could contain information that has not been previously disclosed. Shareholders and other interested parties may call 866-424-3442 (domestic) or +1 201-689-8548 (international) and reference conference ID \u201c13763371\u201d to participate in the conference call. In addition, the conference call and an accompanying slide presentation will be available live as a listen-only webcast here and hosted at the Investor Relations section of Amprius\u2019 website, ir.amprius.com . Amprius uses the Investor Relations section of its website to disclose material information for the purposes of the Securities and Exchange Commission's (SEC) Regulation Fair Disclosure. Shareholders and other interested parties are encouraged to monitor this website in addition to Amprius' other public announcements and SEC filings as information posted on that page could be deemed to be material information. Following the live event, an archived version of the webcast will be available on Amprius\u2019 website for convenient on-demand replay. A copy of this press release is posted in the Investor Relations section on Amprius\u2019 website. About Amprius Technologies, Inc. Amprius Technologies, Inc. is a leader in advanced lithium-ion battery technology, delivering high-energy and high-power silicon-anode batteries with up to twice the energy density, range, and flight time of conventional graphite-based cells. Headquartered in Fremont, California, Amprius operates an R&D lab and pilot manufacturing facility for silicon anodes and cells. To support scalable production, the Company employs a contract manufacturing strategy, enabling rapid capacity expansion with minimal capital investment. Committed to driving innovation in energy storage, Amprius powers next-generation applications in aerospace, defense, and mobility. For additional information, please visit amprius.com and the Company\u2019s LinkedIn page . Forward-Looking Statements This press release includes \u201cforward-looking statements\u201d within the meaning of Section 27A of the Securities Act of 1933, Section 21E of the Securities Exchange Act of 1934, and the \u201csafe harbor\u201d provisions of the United States Private Securities Litigation Reform Act of 1995, each as amended, including Amprius\u2019 expectations, hopes, beliefs, intentions or strategies regarding the future. Forward-looking statements may be identified by the use of words such as \u201cestimate,\u201d \u201cplan,\u201d \u201cproject,\u201d \u201cforecast,\u201d \u201cintend,\u201d \u201cexpect,\u201d \u201canticipate,\u201d \u201cbelieve,\u201d \u201cseek,\u201d \u201cwill\u201d or other similar expressions that predict or indicate future events or trends or that are not statements of historical matters. These forward-looking statements include, but are not limited to, statements regarding the ability of Amprius to serve more customers, bring in additional revenue and expand applications, the strategic benefits of Amprius\u2019 Fremont, California pilot line to its business, the ability of Amprius to further expand this pilot line and the benefits of such expansion to Amprius, the benefits of the existing government award and recent government policies to Amprius\u2019 business, the capacity of Amprius\u2019 contract manufacturing partners with respect to Amprius\u2019 batteries and Amprius\u2019 ability to meet customers' demand through such capacity without the need for significant capital investment in manufacturing, the development and size of the addressable markets for Amprius\u2019 batteries and the benefits of the expansion of such addressable markets, the potential application and performance of Amprius\u2019 batteries, the ability of Amprius to establish additional NDAA-compliant production to meet next levels of demand as a result of agreements it has entered into, the ability of Amprius to secure additional contract manufacturers that can offer greater geographic diversification and operating flexibility, Amprius\u2019 liquidity position, capital strategy, strategic business plans, and Amprius\u2019 financial and business performance. These statements are based on various assumptions, whether or not identified in this press release, and on the current expectations of Amprius\u2019 management and are not predictions of actual performance. These forward-looking statements are not intended to serve as, and must not be relied upon by any investors as, a guarantee, an assurance, a prediction or a definitive statement of fact or probability. Actual events and circumstances are difficult or impossible to predict and will differ from assumptions. Many actual events and circumstances are beyond Amprius\u2019 control. These forward-looking statements are subject to a number of risks and uncertainties, including market demands for Amprius\u2019 batteries; the ability of Amprius to execute its business model and strategy, including the ability to expand manufacturing capacity, secure a stable and cost-effective supply of key materials, develop production lines that meet its requirements, deliver high performance products to customers at acceptable prices and meet their demands via the contract manufacturing arrangements; the effect of macroeconomic factors, such as tariffs, trade barriers, retaliatory actions imposed on Amprius\u2019 partners and suppliers, including regulatory developments proposed in China, abrupt political change, geopolitics, currency fluctuations, embargoes, shortages, terrorist activity, armed conflict and public health emergencies, on Amprius\u2019 business; third-party producers of Amprius batteries continuing to produce such batteries in the expected quantities and caliber and at the expected prices; risks related to Amprius' reliance on third parties and partners for the performance of certain obligations under agreements that Amprius is, or may become, party to, and that such third parties may fail to perform, fail to meet milestone requirements on the expected timeline, or experience delays or other difficulties that adversely affect Amprius' ability to perform under such agreements; Amprius\u2019 customers continuing to purchase batteries from Amprius; risks related to the terms, conditions, milestones and funding of government awards; risks related to the rollout of Amprius\u2019 business and the timing of expected business milestones; the effects of competition on Amprius\u2019 business; Amprius\u2019 liquidity position and its ability to raise additional capital; the possibility that Amprius may be adversely affected by economic, business or competitive factors, including supply chain interruptions, further cost inflation and developments in alternative technologies, and may not be able to manage other risks and uncertainties; changes in government policies impacting Amprius\u2019 customers and addressable markets; and changes in other domestic and foreign business, market, financial, political and legal conditions. More information on these risks and uncertainties that may impact the operations and projections discussed herein can be found in the documents Amprius filed from time to time with the SEC, all of which are available on the SEC\u2019s website at www.sec.gov. If any of these risks materialize or Amprius\u2019 assumptions prove incorrect, actual results could differ materially from the results implied by these forward-looking statements. There may be additional risks that Amprius does not presently know or that Amprius currently believes are immaterial that could also cause actual results to differ from those contained in the forward-looking statements. In addition, forward-looking statements reflect Amprius\u2019 expectations, plans or forecasts of future events and views as of the date of this press release. These forward-looking statements should not be relied upon as representing Amprius\u2019 assessments as of any date subsequent to the date of this press release. Accordingly, undue reliance should not be placed upon the forward-looking statements. Except as required by law, Amprius specifically disclaims any obligation to update any forward-looking statements. Non-GAAP Financial Measures To supplement our financial results presented on a basis in conformity with generally accepted accounting principles in the United States (\u201cGAAP\u201d), we use the non-GAAP measures: Adjusted Net Loss, Adjusted EBITDA and Adjusted EBITDA margin, which excludes from our GAAP net loss, interest, taxes, depreciation and amortization, as well as other significant expenses including stock-based compensation that we believe are helpful in understanding our past financial performance. Our non-GAAP financial measures are not meant to be considered in isolation or as a substitute for comparable GAAP measures and should be read only in conjunction with our consolidated financial statements prepared in accordance with GAAP. Management believes that these non-GAAP financial measures reflect our ongoing business in a manner that allows for meaningful comparisons and analysis of trends in its business, as it excludes expenses and gains not reflective of ongoing operating results or that may be infrequent and/or unusual in nature. We exclude the non-cash impact of the increase in fair value related to the warrant exchange, as the exchange of warrants for common shares is not related to our ongoing operations. We exclude the operating costs for our former facility in Colorado, as these costs were recurring in the past but with the termination of the lease in January 2026, they are no longer indicative of our ongoing operational results. We also adjust for the effect of stock-based compensation expenses noting that such expenses will recur in future periods. Although stock-based compensation is a key incentive offered to our employees, we continue to evaluate our business performance internally excluding stock-based compensation expenses. Management also believes that these non-GAAP financial measures provide useful information to investors in understanding and evaluating our operating results and future prospects in the same manner as management and in comparing financial results across accounting periods and to those of peer companies. These non-GAAP measures may not be comparable to similarly titled measures presented by other companies. In this press release, we provided reconciliations of non-GAAP adjusted net loss and non-GAAP Adjusted EBITDA to GAAP net loss, the most directly comparable GAAP financial measure. Investors Tom Colton, Greg Bradbury Gateway Group, Inc. 949-574-3860 IR@amprius.com Media Zach Kadletz, Brenlyn Motlagh Gateway Group, Inc. 949-574-3860 Amprius@Gateway-grp.com AMPRIUS TECHNOLOGIES, INC. CONDENSED CONSOLIDATED BALANCE SHEETS (Unaudited, in thousands, except share and par value data) September 30, 2026 December 31, 2025 ASSETS Current assets: Cash and cash equivalents $ 60,685 $ 90,465 Accounts receivable, net 45,859 23,737 Inventories 15,890 6,735 Prepaid expenses and other current assets 18,901 5,500 Total current assets 141,335 126,437 Non-current assets: Property, plant and equipment, net 16,242 9,680 Operating lease right-of-use assets, net 6,515 19,518 Other assets 63 1,256 Total assets $ 164,155 $ 156,891 LIABILITIES AND STOCKHOLDERS\u2019 EQUITY Current liabilities: Accounts payable $ 13,362 $ 6,700 Accrued and other current liabilities 16,189 3,666 Deferred grant 2,738 2,738 Deferred revenue 92 100 Operating lease liabilities 1,175 4,665 Total current liabilities 33,556 17,869 Non-current liabilities: Operating lease liabilities 5,904 35,207 Total liabilities 39,460 53,076 Commitments and contingencies Stockholders\u2019 equity: Preferred stock; $0.0001 par value; 50,000,000 shares authorized; no shares issued and outstanding \u2014 \u2014 Common stock; $0.0001 par value; 950,000,000 shares authorized; 146,634,469 and 134,536,592 shares issued and outstanding at September 30, 2026 and December 31, 2025, respectively 14 13 Additional paid-in capital 354,703 322,156 Accumulated other comprehensive income 35 4 Accumulated deficit (230,057) (218,358) Total stockholders\u2019 equity 124,695 103,815 Total liabilities and stockholders\u2019 equity $ 164,155 $ 156,891 AMPRIUS TECHNOLOGIES, INC. CONDENSED CONSOLIDATED STATEMENTS OF OPERATIONS (Unaudited, in thousands, except share and per share data) Three months ended September 30, Nine months ended September 30, 2026 2025 2026 2025 Revenue $ 39,145 $ 21,426 $ 101,713 $ 47,777 Cost of revenue 28,630 18,108 76,178 45,480 Gross profit (loss) 10,515 3,318 25,535 2,297 Gross margin 27 % 15 % 25 % 5 % Operating expenses: Research and development 6,407 2,509 14,305 6,674 Selling, general and administrative 8,834 5,501 26,941 16,799 Total operating expenses 15,241 8,010 41,246 23,473 Loss from operations (4,726) (4,692) (15,711) (21,176) Other income, net 1,227 800 4,012 1,543 Net loss (3,499) (3,892) (11,699) (19,633) Increase in net loss due to warrant modification \u2014 \u2014 (1,921) \u2014 Net loss attributable to common stockholders $ (3,499) $ (3,892) $ (13,620) $ (19,633) Weighted-average common shares outstanding: Basic and diluted 146,332,565 126,630,085 142,283,973 122,137,964 Net loss per share of common stock: Basic and diluted $ (0.02) $ (0.03) $ (0.10) $ (0.16) AMPRIUS TECHNOLOGIES, INC. CONDENSED CONSOLIDATED STATEMENTS OF CASH FLOWS (Unaudited, in thousands) Nine months ended September 30, 2026 2025 Cash flows from operating activities: Net loss $ (11,699) $ (19,633) Adjustments to reconcile net loss to net cash used in operating activities: Stock-based compensation 7,071 5,491 Depreciation and amortization 2,266 3,142 Loss on termination of lease 166 \u2014 Write-down of property, plant and equipment 77 \u2014 Non-cash operating lease expense 1,239 3,857 Gain on disposal of property, plant and equipment (355) \u2014 Other non-cash items (22) 444 Changes in operating assets and liabilities: Accounts receivable, net (22,035) (16,781) Inventories (9,147) 1,895 Prepaid expenses and other current assets (12,342) (2,495) Other assets (22) 26 Accounts payable 6,096 467 Accrued and other current liabilities 11,946 (538) Deferred revenue (8) (933) Operating lease liabilities (21,195) (2,579) Net cash used in operating activities (47,964) (27,637) Cash flows from investing activities: Purchase of property, plant and equipment (7,979) (2,043) Proceeds from the disposal of property, plant and equipment 355 \u2014 Net cash used in investing activities (7,624) (2,043) Cash flows from financing activities: Proceeds from issuance of common stock in connection with the At Market Issuance Sales Agreement, net \u2014 44,053 Proceeds from exercise of warrants 14,182 \u2014 Proceeds from exercise of stock options 11,295 3,899 Net cash provided by financing activities 25,477 47,952 Net (decrease) increase in cash, cash equivalents and restricted cash equivalents (30,111) 18,272 Effect of exchange rate changes on cash, cash equivalents and restricted cash equivalents 31 (3) Cash, cash equivalents and restricted cash equivalents, beginning of period 91,921 56,411 Cash, cash equivalents and restricted cash equivalents, end of period $ 61,841 $ 74,680 Reconciliation of cash, cash equivalents and restricted cash equivalents shown on the condensed consolidated balance sheets: Cash and cash equivalents $ 60,685 $ 73,224 Restricted cash equivalents included in prepaid expenses and other current assets 1,100 200 Restricted cash equivalents included in other assets 56 1,256 Total cash, cash equivalents and restricted cash equivalents $ 61,841 $ 74,680 AMPRIUS TECHNOLOGIES, INC. GAAP TO NON-GAAP RECONCILIATION OF NET LOSS ATTRIBUTABLE TO COMMON STOCKHOLDERS TO ADJUSTED EBITDA (Unaudited, in thousands) Three months ended September 30, Nine months ended September 30, 2026 2025 2026 2025 Outlook FY26 Net loss attributable to common stockholders $ (3,499) $ (3,892) $ (13,620) $ (19,633) $ (10,000) Increase in net loss due to warrant modification \u2014 \u2014 1,921 \u2014 1,921 Non-GAAP adjusted net loss (3,499) (3,892) (11,699) (19,633) (8,079) Depreciation and amortization 754 1,181 2,266 3,142 3,000 Stock-based compensation 2,472 1,763 7,071 5,491 9,500 Gain on sale of equipment, net \u2014 \u2014 (278) \u2014 \u2014 Brighton, Colorado lease termination and operating costs \u2014 1,575 1,216 5,034 \u2014 Interest and foreign exchange (755) (450) (1,716) (1,139) (1,700) Adjusted EBITDA $ (1,028) $ 177 $ (3,140) $ (7,105) $ 2,721 We define non-GAAP adjusted EBITDA as net loss attributable to common stockholders before interest, taxes, depreciation and amortization, stock-based compensation expense, the non-cash impact of the increase in fair value related to the warrant exchange and other items, which occur from time to time and which we do not believe are indicative of our core operating results."
+}

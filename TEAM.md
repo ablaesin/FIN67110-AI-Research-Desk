@@ -47,6 +47,7 @@ Each member creates a local `.env`. Never commit it and never send an API key in
 | Ticker | Release filing | EDGAR Accepted time | Verified report | Brightspace upload |
 |---|---|---|---|---|
 | TDG | 8-K `0001260221-26-000073`, Exhibit 99.1 | Nov. 10, 2026, 6:32:12 AM Eastern | `runs/tdg-20261110T151542Z/verified_report.md` | Not required; live record is committed here |
+| AMPX | 8-K `0001899287-26-000069`, Exhibit 99.1 | Nov. 10, 2026, 4:28:59 PM Eastern | `runs/ampx-20261111T183626Z/verified_report.md` | Not required; live record is committed here |
 
 ## Initial work owners
 
