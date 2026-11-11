@@ -41,12 +41,12 @@ Each member creates a local `.env`. Never commit it and never send an API key in
 - The last official close before that pre-market release was $1,218.85 on Nov. 9, 2026, from the
   LSEG Workspace `TDG.N` regular-close export.
 - A verified report is saved locally in `runs/tdg-20261110T151542Z/verified_report.md`.
-- Brightspace had no visible Live record location when this run was completed. No Brightspace
-  upload is claimed. Keep the report and this row for Checkpoint 3.
+- No Brightspace upload is required for the live record. The verified report and its evidence are
+  committed in this repository. Keep this row for Checkpoint 3.
 
 | Ticker | Release filing | EDGAR Accepted time | Verified report | Brightspace upload |
 |---|---|---|---|---|
-| TDG | 8-K `0001260221-26-000073`, Exhibit 99.1 | Nov. 10, 2026, 6:32:12 AM Eastern | `runs/tdg-20261110T151542Z/verified_report.md` | No visible Live record location; not uploaded |
+| TDG | 8-K `0001260221-26-000073`, Exhibit 99.1 | Nov. 10, 2026, 6:32:12 AM Eastern | `runs/tdg-20261110T151542Z/verified_report.md` | Not required; live record is committed here |
 
 ## Initial work owners
 
