@@ -9,7 +9,7 @@ import shutil
 import subprocess
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -17,6 +17,7 @@ RUNS = ROOT / "runs"
 WORKSHEET = ROOT / "skills" / "spinoff-worksheet" / "worksheet.py"
 HOOK = ROOT / "skills" / "spinoff-worksheet" / "worksheet_hook.py"
 REPORT_HOOK = ROOT / "skills" / "spinoff-worksheet" / "report_hook.py"
+SEEKER = ROOT / "skills" / "spinoff-seeker" / "seeker.py"
 
 
 def elapsed(name: str, start: float) -> None:
@@ -38,6 +39,13 @@ def screen_ticker() -> str:
     match = re.search(r"\(([A-Z]{1,6})\)|\|\s*([A-Z]{1,6})\s*\|", watch.group(1))
     if not match: raise RuntimeError("screen failed: the top screen name has no ticker")
     return next(value for value in match.groups() if value)
+
+
+def refresh_screen() -> None:
+    """The screen path always refreshes the seeker before the code picks its top ticker."""
+    start = time.monotonic()
+    subprocess.run([sys.executable, str(SEEKER), date.today().isoformat()], check=True, cwd=ROOT)
+    elapsed("seeker", start)
 
 
 def final_report(run: Path) -> Path:
@@ -79,7 +87,14 @@ def main() -> None:
         start = time.monotonic(); print("order: replay → worksheet hook → final-report hook")
         print(replay(args.replay.resolve())); elapsed("replay", start); return
     if not args.ticker: raise SystemExit("Provide TICKER or screen.")
-    ticker = screen_ticker() if args.ticker.lower() == "screen" else args.ticker.upper()
+    if args.ticker.lower() == "screen":
+        try:
+            refresh_screen()
+            ticker = screen_ticker()
+        except subprocess.CalledProcessError as error:
+            raise SystemExit(f"seeker failed: {error}")
+    else:
+        ticker = args.ticker.upper()
     saved = latest_saved(ticker)
     if saved and not all((args.peers, args.price is not None, args.price_date, args.price_source)):
         evidence = json.loads((saved / "evidence.json").read_text(encoding="utf-8"))
