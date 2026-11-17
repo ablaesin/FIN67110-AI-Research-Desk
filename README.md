@@ -92,3 +92,47 @@ cp skills/spinoff-seeker/factors.template.json skills/spinoff-seeker/factors.jso
 ```
 
 The seeker sends the required `SEC_USER_AGENT`, reads EDGAR full indexes and Form 10 filings, saves a dated registry and screen, and preserves unknown facts as blank. See its `SKILL.md` for its limits and close-reader command.
+
+## Lab 07 — worksheet and hook
+
+Run the worksheet on an existing team run. The normal command makes one judgment-only model
+call. Code calculates every value. The hook is silent for a clean worksheet and refuses a changed
+claim with its line number.
+
+```bash
+.venv/bin/python skills/spinoff-worksheet/worksheet.py runs/ampx-YYYYMMDDTHHMMSSZ
+.venv/bin/python skills/spinoff-worksheet/worksheet_hook.py runs/ampx-YYYYMMDDTHHMMSSZ/worksheet.md
+```
+
+Create a seeded copy before testing the refusal. Do not change the original output.
+
+```bash
+cp runs/ampx-YYYYMMDDTHHMMSSZ/worksheet.md /tmp/worksheet-seeded.md
+# Change one marked dollar amount in /tmp/worksheet-seeded.md.
+.venv/bin/python skills/spinoff-worksheet/worksheet_hook.py /tmp/worksheet-seeded.md
+```
+
+The team-owned project is the chapter-based factor check. Its fixed-before-results plan is in
+`lab06/factor-check-plan.md`; its limits are recorded there and in `TEAM.md`.
+
+Print the immutable live-run score table with:
+
+```bash
+.venv/bin/python hit_rate.py runs/live
+```
+
+## Lab 08 — one desk
+
+`one_desk.py` uses a fixed code order: pick, agent team, worksheet, worksheet hook, and final
+report hook. A model does not choose a part or its order. For a ticker with a saved run, the
+command reuses its peers and approved price input; a new ticker needs those inputs on the command
+line.
+
+```bash
+.venv/bin/python one_desk.py AMPX
+.venv/bin/python one_desk.py screen
+.venv/bin/python one_desk.py --replay runs/ampx-YYYYMMDDTHHMMSSZ
+```
+
+Replay copies saved files and makes no network request. It writes the same final report content
+and runs both hooks.

@@ -1,0 +1,163 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "accession": "0001899287-26-000015",
+            "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000015/ampx-20251231.htm"
+          },
+          "latest_10q": {
+            "accession": "0001899287-26-000071",
+            "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000071/ampx-20260930.htm"
+          },
+          "earnings_release": {
+            "accession": "0001899287-26-000069",
+            "url": "https://www.sec.gov/Archives/edgar/data/1899287/000189928726000069/ampx-2026x11x03x8kex991.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001899287.json"
+        },
+        "business_and_mda_excerpt": "ampx-20251231 0001899287 2025 FY false http://fasb.org/us-gaap/2025#NonoperatingIncomeExpense iso4217:USD xbrli:shares iso4217:USD xbrli:shares xbrli:pure ampx:platform ampx:vote ampx:day ampx:extensionOption ampx:lease utr:sqft 0001899287 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 ampx:RedeemableWarrantsMember 2025-01-01 2025-12-31 0001899287 2025-06-30 0001899287 2026-02-27 0001899287 2025-12-31 0001899287 2024-12-31 0001899287 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2023-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2023-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-12-31 0001899287 us-gaap:RetainedEarningsMember 2023-12-31 0001899287 2023-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2024-01-01 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-01-01 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-01-01 2024-12-31 0001899287 us-gaap:CommonStockMember 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-01-01 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-01 2025-12-31 0001899287 us-gaap:CommonStockMember 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-12-31 0001899287 ampx:AmpriusHoldingsMember 2024-10-23 0001899287 ampx:EquityIncentivePlansMember us-gaap:EmployeeStockOptionMember 2025-01-01 2025-12-31 0001899287 ampx:EquityIncentivePlansMember us-gaap:RestrictedStockUnitsRSUMember 2025-01-01 2025-12-31 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2025-12-31 0001899287 us-gaap:MoneyMarketFundsMember us-gaap:FairValueInputsLevel1Member 2024-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:AccountsReceivableMember 2025-01-01 2025-12-31 0001899287 ampx:CustomerTwoMember us-gaap:CustomerConcentrationRiskMember us-gaap:AccountsReceivableMember 2024-01-01 2024-12-31 0001899287 srt:MinimumMember ampx:ProductionEquipmentMember 2025-12-31 0001899287 srt:MaximumMember ampx:ProductionEquipmentMember 2025-12-31 0001899287 ampx:LaboratoryEquipmentMember 2025-12-31 0001899287 srt:MinimumMember us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 srt:MaximumMember us-gaap:FurnitureAndFixturesMember 2025-12-31 0001899287 srt:NorthAmericaMember 2025-01-01 2025-12-31 0001899287 srt:NorthAmericaMember 2024-01-01 2024-12-31 0001899287 us-gaap:EMEAMember 2025-01-01 2025-12-31 0001899287 us-gaap:EMEAMember 2024-01-01 2024-12-31 0001899287 srt:AsiaPacificMember 2025-01-01 2025-12-31 0001899287 srt:AsiaPacificMember 2024-01-01 2024-12-31 0001899287 country:UA 2025-01-01 2025-12-31 0001899287 country:UA 2024-01-01 2024-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2025-01-01 2025-12-31 0001899287 ampx:CustomerOneMember us-gaap:CustomerConcentrationRiskMember us-gaap:SalesRevenueNetMember 2024-01-01 2024-12-31 0001899287 ampx:CustomerTwo",
+        "latest_10q_excerpt": "ampx-20260930 0001899287 12-31 2026 Q3 false 0 508 462 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure ampx:vote ampx:day ampx:lease 0001899287 2026-01-01 2026-09-30 0001899287 us-gaap:CommonStockMember 2026-01-01 2026-09-30 0001899287 ampx:RedeemableWarrantsMember 2026-01-01 2026-09-30 0001899287 2026-11-06 0001899287 2026-09-30 0001899287 2025-12-31 0001899287 2026-07-01 2026-09-30 0001899287 2025-07-01 2025-09-30 0001899287 2025-01-01 2025-09-30 0001899287 us-gaap:CommonStockMember 2025-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-31 0001899287 us-gaap:RetainedEarningsMember 2025-12-31 0001899287 us-gaap:CommonStockMember 2026-01-01 2026-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-01-01 2026-03-31 0001899287 2026-01-01 2026-03-31 0001899287 us-gaap:RetainedEarningsMember 2026-01-01 2026-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-01 2026-03-31 0001899287 us-gaap:CommonStockMember 2026-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-03-31 0001899287 us-gaap:RetainedEarningsMember 2026-03-31 0001899287 2026-03-31 0001899287 us-gaap:CommonStockMember 2026-04-01 2026-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-04-01 2026-06-30 0001899287 2026-04-01 2026-06-30 0001899287 us-gaap:RetainedEarningsMember 2026-04-01 2026-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-01 2026-06-30 0001899287 us-gaap:CommonStockMember 2026-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-06-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-06-30 0001899287 us-gaap:RetainedEarningsMember 2026-06-30 0001899287 2026-06-30 0001899287 us-gaap:CommonStockMember 2026-07-01 2026-09-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-07-01 2026-09-30 0001899287 us-gaap:RetainedEarningsMember 2026-07-01 2026-09-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-07-01 2026-09-30 0001899287 us-gaap:CommonStockMember 2026-09-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2026-09-30 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-09-30 0001899287 us-gaap:RetainedEarningsMember 2026-09-30 0001899287 us-gaap:CommonStockMember 2024-12-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-31 0001899287 us-gaap:RetainedEarningsMember 2024-12-31 0001899287 2024-12-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2025-01-01 2025-03-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-03-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-01-01 2025-03-31 0001899287 us-gaap:CommonStockMember 2025-01-01 2025-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-03-31 0001899287 2025-01-01 2025-03-31 0001899287 us-gaap:RetainedEarningsMember 2025-01-01 2025-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-01 2025-03-31 0001899287 us-gaap:CommonStockMember 2025-03-31 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-03-31 0001899287 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-03-31 0001899287 us-gaap:RetainedEarningsMember 2025-03-31 0001899287 2025-03-31 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:CommonStockMember 2025-04-01 2025-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember us-gaap:AdditionalPaidInCapitalMember 2025-04-01 2025-06-30 0001899287 ampx:AtMarketIssuanceSalesAgreementMember 2025-04-01 2025-06-30 0001899287 us-gaap:CommonStockMember 2025-04-01 2025-06-30 0001899287 us-gaap:AdditionalPaidInCapitalMember 2025-04-01 2025-06-30 0001899287 2025-04-01 2025-06-30 0001899287 us-gaap:RetainedEarningsMember 2025-04-01 2025-06-30 0001899287 us-gaap:AccumulatedOtherC",
+        "earnings_release_excerpt": "EX-99.1 2 ampx-2026x11x03x8kex991.htm EX-99.1 Document Exhibit 99.1 Amprius Technologies Reports Third Quarter 2026 Financial Results and Recent Business Highlights \u2022 Q3 2026 revenue increased 83% year-over-year to $39.1 million \u2022 Net loss of $3.5 million, a 10% year-over-year improvement \u2022 Increasing 2026 revenue outlook to $145 million \u2022 U.S. revenues more than doubled quarter over quarter (QoQ) FREMONT, Calif. \u2014 November 10, 2026 \u2013 Amprius Technologies, Inc. (\"Amprius\" or the \"Company\") (NYSE: AMPX) , a leader in silicon anode lithium-ion batteries, today announced financial results for its third quarter ended September 30, 2026, and discussed recent business developments. Revenue for the third quarter of 2026 was $39.1 million, up 83% from $21.4 million in the third quarter of 2025. Net loss attributable to common stockholders was $3.5 million, compared to a net loss of $3.9 million in the third quarter of 2025. GAAP net loss per common share was $0.02, compared to net loss per share was $0.03 in the third quarter of 2025. Q3 2026 Financial Highlights \u2022 Record revenue of $39.1 million, up 15% sequentially and 83% year-over-year (YoY) \u2022 Gross profit of $10.5 million, up $7.2 million and 217% YoY \u2022 GAAP gross margin of 27%, improving from 15% in Q3 2025 \u2022 Net loss attributable to common stockholders of $3.5 million, a $0.4 million improvement YoY \u2022 Non-GAAP Adjusted EBITDA of $(1.0) million, a decrease from $0.2 million in Q3 2025 \u2022 U.S. revenues increased by 2.3X quarter-over-quarter (QoQ) to $12.2 million \u201cOur third quarter results demonstrate the strength of our company\u2019s technology leadership and our ability to convert growing customer demand into meaningful financial performance,\" said Amprius Technologies CEO Tom Stepien. \"We delivered record revenue, as we continued to deepen our relationships with customers across the drone, aviation, defense, and advanced mobility markets. Amprius introduced SiCore 500, a new battery model, with industry-leading energy density. The Company was selected for a competitive and significant contract to increase production in the U.S. in 2028. As our guidance suggests, Amprius enters the fourth quarter with strong momentum, driven by an expanding pipeline, and increased manufacturing scale.\u201d Reconciliations of GAAP net loss to non-GAAP adjusted net loss and non-GAAP adjusted EBITDA are provided in the financial schedules that are part of this press release. An explanation of these non-GAAP financial measures is also included below under the heading \u201cNon-GAAP Financial Measures.\u201d Quarterly Financial Comparison $ in millions Metric Q3 2026 Q3 2025 Delta Improvement Revenue 39.1 21.4 17.7 83% Gross Profit 10.5 3.3 7.2 217% % Margin 27% 15% GAAP Net Loss (3.5) (3.9) 0.4 10% % Margin (9%) (18%) Non-GAAP Adjusted EBITDA (1.0) 0.2 (1.2) NM % Margin (3%) 1% Business Highlights \u2022 Secured a $75 million U.S. Department of War competitive contract to produce cells in the U.S., $22.3 million of which is obligated, by supporting the conversion of an existing battery production line with planned output of up to 12 million NDAA-compliant cells annually in 2028. \u2022 Introduced SiCore\u00ae 500, a second-generation silicon anode cell delivering 500 Wh/kg on conventional lithium-ion manufacturing equipment, enabling a scalable path to large-scale commercial production to support aviation customers. \u2022 Expanded our relationship with Quantum Systems, a leading German developer of autonomous unmanned systems, with increased deployment of Amprius cells across its Vector and Twister ISR platforms. \u2022 Began supplying SiCore cells to a U.S. aerospace company producing a solar-powered stratospheric platform. Our cell supports extended-duration missions where energy density and weight are critical performance requirements. \u2022 Secured a design win with a global leader in maritime and defense technology, for an autonomous deep-sea underwater vehicle platform, extending the application of Amprius' SiCore technology into subsea d",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 73011000,
+            "unit": "",
+            "tag": "Revenues",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": -46646000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": -44024000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 156891000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "liabilities": {
+            "label": "liabilities",
+            "value": 53076000,
+            "unit": "",
+            "tag": "Liabilities",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 103815000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": -31134000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 4400000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": -0.35,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 126437000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 17869000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-06",
+            "accession": "0001899287-26-000015",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": -0.63889
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": -0.602978
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": -0.280602
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 7.075774
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": -35534000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "### Business Overview\n\nAmprius Technologies, Inc. (NYSE: AMPX) is a leader in silicon anode lithium-ion batteries. The company makes money by developing and selling high-energy-density batteries and advanced battery cell products\u2014such as its SiCore and second-generation SiCore 500 silicon anode cells\u2014to customers across markets including drones, aviation, defense, and advanced mobility. \n\n### Recent Developments\n\nAccording to the company's Q3 2026 earnings release, third-quarter revenue grew 83% year-over-year to $39.1 million (up from $21.4 million in Q3 2025), while net loss attributable to common stockholders improved 10% year-over-year to $3.5 million from $3.9 million. Gross profit reached $10.5 million with a GAAP gross margin of 27%, up from 15% in the prior-year period. Recent business highlights include securing a $75 million competitive contract to support the conversion of a U.S. battery production line (with $22.3 million obligated), introducing the SiCore 500 cell, expanding relationships with autonomous unmanned systems developers like Quantum Systems, supplying cells to a U.S. aerospace company for stratospheric platforms, and securing a design win for a deep-sea underwater vehicle platform. Furthermore, the company increased its full-year 2026 revenue outlook to $145 million.\n\n### Criteria Scores\n\n1. **Revenue Growth**\n   - **Score:** 5 / 5\n   - **Financial Number:** $39,100,000 (Q3 2026 revenue, representing an 83% year-over-year increase from $21,400,000)\n   - **Filing Line / XBRL Tag:** `Revenues` (from earnings release / XBRL facts)\n   - **Explanation:** Q3 2026 revenue exhibited substantial growth, rising 83% year-over-year to $39.1 million and 15% sequentially, supported by robust customer demand and expanding U.S. sales.\n\n2. **Business Performance**\n   - **Score:** 3 / 5\n   - **Financial Number:** $(3,500,000) (Q3 2026 net loss attributable to common stockholders)\n   - **Filing Line / XBRL Tag:** Net loss attributable to common stockholders (from earnings release) / `NetIncomeLoss`\n   - **Explanation:** Although the company continues to post net losses, operational performance showed improvement with gross profit increasing 217% year-over-year to $10.5 million and gross margin expanding to 27%, alongside a 10% reduction in net loss compared to Q3 2025.\n\n3. **Competitive Position**\n   - **Score:** 4 / 5\n   - **Financial Number:** $75,000,000 (Secured U.S. Department of War competitive contract value, with $22.3 million obligated)\n   - **Filing Line / XBRL Tag:** not provided (sourced from earnings release business highlights)\n   - **Explanation:** Amprius reinforces a strong competitive standing through technological differentiation, including the introduction of its industry-leading SiCore 500 cell (delivering 500 Wh/kg) and key competitive contract wins with government and defense entities.\n\n### What Would Change The View\n\nA major shift in revenue growth or operating performance in the next filing\u2014such as a failure to meet the increased full-year 2026 revenue outlook of $145 million, a reversal in gross margin expansion, or a significant widening of net losses\u2014could alter the overall assessment. It would be essential to determine whether such changes are temporary timing issues or indicative of longer-term commercial scaling challenges.\n\nInsight: not provided"
+}
