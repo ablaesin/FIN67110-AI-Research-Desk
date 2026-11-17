@@ -1,0 +1,187 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "form": "10-K",
+            "accession": "0001260221-26-000077",
+            "filed": "2026-11-10",
+            "url": "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000077/tdg-20260930.htm"
+          },
+          "latest_10q": {
+            "accession": "0001260221-26-000053",
+            "filed": "2026-08-04",
+            "url": "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000053/tdg-20260627.htm"
+          },
+          "earnings_release": {
+            "accession": "0001260221-26-000073",
+            "filed": "2026-11-10",
+            "url": "https://www.sec.gov/Archives/edgar/data/1260221/000126022126000073/exhibit991tdg2026q4earning.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001260221.json"
+        },
+        "business_and_mda_excerpt": "tdg-20260930 false 2026 FY 0001260221 http://xbrl.sec.gov/country/2026#US http://xbrl.sec.gov/country/2026#US http://fasb.org/us-gaap/2026#OtherAssetsNoncurrent http://fasb.org/us-gaap/2026#OtherAssetsNoncurrent http://fasb.org/us-gaap/2026#AccruedLiabilitiesCurrent http://fasb.org/us-gaap/2026#AccruedLiabilitiesCurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesNoncurrent http://fasb.org/us-gaap/2026#OtherLiabilitiesNoncurrent http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentNet http://fasb.org/us-gaap/2026#PropertyPlantAndEquipmentNet http://fasb.org/us-gaap/2026#LongTermDebtCurrent http://fasb.org/us-gaap/2026#LongTermDebtCurrent http://fasb.org/us-gaap/2026#LongTermDebtAndCapitalLeaseObligations http://fasb.org/us-gaap/2026#LongTermDebtAndCapitalLeaseObligations iso4217:USD xbrli:shares iso4217:USD xbrli:shares xbrli:pure tdg:Segment 0001260221 2025-10-01 2026-09-30 0001260221 2026-03-27 0001260221 2026-10-30 0001260221 2026-06-28 2026-09-30 0001260221 tdg:W.NicholasHowleyMember 2026-06-28 2026-09-30 0001260221 tdg:W.NicholasHowleyMember 2026-09-30 0001260221 2026-09-30 0001260221 2025-09-30 0001260221 2024-10-01 2025-09-30 0001260221 2023-10-01 2024-09-30 0001260221 us-gaap:CommonStockMember 2023-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2023-09-30 0001260221 us-gaap:RetainedEarningsMember 2023-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2023-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2023-09-30 0001260221 2023-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2023-10-01 2024-09-30 0001260221 2023-11-01 2023-11-30 0001260221 2024-09-01 2024-09-30 0001260221 us-gaap:RetainedEarningsMember 2023-10-01 2024-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2023-10-01 2024-09-30 0001260221 us-gaap:CommonStockMember 2023-10-01 2024-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-10-01 2024-09-30 0001260221 us-gaap:CommonStockMember 2024-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-09-30 0001260221 us-gaap:RetainedEarningsMember 2024-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2024-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2024-09-30 0001260221 2024-09-30 0001260221 us-gaap:RetainedEarningsMember 2024-10-01 2025-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-10-01 2025-09-30 0001260221 us-gaap:CommonStockMember 2024-10-01 2025-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2024-10-01 2025-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-10-01 2025-09-30 0001260221 us-gaap:CommonStockMember 2025-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-09-30 0001260221 us-gaap:RetainedEarningsMember 2025-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2025-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2025-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2025-10-01 2026-09-30 0001260221 us-gaap:RetainedEarningsMember 2025-10-01 2026-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-10-01 2026-09-30 0001260221 us-gaap:CommonStockMember 2025-10-01 2026-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2025-10-01 2026-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-10-01 2026-09-30 0001260221 us-gaap:CommonStockMember 2026-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2026-09-30 0001260221 us-gaap:RetainedEarningsMember 2026-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2026-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2026-09-30 0001260221 srt:MinimumMember us-gaap:LandImprovementsMember 2026-09-30 0001260221 srt:MaximumMember us-gaap:LandImprovementsMember 2026-09-30 0001260221 srt:MinimumMember us-gaap:BuildingAndBuildingImproveme",
+        "latest_10q_excerpt": "tdg-20260627 false 2026 Q3 0001260221 9/30 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure tdg:Segment 0001260221 2025-10-01 2026-06-27 0001260221 2026-07-31 0001260221 2026-06-27 0001260221 2025-09-30 0001260221 2026-03-29 2026-06-27 0001260221 2025-03-30 2025-06-28 0001260221 2024-10-01 2025-06-28 0001260221 us-gaap:CommonStockMember 2024-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-09-30 0001260221 us-gaap:RetainedEarningsMember 2024-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2024-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2024-09-30 0001260221 2024-09-30 0001260221 us-gaap:RetainedEarningsMember 2024-10-01 2024-12-28 0001260221 2024-10-01 2024-12-28 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-10-01 2024-12-28 0001260221 us-gaap:CommonStockMember 2024-10-01 2024-12-28 0001260221 us-gaap:TreasuryStockCommonMember 2024-10-01 2024-12-28 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-10-01 2024-12-28 0001260221 us-gaap:CommonStockMember 2024-12-28 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-12-28 0001260221 us-gaap:RetainedEarningsMember 2024-12-28 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-28 0001260221 us-gaap:TreasuryStockCommonMember 2024-12-28 0001260221 us-gaap:NoncontrollingInterestMember 2024-12-28 0001260221 2024-12-28 0001260221 us-gaap:RetainedEarningsMember 2024-12-29 2025-03-29 0001260221 2024-12-29 2025-03-29 0001260221 us-gaap:AdditionalPaidInCapitalMember 2024-12-29 2025-03-29 0001260221 us-gaap:CommonStockMember 2024-12-29 2025-03-29 0001260221 us-gaap:TreasuryStockCommonMember 2024-12-29 2025-03-29 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-29 2025-03-29 0001260221 us-gaap:CommonStockMember 2025-03-29 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-03-29 0001260221 us-gaap:RetainedEarningsMember 2025-03-29 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-03-29 0001260221 us-gaap:TreasuryStockCommonMember 2025-03-29 0001260221 us-gaap:NoncontrollingInterestMember 2025-03-29 0001260221 2025-03-29 0001260221 us-gaap:NoncontrollingInterestMember 2025-03-30 2025-06-28 0001260221 us-gaap:RetainedEarningsMember 2025-03-30 2025-06-28 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-03-30 2025-06-28 0001260221 us-gaap:CommonStockMember 2025-03-30 2025-06-28 0001260221 us-gaap:TreasuryStockCommonMember 2025-03-30 2025-06-28 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-03-30 2025-06-28 0001260221 us-gaap:CommonStockMember 2025-06-28 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-06-28 0001260221 us-gaap:RetainedEarningsMember 2025-06-28 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-06-28 0001260221 us-gaap:TreasuryStockCommonMember 2025-06-28 0001260221 us-gaap:NoncontrollingInterestMember 2025-06-28 0001260221 2025-06-28 0001260221 us-gaap:CommonStockMember 2025-09-30 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-09-30 0001260221 us-gaap:RetainedEarningsMember 2025-09-30 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-09-30 0001260221 us-gaap:TreasuryStockCommonMember 2025-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2025-09-30 0001260221 us-gaap:NoncontrollingInterestMember 2025-10-01 2025-12-27 0001260221 2025-10-01 2025-12-27 0001260221 us-gaap:RetainedEarningsMember 2025-10-01 2025-12-27 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-10-01 2025-12-27 0001260221 us-gaap:CommonStockMember 2025-10-01 2025-12-27 0001260221 us-gaap:TreasuryStockCommonMember 2025-10-01 2025-12-27 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-10-01 2025-12-27 0001260221 us-gaap:CommonStockMember 2025-12-27 0001260221 us-gaap:AdditionalPaidInCapitalMember 2025-12-27 0001260221 us-gaap:RetainedEarningsMember 2025-12-27 0001260221 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-27 0001260221",
+        "earnings_release_excerpt": "EX-99.1 2 exhibit991tdg2026q4earning.htm EX-99.1 Document Exhibit 99.1 TransDigm Group Reports Fiscal 2026 Fourth Quarter and Year-End Results Cleveland, Ohio, November 10, 2026/PRNewswire/ -- TransDigm Group Incorporated (NYSE: TDG), a leading global designer, producer and supplier of highly engineered aircraft components, today reported results for the fourth quarter ended September 30, 2026. Fourth quarter highlights include: \u2022 Net sales of $2,988 million, up 23% from $2,437 million in the prior year's quarter; \u2022 Earnings per share of $10.33, up 33% from $7.75 in the prior year's quarter; \u2022 EBITDA As Defined of $1,583 million, up 20% from $1,320 million in the prior year's quarter; and \u2022 Adjusted earnings per share of $12.44, up 15% from $10.82 in the prior year's quarter. Quarter-to-Date Results Net sales for the quarter increased 23%, or $551 million, to $2,988 million from $2,437 million in the comparable quarter a year ago. Organic sales growth as a percentage of net sales was 14%. Net income for the quarter was $586 million, a decrease of $23 million, or 4%, compared to $609 million in the comparable quarter a year ago. The decrease in net income primarily reflects higher interest expense as a result of the increase in TransDigm's year-over-year gross debt balance and higher tax expense. The decrease was offset by the increase in net sales as described above and the application of our operating strategy. Adjusted net income for the quarter increased 12% to $706 million, or $12.44 per share, from $629 million, or $10.82 per share, in the comparable quarter a year ago. EBITDA for the quarter increased 13% to $1,436 million from $1,269 million for the comparable quarter a year ago. EBITDA As Defined for the quarter increased 20% to $1,583 million compared with $1,320 million in the comparable quarter a year ago. EBITDA As Defined as a percentage of net sales for the quarter was 53.0%, which included approximately two percentage points of dilution from recent acquisitions, compared with 54.2% in the comparable quarter a year ago. Acquisition Activity As previously announced on September 28, 2026, TransDigm completed the acquisition of Prince & Izant (\"P&I\") for approximately $1.07 billion in cash, including certain tax benefits. P&I is a global designer and manufacturer of highly engineered brazing alloys and specialty metal components used across a range of advanced performance and high cost-of-failure applications. P&I primarily supports the aerospace and defense, aeroderivative turbine, and transportation end markets. Additionally, but to a lesser degree, P&I serves the medical and general industrial end markets. 1 Financing Activity During the quarter, on September 28, 2026, TransDigm successfully completed a private offering of $3.0 billion of new 6.75% Senior Secured Notes maturing January 2035. TransDigm used the net proceeds of the offering of the 2035 Senior Secured Notes to repurchase approximately $1.8 billion of its $2.1 billion outstanding 6.75% Senior Secured Notes due 2028 pursuant to a concurrent tender offer, and for general corporate purposes. Share Repurchase Activity During the fourth quarter of fiscal 2026, TransDigm returned $943 million to shareholders through share repurchases totaling 820 thousand shares of its common stock at an average price per share of $1,150. For the full 2026 fiscal year, TransDigm returned $2.8 billion to shareholders through share repurchases totaling 2.3 million shares of its common stock at an average price per share of $1,187. Year-to-Date Results Fiscal 2026 net sales increased 20%, or $1,726 million, to $10,557 million from $8,831 million in the comparable period a year ago. Organic sales growth as a percentage of net sales for fiscal 2026 was 11%, and 13% excluding non-aerospace sales. Fiscal 2026 net income increased $34 million, or 2%, to $2,108 million from $2,074 million in the comparable period a year ago. The increase in net income primarily reflects the increas",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 10557000000,
+            "unit": "",
+            "tag": "Revenues",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": 4811000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": 2107000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 28014000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "liabilities": {
+            "label": "liabilities",
+            "value": 37921000000,
+            "unit": "",
+            "tag": "Liabilities",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": -10000000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 2187000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 274000000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "depreciation_and_amortization": {
+            "label": "depreciation_and_amortization",
+            "value": 445000000,
+            "unit": "",
+            "tag": "DepreciationDepletionAndAmortization",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": 35.51,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "diluted_weighted_average_shares": {
+            "label": "diluted_weighted_average_shares",
+            "value": 57600000,
+            "unit": "",
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 7652000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 2638000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2026-09-30",
+            "filed": "2026-11-10",
+            "accession": "0001260221-26-000077",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": 0.455717
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": 0.199583
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": 0.075212
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 2.900682
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": 1913000000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "### Business Overview\nTransDigm Group Incorporated (NYSE: TDG) is a leading global designer, producer, and supplier of highly engineered aircraft components (as reported in the earnings release: `EX-99.1`). The company makes money primarily through the design, production, and sale of proprietary aerospace components used in various high cost-of-failure applications across commercial and defense aerospace markets. \n\n### Recent Developments\nDuring the fourth quarter and fiscal year ended September 30, 2026, TransDigm completed significant acquisition and financing activities. On September 28, 2026, the company completed the acquisition of Prince & Izant (\"P&I\") for approximately $1.07 billion in cash (`EX-99.1`). P&I is a global designer and manufacturer of highly engineered brazing alloys and specialty metal components serving aerospace, defense, aeroderivative turbine, and transportation end markets (`EX-99.1`). Additionally, during the quarter, TransDigm issued $3.0 billion of new 6.75% Senior Secured Notes maturing January 2035, using net proceeds to repurchase approximately $1.8 billion of its outstanding 2.1 billion 6.75% Senior Secured Notes due 2028 and for general corporate purposes (`EX-99.1`). The company also returned $943 million to shareholders in Q4 through share repurchases of 820 thousand shares at an average price of $1,150 per share (`EX-99.1`).\n\n### Competitor Comparison & Performance Influences\nNot provided.\n\n### Criteria Scores\n\n1. **Revenue Growth**\n   - **Score:** 5 / 5\n   - **Financial Number:** Fiscal 2026 net sales of $10,557,000,000 (up 20% from $8,831,000,000 in the prior year); fourth quarter net sales of $2,988,000,000 (up 23% year-over-year with 14% organic growth).\n   - **Filing Line / XBRL Tag:** `Revenues` (XBRL tag: `us-gaap:Revenues`, period end 2026-09-30; `EX-99.1` for quarterly figures).\n   - **Explanation:** Revenue grew significantly on both a full-year and fourth-quarter basis, driven by robust organic growth and contributions from recent acquisitions.\n\n2. **Business Performance**\n   - **Score:** 4 / 5\n   - **Financial Number:** Fiscal 2026 operating income of $4,811,000,000; net income of $2,107,000,000; diluted EPS of $35.51; EBITDA As Defined of $1,583 million for Q4 (53.0% of net sales).\n   - **Filing Line / XBRL Tag:** `OperatingIncomeLoss` (`us-gaap:OperatingIncomeLoss`), `NetIncomeLoss` (`us-gaap:NetIncomeLoss`), `EarningsPerShareDiluted` (`us-gaap:EarningsPerShareDiluted`).\n   - **Explanation:** The company demonstrated strong operating margins (approximately 45.6% based on code calculations) and solid net income generation, though net income was slightly impacted by higher interest expense from gross debt balances and increased tax expense.\n\n3. **Competitive Position**\n   - **Score:** 4 / 5\n   - **Financial Number:** Fourth quarter EBITDA As Defined margin of 53.0% on net sales of $2,988,000,000.\n   - **Filing Line / XBRL Tag:** `Revenues` / `EX-99.1` earnings release.\n   - **Explanation:** TransDigm continues to maintain exceptionally high profitability metrics and pricing power through its proprietary aerospace components niche, despite mild dilution from recent acquisitions.\n\n### What Would Change Its View\nA major change in revenue growth, organic sales trajectory, or operating performance\u2014such as unexpected deceleration in aerospace end markets or margin compression from integration costs\u2014in the next filing could alter the overall assessment. Given the company's leverage profile and reliance on debt-funded capital allocation strategies, shifts in interest expense or debt service costs could also have a longer-term impact.\n\nInsight: Fiscal 2026 net income increased $34 million, or 2%, to $2,107,000,000 from $2,074,000,000 in the comparable period a year ago, which matters because it highlights the bottom-line conversion pace relative to top-line expansion amidst rising interest and tax expenses. Filing line / XBRL tag: `NetIncomeLoss` (`us-gaap:NetIncomeLoss`)."
+}

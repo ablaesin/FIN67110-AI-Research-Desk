@@ -1,0 +1,152 @@
+{
+  "input": {
+    "report": "TDG \u2014 filings: 10-K 0001260221-26-000077; 10-Q 0001260221-26-000053; earnings release 8-K 0001260221-26-000073\n\n# Overview\n\nTransDigm Group Incorporated (NYSE: TDG) is a leading global designer, producer, and supplier of highly engineered aircraft components for commercial and defense aerospace markets. In the fiscal year ended September 30, 2026, the company reported net sales of $10,557,000,000 (`us-gaap:Revenues`), representing a 20% increase from the prior year. The company's business model relies on proprietary aerospace components with high cost-of-failure applications.\n\n# Market Positioning and Growth Outlook\n\nTransDigm maintains strong competitive positioning, evidenced by a fourth-quarter EBITDA As Defined margin of 53.0% (`EX-99.1`). Growth is supported by both organic expansion\u2014which reached 14% in the fourth quarter\u2014and strategic acquisitions, such as the $1.07 billion purchase of Prince & Izant (\u201cP&I\u201d) on September 28, 2026 (`EX-99.1`). While the company shows strong top-line performance, future outlook is subject to potential risks, including unexpected deceleration in aerospace end markets or margin compression resulting from integration costs.\n\n# Valuation Insights\n\nAs of the latest reporting, the company's stock price is $1,218.85. Financial metrics reflect a high-valuation profile:\n* **Operating Margin:** 45.57% (`us-gaap:OperatingIncomeLoss` / `us-gaap:Revenues`).\n* **Free Cash Flow:** $1,913,000,000 (calculated as $2,187,000,000 in net cash from operations minus $274,000,000 in capital expenditures).\n* **Capital Structure:** The company reports negative stockholders' equity of $10,000,000,000 (`us-gaap:StockholdersEquity`) against total liabilities of $37,921,000,000.\n* **Liquidity:** A current ratio of 2.90 (calculated from $7,652,000,000 in current assets and $2,638,000,000 in current liabilities) indicates sufficient short-term liquidity despite the leveraged balance sheet.\n\n# Future Developments and Strategic Recommendations\n\nTransDigm continues to utilize debt-funded capital allocation strategies. Recent activities include:\n* **Debt Refinancing:** Issuance of $3.0 billion in 6.75% Senior Secured Notes maturing in 2035 to repurchase $1.8 billion of existing 6.75% Senior Secured Notes due 2028 (`EX-99.1`).\n* **Capital Return:** $943 million returned to shareholders in Q4 through the repurchase of 820,000 shares at an average price of $1,150 per share (`EX-99.1`).\n* **Recommendation:** Monitor the impact of the $3 billion in new notes on future net income and cash flow, as debt service costs remain a primary risk to long-term solvency.\n\n# Investment Recommendation\n\n**Recommendation:** Hold.\n\nThe investment case for TransDigm is characterized by a conflict between robust operational efficiency and financial risk. While the company demonstrates exceptional profit margins and strong revenue growth, its capital structure is highly leveraged, evidenced by $10 billion in negative stockholders' equity. Investors are advised to weigh the high profitability and pricing power against the inherent risks associated with a debt-heavy balance sheet.",
+    "facts": {
+      "revenue": {
+        "label": "revenue",
+        "value": 10557000000,
+        "unit": "",
+        "tag": "Revenues",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "operating_income": {
+        "label": "operating_income",
+        "value": 4811000000,
+        "unit": "",
+        "tag": "OperatingIncomeLoss",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "net_income": {
+        "label": "net_income",
+        "value": 2107000000,
+        "unit": "",
+        "tag": "NetIncomeLoss",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "assets": {
+        "label": "assets",
+        "value": 28014000000,
+        "unit": "",
+        "tag": "Assets",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "liabilities": {
+        "label": "liabilities",
+        "value": 37921000000,
+        "unit": "",
+        "tag": "Liabilities",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "equity": {
+        "label": "equity",
+        "value": -10000000000,
+        "unit": "",
+        "tag": "StockholdersEquity",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "cash_from_operations": {
+        "label": "cash_from_operations",
+        "value": 2187000000,
+        "unit": "",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "capital_expenditures": {
+        "label": "capital_expenditures",
+        "value": 274000000,
+        "unit": "",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "depreciation_and_amortization": {
+        "label": "depreciation_and_amortization",
+        "value": 445000000,
+        "unit": "",
+        "tag": "DepreciationDepletionAndAmortization",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "diluted_eps": {
+        "label": "diluted_eps",
+        "value": 35.51,
+        "unit": "",
+        "tag": "EarningsPerShareDiluted",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "diluted_weighted_average_shares": {
+        "label": "diluted_weighted_average_shares",
+        "value": 57600000,
+        "unit": "",
+        "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "current_assets": {
+        "label": "current_assets",
+        "value": 7652000000,
+        "unit": "",
+        "tag": "AssetsCurrent",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      },
+      "current_liabilities": {
+        "label": "current_liabilities",
+        "value": 2638000000,
+        "unit": "",
+        "tag": "LiabilitiesCurrent",
+        "period_end": "2026-09-30",
+        "filed": "2026-11-10",
+        "accession": "0001260221-26-000077",
+        "form": "10-K"
+      }
+    }
+  },
+  "output": {
+    "code_marks": [
+      {
+        "claim": "revenue",
+        "mark": "Wrong",
+        "correction": "10557000000 (XBRL `Revenues`, period 2026-09-30)"
+      },
+      {
+        "claim": "net income",
+        "mark": "Wrong",
+        "correction": "2107000000 (XBRL `NetIncomeLoss`, period 2026-09-30)"
+      }
+    ],
+    "semantic_check": "| Claim | Status | Evidence |\n| :--- | :--- | :--- |\n| Net sales of $10,557,000,000 for fiscal year 2026 | Correct | `annual_numbers.revenue` |\n| 20% increase in net sales from prior year | Correct | 10-K, p. 20: \"Fiscal 2026 net sales increased 20%... to $10,557 million from $8,831 million\" |\n| Fourth-quarter EBITDA As Defined margin of 53.0% | Correct | `EX-99.1` (Earnings Release), Table 2 |\n| Organic expansion reached 14% in the fourth quarter | Correct | `EX-99.1` (Earnings Release), \"Quarter-to-Date Results\" |\n| $1.07 billion purchase of Prince & Izant on September 28, 2026 | Correct | `EX-99.1` (Earnings Release), \"Acquisition Activity\" |\n| Operating Margin: 45.57% | Correct | `ratios_calculated_in_code.operating_margin` |\n| Free Cash Flow: $1,913,000,000 | Correct | `ratios_calculated_in_code.free_cash_flow` |\n| Negative stockholders' equity of $10,000,000,000 | Correct | `annual_numbers.equity` |\n| Total liabilities of $37,921,000,000 | Correct | `annual_numbers.liabilities` |\n| Current ratio of 2.90 | Correct | `ratios_calculated_in_code.current_ratio` |\n| Issuance of $3.0 billion in 6.75% Senior Secured Notes maturing in 2035 | Correct | `EX-99.1` (Earnings Release), \"Financing Activity\" |\n| Repurchase of $1.8 billion of existing 6.75% Senior Secured Notes due 2028 | Correct | `EX-99.1` (Earnings Release), \"Financing Activity\" |\n| $943 million returned to shareholders in Q4 | Correct | `EX-99.1` (Earnings Release), \"Share Repurchase Activity\" |\n| Repurchase of 820,000 shares at average price of $1,150 | Correct | `EX-99.1` (Earnings Release), \"Share Repurchase Activity\" |"
+  }
+}
