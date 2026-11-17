@@ -104,12 +104,12 @@ claim with its line number.
 .venv/bin/python skills/spinoff-worksheet/worksheet_hook.py runs/ampx-YYYYMMDDTHHMMSSZ/worksheet.md
 ```
 
-When an official vendor file has a `ticker,date,close,volume` column set, use it only from its
-external location. The worksheet calculates median daily dollar volume and applies the $10,000
-purchase-size rule; it does not copy the vendor file into the repository.
+When an official vendor file has `Date`, `Close`, and `Daily Value Traded` columns, use it only
+from its external location. The worksheet calculates median daily dollar volume and applies the
+$10,000 purchase-size rule; it does not copy the vendor file into the repository.
 
 ```bash
-.venv/bin/python skills/spinoff-worksheet/worksheet.py runs/ampx-YYYYMMDDTHHMMSSZ --closes-csv /path/outside/repo/closes.csv
+.venv/bin/python skills/spinoff-worksheet/worksheet.py runs/hona-YYYYMMDDTHHMMSSZ --market-file /path/outside/repo/hona.xlsx
 ```
 
 Create a seeded copy before testing the refusal. Do not change the original output.

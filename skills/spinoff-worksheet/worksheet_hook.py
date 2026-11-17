@@ -32,10 +32,15 @@ def verify(path: Path) -> None:
             if expected is None or not stated or abs(number(stated.group(1)) - float(expected)) > 0.005:
                 fail(line_no, f"{stated.group(1) if stated else 'amount'} is not {key} in evidence.json")
         if "[price]" in line:
-            stated = re.search(r"\$(\d+(?:\.\d+)?)", line)
+            stated = re.search(r"\$([\d,]+(?:\.\d+)?)", line)
             expected = evidence.get("price", {}).get("value")
             if expected is None or not stated or abs(float(stated.group(1)) - float(expected)) > 0.005:
                 fail(line_no, f"{stated.group(0) if stated else 'price'} is not the saved reader price")
+        if "[liquidity: median(daily value traded)]" in line:
+            stated = re.search(r"\$([\d,]+(?:\.\d+)?)", line)
+            expected = evidence.get("market_data", {}).get("median_daily_dollar_volume")
+            if expected is None or not stated or abs(float(stated.group(1).replace(",", "")) - float(expected)) > 0.005:
+                fail(line_no, f"{stated.group(0) if stated else 'liquidity'} is not the saved market-data median")
         if "[computed: annual_numbers.net_income + depreciation - annual_numbers.capital_expenditures]" in line:
             amounts = [number(value) for value in re.findall(r"-?\$[\d,]+(?:\.\d+)?", line)]
             net = float(evidence.get("annual_numbers", {}).get("net_income", {}).get("value", 0))

@@ -13,6 +13,9 @@ from datetime import date, datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+sys.path.insert(0, str(ROOT / "skills" / "spinoff-worksheet"))
+import market_data
+
 RUNS = ROOT / "runs"
 WORKSHEET = ROOT / "skills" / "spinoff-worksheet" / "worksheet.py"
 HOOK = ROOT / "skills" / "spinoff-worksheet" / "worksheet_hook.py"
@@ -27,6 +30,15 @@ def elapsed(name: str, start: float) -> None:
 def latest_saved(ticker: str) -> Path | None:
     choices = [path for path in RUNS.glob(f"{ticker.lower()}-*") if (path / "evidence.json").exists()]
     return max(choices, default=None, key=lambda path: path.stat().st_mtime)
+
+
+def screen_record(ticker: str) -> dict | None:
+    records = sorted((ROOT / "skills" / "spinoff-seeker" / "output").glob("registry-*.json"), reverse=True)
+    for path in records:
+        for record in json.loads(path.read_text(encoding="utf-8")):
+            if record.get("ticker", "").upper() == ticker.upper() and not record.get("dropped"):
+                return record
+    return None
 
 
 def screen_ticker() -> str:
@@ -80,7 +92,7 @@ def main() -> None:
     parser.add_argument("--price", type=float)
     parser.add_argument("--price-date")
     parser.add_argument("--price-source")
-    parser.add_argument("--closes-csv", type=Path, help="Official close-and-volume CSV for the worksheet liquidity check.")
+    parser.add_argument("--market-file", type=Path, help="Official LSEG close and Daily Value Traded CSV/XLSX for price and liquidity.")
     parser.add_argument("--replay", type=Path, metavar="RUN", help="Rebuild saved output without network access.")
     parser.add_argument("--offline-worksheet", action="store_true", help="Test-only: do not call the worksheet model.")
     args = parser.parse_args()
@@ -103,6 +115,15 @@ def main() -> None:
         args.price = args.price if args.price is not None else evidence["price"]["value"]
         args.price_date = args.price_date or evidence["price"]["date"]
         args.price_source = args.price_source or evidence["price"]["source"]
+    if args.market_file and args.price is None:
+        record = screen_record(ticker)
+        if not record or not record.get("distribution_date"):
+            raise SystemExit("The registry has no distribution date for this ticker. Provide --price, --price-date, and --price-source.")
+        distribution = __import__("datetime").datetime.strptime(record["distribution_date"], "%B %d, %Y").date()
+        selected = market_data.first_close_after(args.market_file, ticker, distribution)
+        if not selected: raise SystemExit("The market file has no official close after the distribution date.")
+        args.price_date, args.price = selected[0].isoformat(), selected[1]
+        args.price_source = f"LSEG Workspace export: {args.market_file.name}; first official close after distribution"
     if not all((args.peers, args.price is not None, args.price_date, args.price_source)):
         raise SystemExit("A new ticker needs --peers, --price, --price-date, and --price-source. A saved run supplies these inputs automatically.")
     print("order: pick → agent team → worksheet → worksheet hook → final-report hook")
@@ -117,7 +138,7 @@ def main() -> None:
     run = created[0]; elapsed("agent team", start)
     start = time.monotonic()
     command = [sys.executable, str(WORKSHEET), str(run)] + (["--no-model"] if args.offline_worksheet else [])
-    if args.closes_csv: command += ["--closes-csv", str(args.closes_csv)]
+    if args.market_file: command += ["--market-file", str(args.market_file)]
     subprocess.run(command, check=True); elapsed("worksheet", start)
     start = time.monotonic(); subprocess.run([sys.executable, str(HOOK), str(run / "worksheet.md")], check=True); elapsed("worksheet hook", start)
     report = final_report(run)

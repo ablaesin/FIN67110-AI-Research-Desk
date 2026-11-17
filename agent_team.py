@@ -81,7 +81,7 @@ def call_node(name: str, output_key: str, task: str, context_keys: list[str], ex
         output = desk.model_call(genai.Client(api_key=__import__("os").environ["API_KEY"]), name.replace("_", " ").title(), task, context, expected, role_text(name))
         if output_key == "report":
             sources = state["evidence"]["sources"]
-            output = (f"{state['ticker']} — filings: 10-K {sources['latest_10k']['accession']}; "
+            output = (f"{state['ticker']} — filings: {sources['latest_10k'].get('form', '10-K')} {sources['latest_10k']['accession']}; "
                       f"10-Q {sources['latest_10q']['accession']}; earnings release 8-K "
                       f"{sources['earnings_release']['accession']}\n\n" + output)
         save_node(run_dir, save_name or name, {"input": payload, "output": output})

@@ -94,6 +94,19 @@ def first_filing(filings: list[dict[str, str]], form: str) -> dict[str, str]:
     raise SystemExit(f"No {form} filing was found.")
 
 
+def baseline_filing(filings: list[dict[str, str]]) -> dict[str, str]:
+    """Use the first Form 10 when a newly public spinoff has no 10-K yet."""
+    try:
+        return first_filing(filings, "10-K")
+    except SystemExit:
+        for form in ("10-12B/A", "10-12B", "10"):
+            try:
+                return first_filing(filings, form)
+            except SystemExit:
+                continue
+    raise SystemExit("No 10-K or Form 10 baseline filing was found.")
+
+
 def filing_directory(cik: str, filing: dict[str, str]) -> str:
     accession = filing["accessionNumber"].replace("-", "")
     return f"{SEC_ARCHIVES}/{int(cik)}/{accession}"
@@ -143,10 +156,19 @@ def pick_annual_fact(facts: dict[str, Any], tags: tuple[str, ...]) -> dict[str, 
     candidates: list[dict[str, Any]] = []
     for tag in tags:
         for fact in fact_units(facts, tag):
-            if fact.get("form") == "10-K" and fact.get("fp") == "FY":
+            if fact.get("form") in {"10-K", "10-12B", "10-12B/A", "10"} and fact.get("fp") == "FY":
                 candidates.append({**fact, "tag": tag})
     if not candidates:
-        return None
+        # A new spinoff can have a Form 10 and its first 10-Q before its first 10-K.
+        # Use the latest, longest reported 10-Q period; do not call it an annual fact.
+        for tag in tags:
+            for fact in fact_units(facts, tag):
+                if fact.get("form") == "10-Q": candidates.append({**fact, "tag": tag})
+        if not candidates: return None
+        def reported_period(item: dict[str, Any]) -> int:
+            try: return (datetime.fromisoformat(item["end"]) - datetime.fromisoformat(item["start"])).days
+            except (KeyError, ValueError): return 0
+        return sorted(candidates, key=lambda item: (item.get("end", ""), reported_period(item), item.get("filed", "")), reverse=True)[0]
     return sorted(candidates, key=lambda item: (item.get("end", ""), item.get("filed", "")), reverse=True)[0]
 
 
@@ -195,7 +217,7 @@ def annual_revenue_history(facts: dict[str, Any]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for tag in ANNUAL_TAGS["revenue"]:
         for fact in fact_units(facts, tag):
-            if fact.get("form") == "10-K" and fact.get("fp") == "FY":
+            if fact.get("form") in {"10-K", "10-12B", "10-12B/A", "10"} and fact.get("fp") == "FY":
                 rows.append({**fact, "tag": tag})
     unique = {(row.get("end"), row.get("val")): row for row in rows}
     return sorted(unique.values(), key=lambda row: row.get("end", ""), reverse=True)[:2]
@@ -295,9 +317,9 @@ def main() -> None:
     print("Step 2/7: retrieve filing list")
     submissions = get_json(session, f"{SEC_DATA}/submissions/CIK{cik}.json")
     filings = recent_filings(submissions)
-    latest_10k = first_filing(filings, "10-K")
+    latest_10k = baseline_filing(filings)
     latest_10q = first_filing(filings, "10-Q")
-    print("Step 3/7: download latest 10-K")
+    print(f"Step 3/7: download baseline {latest_10k['form']}")
     ten_k_text = plain_text(get_text(session, accession_url(cik, latest_10k)))
     ten_q_text = plain_text(get_text(session, accession_url(cik, latest_10q)))
     print("Step 4/7: retrieve XBRL facts")
@@ -320,7 +342,7 @@ def main() -> None:
             peer_summary[peer] = {"error": str(error)}
 
     sources = {
-        "latest_10k": {"accession": latest_10k["accessionNumber"], "filed": latest_10k.get("filingDate"), "url": accession_url(cik, latest_10k)},
+        "latest_10k": {"form": latest_10k["form"], "accession": latest_10k["accessionNumber"], "filed": latest_10k.get("filingDate"), "url": accession_url(cik, latest_10k)},
         "latest_10q": {"accession": latest_10q["accessionNumber"], "filed": latest_10q.get("filingDate"), "url": accession_url(cik, latest_10q)},
         "earnings_release": {"accession": release["accessionNumber"], "filed": release.get("filingDate"), "url": release_url},
         "company_facts": f"{SEC_DATA}/api/xbrl/companyfacts/CIK{cik}.json",
@@ -380,7 +402,7 @@ def main() -> None:
         manager_context = {"research": research, "financial": financial, "advisor": advisor, "sources": sources}
         report = model_call(client, "Strategy Manager", "Check the inputs, then compile exactly five sections: Overview; Market Positioning and Growth Outlook; Valuation Insights; Future Developments and Strategic Recommendations; Investment Recommendation. Mark absent evidence as not provided.", manager_context, "A complete five-part Markdown report.")
 
-    filing_line = f"{ticker} — filings: 10-K {latest_10k['accessionNumber']}; 10-Q {latest_10q['accessionNumber']}; earnings release 8-K {release['accessionNumber']}"
+    filing_line = f"{ticker} — filings: {latest_10k['form']} {latest_10k['accessionNumber']}; 10-Q {latest_10q['accessionNumber']}; earnings release 8-K {release['accessionNumber']}"
     if args.fallback:
         header = f"{filing_line}\nfallback\n\n# {ticker} Research Desk Report\n\nRun time (UTC): {datetime.now(timezone.utc).isoformat()}\n\n"
     else:

@@ -3,8 +3,6 @@
 from __future__ import annotations
 
 import argparse
-import csv
-import statistics
 import json
 import shutil
 import sys
@@ -15,6 +13,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 import desk  # noqa: E402
 from google import genai  # noqa: E402
+sys.path.insert(0, str(Path(__file__).parent))
+import market_data  # noqa: E402
 
 METHOD = ROOT / "lab06" / "worksheet-method.md"
 REGISTRY = ROOT / "skills" / "spinoff-seeker" / "output"
@@ -45,27 +45,10 @@ def valuation(owner_cash_flow: float | None, shares: float | None) -> dict[str, 
 
 
 def source_line(item: dict) -> str:
-    return f"10-K {item['accession']}; XBRL {item['tag']}, period {item['period_end']}"
+    return f"{item.get('form', '10-K')} {item['accession']}; XBRL {item['tag']}, period {item['period_end']}"
 
 
-def median_dollar_volume(csv_path: Path | None, ticker: str) -> tuple[float, str] | None:
-    """Read vendor close and volume columns without saving the vendor file in the repository."""
-    if not csv_path:
-        return None
-    with csv_path.open(newline="", encoding="utf-8-sig") as handle:
-        rows = csv.DictReader(handle)
-        values = []
-        for row in rows:
-            fields = {str(key).strip().lower(): str(value or "").strip() for key, value in row.items() if key}
-            try:
-                if fields["ticker"].upper() == ticker.upper():
-                    values.append(float(fields["close"]) * float(fields["volume"]))
-            except (KeyError, ValueError):
-                continue
-    return (statistics.median(values), str(csv_path)) if values else None
-
-
-def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path:
+def build(run_dir: Path, no_model: bool, market_file: Path | None = None) -> Path:
     evidence = json.loads((run_dir / "evidence.json").read_text(encoding="utf-8"))
     ticker = evidence["ticker"].upper()
     numbers = evidence.get("annual_numbers", {})
@@ -84,7 +67,8 @@ def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path
         item = numbers.get(key)
         if not item:
             return f"{label}: not known"
-        return f"{label}: {money(float(item['value']))}; historic; {source_line(item)} [claim: annual_numbers.{key}]"
+        label_type = "historic" if item.get("form") in {"10-K", "10-12B", "10-12B/A", "10"} else "reported after spin"
+        return f"{label}: {money(float(item['value']))}; {label_type}; {source_line(item)} [claim: annual_numbers.{key}]"
 
     net = numbers.get("net_income")
     capex = numbers.get("capital_expenditures")
@@ -95,14 +79,15 @@ def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path
         owner_cash_flow = float(net["value"]) + depreciation - float(capex["value"])
     shares_item = numbers.get("diluted_weighted_average_shares")
     shares = float(shares_item["value"]) if shares_item and float(shares_item["value"]) > 0 else None
-    values = valuation(owner_cash_flow, shares)
+    annual_owner_cash_flow = owner_cash_flow if net and net.get("form") in {"10-K", "10-12B", "10-12B/A", "10"} else None
+    values = valuation(annual_owner_cash_flow, shares)
     price_line = "price: not computed" if not price else (
         f"price: ${float(price['value']):.2f} on {price['date']}; {price['source']} [price]"
     )
     if owner_cash_flow is None:
         ocf_line = "owner cash flow: not computed; after-tax earnings + depreciation and amortization - capital expenditures; depreciation and amortization not known"
     else:
-        ocf_line = (f"owner cash flow: {money(owner_cash_flow)} = {money(float(net['value']))} + {money(depreciation)} - {money(float(capex['value']))} "
+        ocf_line = (f"owner cash flow for the reported period: {money(owner_cash_flow)} = {money(float(net['value']))} + {money(depreciation)} - {money(float(capex['value']))} "
                     "[computed: annual_numbers.net_income + depreciation - annual_numbers.capital_expenditures]")
     if values is None:
         value_lines = ["low case: not computed", "middle case: not computed", "price against low case: not computed"]
@@ -112,7 +97,15 @@ def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path
             f"middle case: ${values['middle']:.2f} per share; 3% growth for five years; 9% required return; 2% terminal growth [method: middle_return=9%]",
             f"price against low case: {(float(price['value']) / values['low'] - 1) * 100:.2f}%" if price else "price against low case: not computed",
         ]
-    liquidity = median_dollar_volume(closes_csv, ticker)
+    liquidity_value = market_data.median_dollar_volume(market_file, ticker) if market_file else None
+    liquidity = (liquidity_value, str(market_file)) if liquidity_value is not None else None
+    if liquidity:
+        evidence["market_data"] = {
+            "median_daily_dollar_volume": liquidity[0],
+            "source": market_file.name,
+            "method": "median(daily value traded)",
+        }
+        (run_dir / "evidence.json").write_text(json.dumps(evidence, indent=2) + "\n", encoding="utf-8")
     facts = {
         "ticker": ticker, "spinoff": spinoff, "parent": reg.get("parent") if reg else "not applicable",
         "ratio": reg.get("distribution_ratio") if reg else "not applicable", "price": price,
@@ -141,12 +134,15 @@ def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path
         claim("depreciation_and_amortization", "depreciation and amortization"), claim("diluted_weighted_average_shares", "diluted weighted-average shares"), "",
         "## Owner cash flow and value", ocf_line, *value_lines, price_line, "",
         "## Liquidity",
-        (f"median daily dollar volume: {money(liquidity[0])}; source: {liquidity[1]} [liquidity: median(close * volume)]\n"
+        (f"median daily dollar volume: {money(liquidity[0])}; source: {liquidity[1]} [liquidity: median(daily value traded)]\n"
          f"purchase size: {'allowed' if 10000 <= liquidity[0] * 0.10 else 'not determined'}; $10,000 project limit against 10% of median daily dollar volume"
-         if liquidity else "median daily dollar volume: not known; purchase size: not determined; supply an official close-and-volume CSV with --closes-csv."), "",
-        "## Judgment", judgment, "", "## Release view", "view: not computed; the owner-cash-flow value is not computed.",
+         if liquidity else "median daily dollar volume: not known; purchase size: not determined; supply an official LSEG close-and-value-traded export with --market-file."), "",
+        "## Judgment", judgment, "", "## Release view", "view: not computed; an annual owner-cash-flow value is not available.",
         f"conviction: {conviction}; worksheet-method conviction rule.", "", "## Not known",
-        "- depreciation and amortization", "- reliable share count for valuation", "- median daily dollar volume", "- Form 4 open-market purchases", "",
+        *( ["- depreciation and amortization"] if depreciation is None else []),
+        *( ["- reliable share count for valuation"] if shares is None else []),
+        *( ["- median daily dollar volume"] if liquidity is None else []),
+        "- Form 4 open-market purchases", "",
     ]
     output = run_dir / "worksheet.md"
     output.write_text("\n".join(lines), encoding="utf-8")
@@ -161,9 +157,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("run", type=Path)
     parser.add_argument("--no-model", action="store_true")
-    parser.add_argument("--closes-csv", type=Path, help="Official vendor CSV with ticker,date,close,volume; kept outside the repository.")
+    parser.add_argument("--market-file", type=Path, help="Official LSEG CSV or XLSX with Date, Close, and Daily Value Traded; kept outside the repository.")
     args = parser.parse_args()
-    print(build(args.run.resolve(), args.no_model, args.closes_csv))
+    print(build(args.run.resolve(), args.no_model, args.market_file))
 
 
 if __name__ == "__main__":

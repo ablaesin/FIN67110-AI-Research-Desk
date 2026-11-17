@@ -34,8 +34,27 @@ def parsed(token: str) -> float:
 def support_values(run: Path) -> set[float]:
     evidence = json.loads((run / "evidence.json").read_text(encoding="utf-8"))
     supported: set[float] = set()
-    for item in evidence.get("annual_numbers", {}).values(): supported.update(numeric_forms(item.get("value")))
-    for item in evidence.get("ratios_calculated_in_code", {}).values(): supported.update(numeric_forms(item.get("value")))
+
+    def collect(value: object) -> None:
+        if isinstance(value, dict):
+            for child in value.values(): collect(child)
+        elif isinstance(value, list):
+            for child in value: collect(child)
+        elif isinstance(value, (int, float)) and not isinstance(value, bool):
+            supported.update(numeric_forms(value))
+
+    # This includes the subject's figures, code-calculated ratios, and peer figures.
+    # All three are saved in evidence.json before any report is generated.
+    collect(evidence)
+    annual = evidence.get("annual_numbers", {})
+    owner_cash_flow_inputs = (
+        annual.get("net_income", {}).get("value"),
+        annual.get("depreciation_and_amortization", {}).get("value"),
+        annual.get("capital_expenditures", {}).get("value"),
+    )
+    if all(isinstance(value, (int, float)) for value in owner_cash_flow_inputs):
+        net_income, depreciation, capex = owner_cash_flow_inputs
+        supported.update(numeric_forms(net_income + depreciation - capex))
     if evidence.get("price", {}).get("value") is not None: supported.update(numeric_forms(evidence["price"]["value"]))
     for filing in (run / "filings").glob("*.txt"):
         for token in NUMBER.findall(filing.read_text(encoding="utf-8")):
