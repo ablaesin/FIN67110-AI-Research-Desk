@@ -104,6 +104,14 @@ claim with its line number.
 .venv/bin/python skills/spinoff-worksheet/worksheet_hook.py runs/ampx-YYYYMMDDTHHMMSSZ/worksheet.md
 ```
 
+When an official vendor file has a `ticker,date,close,volume` column set, use it only from its
+external location. The worksheet calculates median daily dollar volume and applies the $10,000
+purchase-size rule; it does not copy the vendor file into the repository.
+
+```bash
+.venv/bin/python skills/spinoff-worksheet/worksheet.py runs/ampx-YYYYMMDDTHHMMSSZ --closes-csv /path/outside/repo/closes.csv
+```
+
 Create a seeded copy before testing the refusal. Do not change the original output.
 
 ```bash
@@ -118,7 +126,7 @@ The team-owned project is the chapter-based factor check. Its fixed-before-resul
 Print the immutable live-run score table with:
 
 ```bash
-.venv/bin/python hit_rate.py runs/live
+.venv/bin/python hit_rate.py runs/live --closes-csv /path/outside/repo/closes.csv
 ```
 
 ## Lab 08 — one desk
@@ -136,3 +144,10 @@ line.
 
 Replay copies saved files and makes no network request. It writes the same final report content
 and runs both hooks.
+
+Start the local Lab 05 page with the command below. It runs `one_desk.py` for a submitted ticker
+and displays the saved `final_report.md`. It does not publish a site.
+
+```bash
+.venv/bin/python lab05_page.py
+```

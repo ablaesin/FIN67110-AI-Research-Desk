@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import argparse
+import csv
+import statistics
 import json
 import shutil
 import sys
@@ -20,7 +22,7 @@ PERSONA = ROOT / "roles" / "worksheet_investor.md"
 
 
 def money(value: float) -> str:
-    return f"${value:,.0f}"
+    return f"-${abs(value):,.0f}" if value < 0 else f"${value:,.0f}"
 
 
 def registry_item(ticker: str) -> dict | None:
@@ -46,7 +48,24 @@ def source_line(item: dict) -> str:
     return f"10-K {item['accession']}; XBRL {item['tag']}, period {item['period_end']}"
 
 
-def build(run_dir: Path, no_model: bool) -> Path:
+def median_dollar_volume(csv_path: Path | None, ticker: str) -> tuple[float, str] | None:
+    """Read vendor close and volume columns without saving the vendor file in the repository."""
+    if not csv_path:
+        return None
+    with csv_path.open(newline="", encoding="utf-8-sig") as handle:
+        rows = csv.DictReader(handle)
+        values = []
+        for row in rows:
+            fields = {str(key).strip().lower(): str(value or "").strip() for key, value in row.items() if key}
+            try:
+                if fields["ticker"].upper() == ticker.upper():
+                    values.append(float(fields["close"]) * float(fields["volume"]))
+            except (KeyError, ValueError):
+                continue
+    return (statistics.median(values), str(csv_path)) if values else None
+
+
+def build(run_dir: Path, no_model: bool, closes_csv: Path | None = None) -> Path:
     evidence = json.loads((run_dir / "evidence.json").read_text(encoding="utf-8"))
     ticker = evidence["ticker"].upper()
     numbers = evidence.get("annual_numbers", {})
@@ -69,16 +88,13 @@ def build(run_dir: Path, no_model: bool) -> Path:
 
     net = numbers.get("net_income")
     capex = numbers.get("capital_expenditures")
-    # Saved evidence currently has no depreciation tag. Preserve that unknown rather than infer it.
-    depreciation = None
+    depreciation_item = numbers.get("depreciation_and_amortization")
+    depreciation = float(depreciation_item["value"]) if depreciation_item else None
     owner_cash_flow = None
     if net and capex and depreciation is not None:
         owner_cash_flow = float(net["value"]) + depreciation - float(capex["value"])
-    shares = None
-    # A positive EPS permits a conservative share-count derivation. Loss EPS does not.
-    eps = numbers.get("diluted_eps")
-    if net and eps and float(eps["value"]) > 0:
-        shares = float(net["value"]) / float(eps["value"])
+    shares_item = numbers.get("diluted_weighted_average_shares")
+    shares = float(shares_item["value"]) if shares_item and float(shares_item["value"]) > 0 else None
     values = valuation(owner_cash_flow, shares)
     price_line = "price: not computed" if not price else (
         f"price: ${float(price['value']):.2f} on {price['date']}; {price['source']} [price]"
@@ -96,10 +112,11 @@ def build(run_dir: Path, no_model: bool) -> Path:
             f"middle case: ${values['middle']:.2f} per share; 3% growth for five years; 9% required return; 2% terminal growth [method: middle_return=9%]",
             f"price against low case: {(float(price['value']) / values['low'] - 1) * 100:.2f}%" if price else "price against low case: not computed",
         ]
+    liquidity = median_dollar_volume(closes_csv, ticker)
     facts = {
         "ticker": ticker, "spinoff": spinoff, "parent": reg.get("parent") if reg else "not applicable",
         "ratio": reg.get("distribution_ratio") if reg else "not applicable", "price": price,
-        "owner_cash_flow": owner_cash_flow, "values": values,
+        "owner_cash_flow": owner_cash_flow, "values": values, "liquidity": liquidity[0] if liquidity else None,
     }
     if no_model:
         judgment = "Offline test: no model call. Filing facts do not support a judgment."
@@ -120,9 +137,13 @@ def build(run_dir: Path, no_model: bool) -> Path:
         "parent liabilities and restrictions: not applicable" if not reg else "parent liabilities and restrictions: not known",
         "Form 4 purchases, code P only: not applicable" if not reg else "Form 4 purchases, code P only: not known", "",
         "## Filing facts", claim("net_income", "after-tax earnings"), claim("capital_expenditures", "capital expenditures"),
-        claim("liabilities", "liabilities"), claim("cash_from_operations", "cash from operations"), "",
+        claim("liabilities", "liabilities"), claim("cash_from_operations", "cash from operations"),
+        claim("depreciation_and_amortization", "depreciation and amortization"), claim("diluted_weighted_average_shares", "diluted weighted-average shares"), "",
         "## Owner cash flow and value", ocf_line, *value_lines, price_line, "",
-        "## Liquidity", "median daily dollar volume: not known; purchase size: not determined; the closes reader did not supply a volume column.", "",
+        "## Liquidity",
+        (f"median daily dollar volume: {money(liquidity[0])}; source: {liquidity[1]} [liquidity: median(close * volume)]\n"
+         f"purchase size: {'allowed' if 10000 <= liquidity[0] * 0.10 else 'not determined'}; $10,000 project limit against 10% of median daily dollar volume"
+         if liquidity else "median daily dollar volume: not known; purchase size: not determined; supply an official close-and-volume CSV with --closes-csv."), "",
         "## Judgment", judgment, "", "## Release view", "view: not computed; the owner-cash-flow value is not computed.",
         f"conviction: {conviction}; worksheet-method conviction rule.", "", "## Not known",
         "- depreciation and amortization", "- reliable share count for valuation", "- median daily dollar volume", "- Form 4 open-market purchases", "",
@@ -140,8 +161,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("run", type=Path)
     parser.add_argument("--no-model", action="store_true")
+    parser.add_argument("--closes-csv", type=Path, help="Official vendor CSV with ticker,date,close,volume; kept outside the repository.")
     args = parser.parse_args()
-    print(build(args.run.resolve(), args.no_model))
+    print(build(args.run.resolve(), args.no_model, args.closes_csv))
 
 
 if __name__ == "__main__":

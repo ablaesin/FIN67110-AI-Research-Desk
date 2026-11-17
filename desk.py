@@ -125,7 +125,9 @@ ANNUAL_TAGS: dict[str, tuple[str, ...]] = {
     "equity": ("StockholdersEquity", "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"),
     "cash_from_operations": ("NetCashProvidedByUsedInOperatingActivities",),
     "capital_expenditures": ("PaymentsToAcquirePropertyPlantAndEquipment",),
+    "depreciation_and_amortization": ("DepreciationDepletionAndAmortization", "DepreciationDepletionAndAmortizationPropertyPlantAndEquipment"),
     "diluted_eps": ("EarningsPerShareDiluted",),
+    "diluted_weighted_average_shares": ("WeightedAverageNumberOfDilutedSharesOutstanding",),
     "current_assets": ("AssetsCurrent",),
     "current_liabilities": ("LiabilitiesCurrent",),
 }
@@ -318,9 +320,9 @@ def main() -> None:
             peer_summary[peer] = {"error": str(error)}
 
     sources = {
-        "latest_10k": {"accession": latest_10k["accessionNumber"], "url": accession_url(cik, latest_10k)},
-        "latest_10q": {"accession": latest_10q["accessionNumber"], "url": accession_url(cik, latest_10q)},
-        "earnings_release": {"accession": release["accessionNumber"], "url": release_url},
+        "latest_10k": {"accession": latest_10k["accessionNumber"], "filed": latest_10k.get("filingDate"), "url": accession_url(cik, latest_10k)},
+        "latest_10q": {"accession": latest_10q["accessionNumber"], "filed": latest_10q.get("filingDate"), "url": accession_url(cik, latest_10q)},
+        "earnings_release": {"accession": release["accessionNumber"], "filed": release.get("filingDate"), "url": release_url},
         "company_facts": f"{SEC_DATA}/api/xbrl/companyfacts/CIK{cik}.json",
     }
     evidence = {
@@ -332,6 +334,7 @@ def main() -> None:
         "revenue_history": revenue_history,
         "price": {"value": args.price, "date": args.price_date, "source": args.price_source,
                   "definition": "last close before the earnings release"},
+        "release_date": release.get("filingDate"),
         "peers": peer_summary,
         "business_and_mda_excerpt": ten_k_text[:40000],
         "latest_10q_excerpt": ten_q_text[:12000],

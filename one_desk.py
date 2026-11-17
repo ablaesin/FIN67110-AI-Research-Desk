@@ -80,6 +80,7 @@ def main() -> None:
     parser.add_argument("--price", type=float)
     parser.add_argument("--price-date")
     parser.add_argument("--price-source")
+    parser.add_argument("--closes-csv", type=Path, help="Official close-and-volume CSV for the worksheet liquidity check.")
     parser.add_argument("--replay", type=Path, metavar="RUN", help="Rebuild saved output without network access.")
     parser.add_argument("--offline-worksheet", action="store_true", help="Test-only: do not call the worksheet model.")
     args = parser.parse_args()
@@ -116,6 +117,7 @@ def main() -> None:
     run = created[0]; elapsed("agent team", start)
     start = time.monotonic()
     command = [sys.executable, str(WORKSHEET), str(run)] + (["--no-model"] if args.offline_worksheet else [])
+    if args.closes_csv: command += ["--closes-csv", str(args.closes_csv)]
     subprocess.run(command, check=True); elapsed("worksheet", start)
     start = time.monotonic(); subprocess.run([sys.executable, str(HOOK), str(run / "worksheet.md")], check=True); elapsed("worksheet hook", start)
     report = final_report(run)
