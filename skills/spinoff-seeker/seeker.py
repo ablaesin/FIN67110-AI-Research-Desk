@@ -96,17 +96,28 @@ def first_match(patterns: list[str], body: str) -> str:
 
 def find_facts(body: str, url: str) -> dict[str, Any]:
     parent = first_match([
+        r"([A-Z][A-Za-z& ]{2,60})\s+(?:will|expects? to)\s+distribute(?:\s+all)?\s+(?:of\s+)?the shares",
+        r"shares of [A-Za-z& ]{2,80}?\s+(?:will be|are expected to be)\s+distributed by\s+([A-Z][A-Za-z& ]{2,60})\s+(?:to|at|on)",
         r"(?:our|the) parent company,?\s+([^,.]{2,100})[,.;]",
         r"distribution by\s+([^,.]{2,100})[,.;]",
         r"([^,.]{2,100})\s+will distribute all of the shares",
     ], body)
-    ratio = first_match([r"(?:distribution|distributed)\s+(?:ratio|of)\s+([^.;]{3,80}(?:share|shares)[^.;]{0,80})"], body)
-    record_date = first_match([r"record date (?:will be|is|of)?\s*(.{0,80}?)(?:[.;]|\s+and\s+the distribution)"], body)
-    distribution_date = first_match([r"distribution date (?:will be|is|of)?\s*(.{0,80}?)(?:[.;]|\s+we expect)"], body)
+    ratio = first_match([
+        r"((?:one|two|three|four|five|\d+)\s+share[^.;]{0,20}\s+for every\s+(?:one|two|three|four|five|\d+)\s+share[^.;]{0,40})",
+        r"(?:distribution|distributed)\s+(?:ratio|of)\s+([^.;]{3,80}(?:share|shares)[^.;]{0,80})",
+    ], body)
+    record_date = first_match([
+        r"([A-Z][a-z]+\s+\d{1,2},\s+20\d{2}),\s+the record date",
+        r"record date (?:will be|is|of)?\s*([A-Z][a-z]+\s+\d{1,2},\s+20\d{2})",
+    ], body)
+    distribution_date = first_match([
+        r"(?:shares|stock).{0,100}?(?:distributed|distribution).{0,80}?on\s+([A-Z][a-z]+\s+\d{1,2},\s+20\d{2})",
+        r"distribution date (?:will be|is|of)?\s*([A-Z][a-z]+\s+\d{1,2},\s+20\d{2})",
+    ], body)
     # Dates without a clear label stay blank; the report must not infer them.
     result: dict[str, Any] = {"parent": parent, "distribution_ratio": ratio,
                               "record_date": record_date, "distribution_date": distribution_date,
-                              "ticker": "", "sources": {}}
+                              "ticker": first_match([r"ticker symbol[^A-Z]{0,30}([A-Z]{1,6})", r"under the symbol[^A-Z]{0,30}([A-Z]{1,6})"], body), "sources": {}}
     for field, value in list(result.items()):
         if field not in {"sources", "ticker"} and value:
             result["sources"][field] = source(url, "Information Statement")
@@ -115,18 +126,13 @@ def find_facts(body: str, url: str) -> dict[str, Any]:
 
 def exclusion_reason(body: str) -> str:
     low = body.lower()
-    def stated_as(term: str) -> bool:
-        """Return true only for an affirmative description, not 'not an investment company'."""
-        for match in re.finditer(re.escape(term), low):
-            before = low[max(0, match.start() - 90):match.start()]
-            if re.search(r"\b(?:not|no)\s+(?:an?\s+)?$", before):
-                continue
-            if re.search(r"\b(?:is|are|was|were|as|a|an|the)\s+(?:registered\s+)?$", before):
-                return True
-        return False
-    if any(stated_as(term) for term in ("investment company", "closed-end fund", "mutual fund")):
+    def registrant_is(term: str) -> bool:
+        """Match only a statement that identifies this registrant as a fund."""
+        subject = r"(?:this|the\s+(?:registrant|company)|registrant|company|we)"
+        return bool(re.search(rf"\b{subject}\s+(?:is|are|was|were)\s+(?:an?\s+)?(?:registered\s+)?{re.escape(term)}\b", low))
+    if any(registrant_is(term) for term in ("investment company", "closed-end fund", "mutual fund")):
         return "fund registrant"
-    if any(stated_as(term) for term in ("shell company", "blank check company")):
+    if any(registrant_is(term) for term in ("shell company", "blank check company")):
         return "shell company"
     if "information statement" not in low:
         return "Form 10 has no information statement"
