@@ -33,18 +33,21 @@ close through day 180, and no imputation of missing material facts.
 ## Roles
 
 - Abraham Blaesing: seeker code, official-close reader test, and live-report run/upload.
-- Gabriel DePalma: filing checks for the Honeywell and BioStem examples.
+- Gabriel DePalma: completed filing checks for the Honeywell and BioStem examples, and audited
+  the WMT release filing, its EDGAR accepted time, and the 24-hour live-record entry.
 - Brody Oliver: factor-file review, seeker-report review, and recomputation of one factor's
-  points after the seeker produces a ranked candidate.
+  points after the seeker produces a ranked candidate; completed the NVDA and CRWV three-column
+  comparison review and marked each filing-supported difference.
 
 These roles are the team’s recorded starting assignments in `TEAM.md`. Update this section if the
 team changed them in a commit.
 
 ## Lab 9 proof runs
 
-Brody Oliver and Gabriel DePalma selected these two names. Both reports were produced by the
-one-command desk, include the accepted earnings filing on the first line, and label spinoff facts
-as not applicable.
+Brody Oliver and Gabriel DePalma selected these two names. Brody completed the filing-supported
+three-column comparison review for these reports. Both reports were produced by the one-command
+desk, include the accepted earnings filing on the first line, and label spinoff facts as not
+applicable.
 
 | Ticker | Filing accepted time | Official pre-filing close | Verified final report |
 |---|---|---|---|
@@ -61,4 +64,5 @@ Repository path: [runs/live](https://github.com/ablaesin/FIN67110-AI-Research-De
 | TDG | 8-K `0001260221-26-000073`, Exhibit 99.1 | Nov. 10, 2026, 6:32:12 AM Eastern | Nov. 17, 2026, 10:03:31 AM Eastern | No; the release is in Week 4, although the report was committed in Week 5. |
 
 The Week 5 live-record window is Monday, Nov. 16 through Sunday, Nov. 22, 2026. The WMT report is
-stored in `runs/live/wmt-20261119T140341Z/` and was committed within the 24-hour rule.
+stored in `runs/live/wmt-20261119T140341Z/` and was committed within the 24-hour rule. Gabriel
+completed the filing, timestamp, and 24-hour-record audit.
