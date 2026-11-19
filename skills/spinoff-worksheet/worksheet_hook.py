@@ -42,12 +42,7 @@ def verify(path: Path) -> None:
             if expected is None or not stated or abs(float(stated.group(1).replace(",", "")) - float(expected)) > 0.005:
                 fail(line_no, f"{stated.group(0) if stated else 'liquidity'} is not the saved market-data median")
         if "[computed: annual_numbers.net_income + depreciation - annual_numbers.capital_expenditures]" in line:
-            amounts = [number(value) for value in re.findall(r"-?\$[\d,]+(?:\.\d+)?", line)]
-            net = float(evidence.get("annual_numbers", {}).get("net_income", {}).get("value", 0))
-            depreciation = float(evidence.get("annual_numbers", {}).get("depreciation_and_amortization", {}).get("value", 0))
-            capex = float(evidence.get("annual_numbers", {}).get("capital_expenditures", {}).get("value", 0))
-            if len(amounts) != 4 or abs(amounts[0] - (net + depreciation - capex)) > 0.005:
-                fail(line_no, "owner cash flow does not equal its printed filing inputs")
+            fail(line_no, "owner cash flow improperly substitutes net income for after-tax operating income")
         if "[method: low_return=10%]" in line and "10%" not in line:
             fail(line_no, "the low-case rate does not match worksheet-method.md")
         if "[method: middle_return=9%]" in line and "9%" not in line:

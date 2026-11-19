@@ -18,7 +18,7 @@ NVDA — filings: 10-K 0001045810-26-000021; 10-Q 0001045810-26-000075; earnings
 | Depreciation and amortization of $2,843,000,000 | Correct | Form 10-K (0001045810-26-000021), Consolidated Statements of Cash Flows |
 | Operating Margin of 60.38% | Correct | 130,387 (Operating Income) / 215,938 (Revenue) = 0.603817 |
 | Current Ratio of 3.91 | Correct | 125,605 (AssetsCurrent) / 32,163 (LiabilitiesCurrent) = 3.905264 |
-| Groq Inc. license agreement date: December 31, 2025 | Wrong | "In December 2025, we entered into a non-exclusive license agreement with Groq, Inc." (Note 2, 10-K) |
+| Groq Inc. license agreement date: December 2025 | Correct | "In December 2025, we entered into a non-exclusive license agreement with Groq, Inc." (Note 2, 10-K) |
 
 
 ### Overview
@@ -31,7 +31,7 @@ Competitor positioning and industry comparisons are not provided in detail withi
 The stock price is noted at $150.96 as of November 17, 2026, with an assigned valuation score of 5/5 based on massive earnings output, including a net income of $120,067,000,000 (`NetIncomeLoss`, Form 10-K, accession `0001045810-26-000021`). Detailed price-to-earnings calculations are not provided. The company maintains a capital-light asset base, evidenced by depreciation and amortization of $2,843,000,000 (`DepreciationDepletionAndAmortization`, Form 10-K, accession `0001045810-26-000021`) relative to $206,803,000,000 in total assets (`Assets`).
 
 ### Future Developments and Strategic Recommendations
-Future performance will be influenced by ongoing management transitions, including Colette M. Kress serving as Interim Chief Executive Officer, Executive Vice President, and Chief Financial Officer as of November 2026 (Form 8-K, filed November 17, 2026). Strategic developments include a non-exclusive license agreement entered into with Groq Inc. on December 31, 2025 (`nvda:GroqInc.NonExclusiveLicenseAgreementMember`, Form 10-K, accession `0001045810-26-000021`), involving developed technology rights that expand the company's technological capabilities and IP portfolio. Investors should monitor operating margin trends as the primary indicator of competitive edge maintenance.
+Future performance will be influenced by ongoing management transitions, including Colette M. Kress serving as Interim Chief Executive Officer, Executive Vice President, and Chief Financial Officer as of November 2026 (Form 8-K, filed November 17, 2026). Strategic developments include a non-exclusive license agreement entered into with Groq Inc. in December 2025 (`nvda:GroqInc.NonExclusiveLicenseAgreementMember`, Form 10-K, accession `0001045810-26-000021`), involving developed technology rights that expand the company's technological capabilities and IP portfolio. Investors should monitor operating margin trends as the primary indicator of competitive edge maintenance.
 
 ### Investment Recommendation
 * **Recommendation:** Buy

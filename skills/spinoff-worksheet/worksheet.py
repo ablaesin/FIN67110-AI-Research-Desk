@@ -136,25 +136,21 @@ def build(run_dir: Path, no_model: bool, market_file: Path | None = None) -> Pat
     capex = numbers.get("capital_expenditures")
     depreciation_item = numbers.get("depreciation_and_amortization")
     depreciation = float(depreciation_item["value"]) if depreciation_item else None
+    # The project method requires after-tax operating income.  Net income is a
+    # different measure, so do not substitute it merely because it is available.
+    after_tax_operating_income = None
     owner_cash_flow = None
-    if net and capex and depreciation is not None:
-        owner_cash_flow = float(net["value"]) + depreciation - float(capex["value"])
     shares_item = numbers.get("diluted_weighted_average_shares")
     shares = float(shares_item["value"]) if shares_item and float(shares_item["value"]) > 0 else None
     historic_owner_cash_flow = None
-    if info and all(info.get(key) is not None for key in ("historic_net_income", "historic_depreciation", "historic_amortization", "historic_capex")):
-        historic_owner_cash_flow = info["historic_net_income"] + info["historic_depreciation"] + info["historic_amortization"] - info["historic_capex"]
-    annual_owner_cash_flow = owner_cash_flow if net and net.get("form") in {"10-K", "10-12B", "10-12B/A", "10"} else historic_owner_cash_flow
+    annual_owner_cash_flow = None
     annual_shares = shares if owner_cash_flow == annual_owner_cash_flow else info.get("historic_shares")
     values = valuation(annual_owner_cash_flow, annual_shares)
     price_line = "price: not computed" if not price else (
         f"price: ${float(price['value']):.2f} on {price['date']}; {price['source']} [price]"
     )
-    if owner_cash_flow is None:
-        ocf_line = "owner cash flow: not computed; after-tax earnings + depreciation and amortization - capital expenditures; depreciation and amortization not known"
-    else:
-        ocf_line = (f"owner cash flow for the reported period: {money(owner_cash_flow)} = {money(float(net['value']))} + {money(depreciation)} - {money(float(capex['value']))} "
-                    "[computed: annual_numbers.net_income + depreciation - annual_numbers.capital_expenditures]")
+    ocf_line = ("owner cash flow: not computed; the method requires after-tax operating income, "
+                "and net income is not substituted for that measure.")
     if values is None:
         value_lines = ["low case: not computed", "middle case: not computed", "price against low case: not computed"]
     else:
@@ -208,7 +204,7 @@ def build(run_dir: Path, no_model: bool, market_file: Path | None = None) -> Pat
         "debt raised and cash to parent: not applicable" if not reg else f"debt raised: {info['debt']}; cash to parent: {info['cash_to_parent']}; exchange notes: {info['exchange_notes']}; Form 10 information statement, Description of Material Indebtedness",
         "parent liabilities and restrictions: not applicable" if not reg else f"parent restrictions: {info['restriction']}; Form 10 information statement, Risk Factors",
         "Form 4 purchases, code P only: not applicable" if not reg else ("Form 4 purchases, code P only: " + "; ".join(purchases) if purchases else "Form 4 purchases, code P only: not known"), "",
-        "## Filing facts", claim("net_income", "after-tax earnings"), claim("capital_expenditures", "capital expenditures"),
+        "## Filing facts", claim("net_income", "net income"), claim("capital_expenditures", "capital expenditures"),
         claim("liabilities", "liabilities"), claim("cash_from_operations", "cash from operations"),
         claim("depreciation_and_amortization", "depreciation and amortization"), claim("diluted_weighted_average_shares", "diluted weighted-average shares"), "",
         "## Owner cash flow and value", ocf_line,
@@ -220,6 +216,7 @@ def build(run_dir: Path, no_model: bool, market_file: Path | None = None) -> Pat
          if liquidity else "median daily dollar volume: not known; purchase size: not determined; supply an official LSEG close-and-value-traded export with --market-file."), "",
         "## Judgment", judgment, "", "## Release view", release_view,
         f"conviction: {conviction}; worksheet-method conviction rule.", "", "## Not known",
+        "- after-tax operating income",
         *( ["- depreciation and amortization"] if depreciation is None else []),
         *( ["- reliable share count for valuation"] if shares is None else []),
         *( ["- median daily dollar volume"] if liquidity is None else []),

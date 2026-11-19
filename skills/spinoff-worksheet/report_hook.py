@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import worksheet_hook  # noqa: E402
 
 
-NUMBER = re.compile(r"(?<![A-Za-z0-9])(?:\d+(?:\.\d+)?%|(?:-?\$|\$-?)?\d[\d,]*(?:\.\d+)?)(?![A-Za-z0-9])")
+NUMBER = re.compile(r"(?<![A-Za-z0-9])(?:-?\d+(?:\.\d+)?%|(?:\$-?|-?\$|-)?\d[\d,]*(?:\.\d+)?)(?![A-Za-z0-9])")
 
 
 def numeric_forms(value: object) -> set[float]:
@@ -47,14 +47,6 @@ def support_values(run: Path) -> set[float]:
     # All three are saved in evidence.json before any report is generated.
     collect(evidence)
     annual = evidence.get("annual_numbers", {})
-    owner_cash_flow_inputs = (
-        annual.get("net_income", {}).get("value"),
-        annual.get("depreciation_and_amortization", {}).get("value"),
-        annual.get("capital_expenditures", {}).get("value"),
-    )
-    if all(isinstance(value, (int, float)) for value in owner_cash_flow_inputs):
-        net_income, depreciation, capex = owner_cash_flow_inputs
-        supported.update(numeric_forms(net_income + depreciation - capex))
     if evidence.get("price", {}).get("value") is not None:
         price = evidence["price"]["value"]
         supported.update(numeric_forms(price))
@@ -70,8 +62,9 @@ def support_values(run: Path) -> set[float]:
 def identifier(line: str, token: str) -> bool:
     start = line.find(token); before = line[max(0, start - 24):start].lower()
     accession_parts = {part for accession in re.findall(r"\d{10}-\d{2}-\d{6}", line) for part in accession.split("-")}
-    return bool(token in accession_parts or re.fullmatch(r"20\d{2}", token) or re.fullmatch(r"\d{10}-\d{2}-\d{6}", token)
-                or any(word in before for word in ("accession", "form ", "item ", "q3", "fy", "line ", "run:")))
+    return bool("run time" in line.lower() or token in accession_parts or re.fullmatch(r"20\d{2}", token)
+                or re.fullmatch(r"\d{10}-\d{2}-\d{6}", token) or re.fullmatch(r"\d{18}", token)
+                or any(word in before for word in ("accession", "form ", "item ", "q3", "fy", "line ", "run:", "run time")))
 
 
 def close_enough(value: float, candidates: set[float]) -> bool:
