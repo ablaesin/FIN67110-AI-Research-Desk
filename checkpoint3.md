@@ -57,8 +57,8 @@ Repository path: [runs/live](https://github.com/ablaesin/FIN67110-AI-Research-De
 
 | Ticker | Release filing | Filing accepted time | Commit time | Inside the Week 5 window? |
 |---|---|---|---|---|
+| WMT | 8-K `0000104169-26-000168`, Exhibit 99.1 | Nov. 19, 2026, 6:58:52 AM Eastern | Nov. 19, 2026, 9:07:16 AM Eastern | Yes; committed 2 hours, 8 minutes, and 24 seconds after EDGAR acceptance. |
 | TDG | 8-K `0001260221-26-000073`, Exhibit 99.1 | Nov. 10, 2026, 6:32:12 AM Eastern | Nov. 17, 2026, 10:03:31 AM Eastern | No; the release is in Week 4, although the report was committed in Week 5. |
 
-The Week 5 live-record window is Monday, Nov. 16 through Sunday, Nov. 22, 2026. Add the selected
-Week 5 release here after it files. Record its filing-accepted time, the commit time, and whether
-the commit is inside the window.
+The Week 5 live-record window is Monday, Nov. 16 through Sunday, Nov. 22, 2026. The WMT report is
+stored in `runs/live/wmt-20261119T140341Z/` and was committed within the 24-hour rule.
