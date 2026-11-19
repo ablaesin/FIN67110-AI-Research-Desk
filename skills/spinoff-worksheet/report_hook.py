@@ -21,7 +21,7 @@ def numeric_forms(value: object) -> set[float]:
         raw = float(value)
     except (TypeError, ValueError):
         return set()
-    return {raw, raw / 1_000, raw / 1_000_000, raw / 1_000_000_000, raw * 100,
+    return {raw, raw / 1_000, raw / 1_000_000, raw / 1_000_000_000, round(raw / 1_000_000_000, 1), raw * 100,
             raw * 1_000, raw * 1_000_000, raw * 1_000_000_000}
 
 
@@ -95,6 +95,9 @@ def verify(report: Path) -> None:
         # external file; they are not numeric claims in the report.
         claim_line = re.sub(r"\S+\.(?:csv|xlsx)\b", "", line, flags=re.I)
         for token in NUMBER.findall(claim_line):
+            threshold = re.search(r"(?:exceeding|more than|over|at least)\s+\$?" + re.escape(token), line, re.I)
+            if threshold and any(candidate >= parsed(token) for candidate in supported):
+                continue
             if not identifier(line, token) and not close_enough(parsed(token), supported):
                 raise SystemExit(f"refused: line {line_no}, {token} is not in saved evidence, a saved filing, or a printed calculation")
 

@@ -1,0 +1,45 @@
+# WMT worksheet
+
+Run: wmt-20261119T140341Z
+Method: lab06/worksheet-method.md
+
+## Spinoff facts
+parent: not applicable; not applicable
+distribution ratio: not applicable; not applicable
+distribution dates: not applicable
+debt raised and cash to parent: not applicable
+parent liabilities and restrictions: not applicable
+Form 4 purchases, code P only: not applicable
+
+## Filing facts
+after-tax earnings: $21,893,000,000; historic; 10-K 0000104169-26-000055; XBRL NetIncomeLoss, period 2026-01-31 [claim: annual_numbers.net_income]
+capital expenditures: $26,642,000,000; historic; 10-K 0000104169-26-000055; XBRL PaymentsToAcquirePropertyPlantAndEquipment, period 2026-01-31 [claim: annual_numbers.capital_expenditures]
+liabilities: not known
+cash from operations: $41,565,000,000; historic; 10-K 0000104169-26-000055; XBRL NetCashProvidedByUsedInOperatingActivities, period 2026-01-31 [claim: annual_numbers.cash_from_operations]
+depreciation and amortization: $10,678,000,000; historic; 10-K 0000104169-19-000016; XBRL DepreciationDepletionAndAmortization, period 2019-01-31 [claim: annual_numbers.depreciation_and_amortization]
+diluted weighted-average shares: $8,022,000,000; historic; 10-K 0000104169-26-000055; XBRL WeightedAverageNumberOfDilutedSharesOutstanding, period 2026-01-31 [claim: annual_numbers.diluted_weighted_average_shares]
+
+## Owner cash flow and value
+owner cash flow for the reported period: $5,929,000,000 = $21,893,000,000 + $10,678,000,000 - $26,642,000,000 [computed: annual_numbers.net_income + depreciation - annual_numbers.capital_expenditures]
+historical owner cash flow: not known
+low case: $7.39 per share; 0% growth; 10% required return; 0% terminal growth [method: low_return=10%]
+middle case: $11.24 per share; 3% growth for five years; 9% required return; 2% terminal growth [method: middle_return=9%]
+price against low case: 1623.19%
+price: $127.36 on 2026-11-18; LSEG Workspace Price History export; WMT.N close; last close before the 2026-11-19 06:58:52 Eastern filing [price]
+
+## Liquidity
+median daily dollar volume: $2,533,336,785; source: /Users/abrahamblaesing/Downloads/Price History_20261119_0902.xlsx [liquidity: median(daily value traded)]
+purchase size: allowed; $10,000 project limit against 10% of median daily dollar volume
+
+## Judgment
+Based on the supplied worksheet facts, the name trades at a price of 127.36 (as of 2026-11-18, sourced from "LSEG Workspace Price History export; WMT.N close; last close before the 2026-11-19 06:58:52 Eastern filing") against an owner cash flow of 5,929,000,000.0, a liquidity of 2,533,336,785.0, and low and middle values of 7.390924956369982 and 11.242548914005598 respectively. 
+
+Whether the name may be cheap or not that story is not provided by the current data, as the values (7.39 and 11.24) sit significantly below the given share price of 127.36, and the relationship between these metrics is not detailed enough to form a complete valuation thesis.
+
+The next filing fact that would change the view is not provided.
+
+## Release view
+view: less than price; middle case $11.24 against price $127.36; Form 10 information statement, Combined Statements of Cash Flows
+conviction: Medium; worksheet-method conviction rule.
+
+## Not known

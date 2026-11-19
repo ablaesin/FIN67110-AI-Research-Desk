@@ -1,0 +1,177 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "form": "10-K",
+            "accession": "0000104169-26-000055",
+            "filed": "2026-03-13",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm"
+          },
+          "latest_10q": {
+            "accession": "0000104169-26-000154",
+            "filed": "2026-08-28",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm"
+          },
+          "earnings_release": {
+            "accession": "0000104169-26-000168",
+            "filed": "2026-11-19",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000168/wmt-20261119.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json"
+        },
+        "business_and_mda_excerpt": "wmt-20260131 0000104169 2026 FY false http://fasb.org/us-gaap/2025#AccountsPayableCurrent http://fasb.org/us-gaap/2025#AccountsPayableCurrent P1Y P5Y 364 iso4217:USD xbrli:shares iso4217:USD xbrli:shares wmt:segment xbrli:pure iso4217:JPY wmt:state wmt:territory wmt:case wmt:classAction wmt:pharmacist wmt:employee wmt:phase wmt:supplierContribution iso4217:MXN 0000104169 2025-02-01 2026-01-31 0000104169 wmt:CommonStockparvalue0.10pershareMember 2025-02-01 2026-01-31 0000104169 wmt:A2.550NotesDue2026Member 2025-02-01 2026-01-31 0000104169 wmt:A1050NotesDue2026Member 2025-02-01 2026-01-31 0000104169 wmt:A1500NotesDue2028Member 2025-02-01 2026-01-31 0000104169 wmt:A4875NotesDue2029Member 2025-02-01 2026-01-31 0000104169 wmt:A5750NotesDue2030Member 2025-02-01 2026-01-31 0000104169 wmt:A1800NotesDue2031Member 2025-02-01 2026-01-31 0000104169 wmt:A5625NotesDue2034Member 2025-02-01 2026-01-31 0000104169 wmt:A5250NotesDue2035Member 2025-02-01 2026-01-31 0000104169 wmt:A4875NotesDue2039Member 2025-02-01 2026-01-31 0000104169 2025-07-31 0000104169 2026-03-11 0000104169 2024-02-01 2025-01-31 0000104169 2023-02-01 2024-01-31 0000104169 2026-01-31 0000104169 2025-01-31 0000104169 us-gaap:CommonStockMember 2023-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2023-01-31 0000104169 us-gaap:RetainedEarningsMember 2023-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-01-31 0000104169 us-gaap:ParentMember 2023-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2023-01-31 0000104169 2023-01-31 0000104169 us-gaap:RetainedEarningsMember 2023-02-01 2024-01-31 0000104169 us-gaap:ParentMember 2023-02-01 2024-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2023-02-01 2024-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-02-01 2024-01-31 0000104169 us-gaap:CommonStockMember 2023-02-01 2024-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2023-02-01 2024-01-31 0000104169 us-gaap:CommonStockMember 2024-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2024-01-31 0000104169 us-gaap:RetainedEarningsMember 2024-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-01-31 0000104169 us-gaap:ParentMember 2024-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2024-01-31 0000104169 2024-01-31 0000104169 us-gaap:RetainedEarningsMember 2024-02-01 2025-01-31 0000104169 us-gaap:ParentMember 2024-02-01 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2024-02-01 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-02-01 2025-01-31 0000104169 us-gaap:CommonStockMember 2024-02-01 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2024-02-01 2025-01-31 0000104169 us-gaap:CommonStockMember 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-31 0000104169 us-gaap:ParentMember 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-02-01 2026-01-31 0000104169 us-gaap:ParentMember 2025-02-01 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-02-01 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-01 2026-01-31 0000104169 us-gaap:CommonStockMember 2025-02-01 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-02-01 2026-01-31 0000104169 us-gaap:CommonStockMember 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-31 0000104169 us-gaap:ParentMember 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-01-31 0000104169 wmt:AmountsDuefromBanksMember 2026-01-31 0000104169 wmt:AmountsDuefromBanksMember 2025-01-31 0000104169 wmt:NonrepatriableCashAndCashEquivalentsMember 2026-01-31 0000104169 wmt:NonrepatriableCashAndCashEquivalentsMember 2025-01",
+        "latest_10q_excerpt": "wmt-20260731 0000104169 1/31 2027 Q2 false 534 247 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure iso4217:EUR wmt:case wmt:classAction wmt:pharmacist wmt:employee wmt:phase wmt:supplierContribution iso4217:MXN wmt:segment 0000104169 2026-02-01 2026-07-31 0000104169 wmt:CommonStockparvalue0.10pershareMember 2026-02-01 2026-07-31 0000104169 wmt:A1050NotesDue2026Member 2026-02-01 2026-07-31 0000104169 wmt:A1500NotesDue2028Member 2026-02-01 2026-07-31 0000104169 wmt:A4875NotesDue2029Member 2026-02-01 2026-07-31 0000104169 wmt:A5750NotesDue2030Member 2026-02-01 2026-07-31 0000104169 wmt:A1800NotesDue2031Member 2026-02-01 2026-07-31 0000104169 wmt:A5625NotesDue2034Member 2026-02-01 2026-07-31 0000104169 wmt:A5250NotesDue2035Member 2026-02-01 2026-07-31 0000104169 wmt:A4875NotesDue2039Member 2026-02-01 2026-07-31 0000104169 2026-08-26 0000104169 2026-05-01 2026-07-31 0000104169 2025-05-01 2025-07-31 0000104169 2025-02-01 2025-07-31 0000104169 2026-07-31 0000104169 2026-01-31 0000104169 2025-07-31 0000104169 us-gaap:CommonStockMember 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-31 0000104169 us-gaap:ParentMember 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-02-01 2026-04-30 0000104169 us-gaap:ParentMember 2026-02-01 2026-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2026-02-01 2026-04-30 0000104169 2026-02-01 2026-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-02-01 2026-04-30 0000104169 us-gaap:CommonStockMember 2026-02-01 2026-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-02-01 2026-04-30 0000104169 us-gaap:CommonStockMember 2026-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-04-30 0000104169 us-gaap:RetainedEarningsMember 2026-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-30 0000104169 us-gaap:ParentMember 2026-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2026-04-30 0000104169 2026-04-30 0000104169 us-gaap:RetainedEarningsMember 2026-05-01 2026-07-31 0000104169 us-gaap:ParentMember 2026-05-01 2026-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-05-01 2026-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-05-01 2026-07-31 0000104169 us-gaap:CommonStockMember 2026-05-01 2026-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-05-01 2026-07-31 0000104169 us-gaap:CommonStockMember 2026-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-07-31 0000104169 us-gaap:RetainedEarningsMember 2026-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-07-31 0000104169 us-gaap:ParentMember 2026-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-07-31 0000104169 us-gaap:CommonStockMember 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-31 0000104169 us-gaap:ParentMember 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-01-31 0000104169 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-02-01 2025-04-30 0000104169 us-gaap:ParentMember 2025-02-01 2025-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2025-02-01 2025-04-30 0000104169 2025-02-01 2025-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-01 2025-04-30 0000104169 us-gaap:CommonStockMember 2025-02-01 2025-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-02-01 2025-04-30 0000104169 us-gaap:CommonStockMember 2025-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-04-30 0000104169 us-gaap:RetainedEarningsMember 2025-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-04-30 0000104169 us-gaap:ParentMember 2025-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2025",
+        "earnings_release_excerpt": "wmt-20261119 0000104169 false 0000104169 2026-11-19 2026-11-19 0000104169 wmt:CommonStockparvalue0.10pershareMember 2026-11-19 2026-11-19 0000104169 wmt:A1500NotesDue2028Member 2026-11-19 2026-11-19 0000104169 wmt:A4875NotesDue2029Member 2026-11-19 2026-11-19 0000104169 wmt:A5750NotesDue2030Member 2026-11-19 2026-11-19 0000104169 wmt:A1800NotesDue2031Member 2026-11-19 2026-11-19 0000104169 wmt:A5625NotesDue2034Member 2026-11-19 2026-11-19 0000104169 wmt:A5250NotesDue2035Member 2026-11-19 2026-11-19 0000104169 wmt:A4875NotesDue2039Member 2026-11-19 2026-11-19 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, DC 20549 ________________________ FORM 8-K CURRENT REPORT PURSUANT TO SECTION 13 or 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 Date of Report (date of earliest event reported) November 19, 2026 WALMART INC. (Exact name of registrant as specified in its charter) DE 001-06991 71-0415188 (State or other jurisdiction of incorporation or organization) (Commission File Number) (I.R.S. Employer Identification No.) 1 Customer Drive Bentonville , AR 72716 (Address of Principal Executive Offices) (Zip code) Registrant's telephone number, including area code: ( 479 ) 273-4000 Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: \u2610 Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) \u2610 Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) \u2610 Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) \u2610 Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, par value $0.10 per share WMT The Nasdaq Stock Market LLC 1.500% Notes due 2028 WMT28C The Nasdaq Stock Market LLC 4.875% Notes due 2029 WMT29B The Nasdaq Stock Market LLC 5.750% Notes due 2030 WMT30B The Nasdaq Stock Market LLC 1.800% Notes due 2031 WMT31A The Nasdaq Stock Market LLC 5.625% Notes due 2034 WMT34 The Nasdaq Stock Market LLC 5.250% Notes due 2035 WMT35A The Nasdaq Stock Market LLC 4.875% Notes due 2039 WMT39 The Nasdaq Stock Market LLC Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (\u00a7230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (\u00a7240.12b-2 of this chapter). Emerging growth company \u2610 If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 Item 2.02. Results of Operations and Financial Condition. In accordance with Item 2.02 of Form 8-K of the Securities and Exchange Commission (the \"SEC\"), Walmart Inc., a Delaware corporation (the \"Company\"), is furnishing to the SEC a press release that the Company will issue on November 19, 2026 (the \"Press Release\") and a financial presentation that will be first posted by the Company on the Company\u2019s website at http://stock.walmart.com on November 19, 2026 (the \"Financial Presentation\"). The Press Release and the Financial Presentation will disclose information regarding the Company's results of operations and cash flows for the three and nine months ended October 31, 2026 and financial condition as of October 31, 2026. In accordance with General Instruction B.2 of Form 8-K, the information in this Item 2.02 of this Current Report on Form 8-K, including Exhibits 99.1 and 99.2 hereto, which are furnished herewith pursuant to and relate to this Item 2.02, shall not be deemed \"filed\" for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the \"Exchange Act\"), or otherwise be",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 713163000000,
+            "unit": "",
+            "tag": "Revenues",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": 29825000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": 21893000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 284668000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 99617000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 41565000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 26642000000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "depreciation_and_amortization": {
+            "label": "depreciation_and_amortization",
+            "value": 10678000000,
+            "unit": "",
+            "tag": "DepreciationDepletionAndAmortization",
+            "period_end": "2019-01-31",
+            "filed": "2019-03-28",
+            "accession": "0000104169-19-000016",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": 2.73,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "diluted_weighted_average_shares": {
+            "label": "diluted_weighted_average_shares",
+            "value": 8022000000,
+            "unit": "",
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 84874000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 107469000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": 0.041821
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": 0.030698
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": 0.076907
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 0.789753
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": 14923000000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "### Business Overview and Revenue Model\n\nWalmart Inc. operates retail, wholesale, and other units, serving customers worldwide through physical stores, e-commerce websites, and mobile applications. The company generates revenue primarily through the sale of a wide assortment of merchandise, including groceries, consumables, health and wellness products, apparel, home goods, and hardlines, as well as through e-commerce operations, membership fees, and advertising services. \n\nFor the fiscal year ended January 31, 2026, Walmart reported total revenues of $713,163,000,000, operating income of $29,825,000,000, and net income of $21,893,000,000 (Source: Form 10-K, filed March 13, 2026, accession `0000104169-26-000055`).\n\n### Recent Developments and Performance Factors\n\nRecent developments include ongoing strategic investments in digital commerce, supply chain automation, and advertising initiatives to support long-term growth. Factors influencing future performance include macroeconomic conditions, consumer spending trends, inflationary pressures on operating costs, competitive pricing pressures in the global retail sector, and execution of supply chain efficiencies. \n\n### Criteria Scores\n\n* **Revenue Growth:** Score: 4/5\n  * **Financial Number:** $713,163,000,000\n  * **Filing Line / XBRL Tag:** `Revenues` (`0000104169-26-000055`)\n  * **Explanation:** Reflects robust top-line scale and continued demand across retail and digital channels.\n* **Business Performance:** Score: 4/5\n  * **Financial Number:** $29,825,000,000 (Operating Income) and $21,893,000,000 (Net Income)\n  * **Filing Line / XBRL Tag:** `OperatingIncomeLoss` / `NetIncomeLoss` (`0000104169-26-000055`)\n  * **Explanation:** Demonstrates healthy profitability and effective cash generation, supported by $41,565,000,000 in net cash provided by operating activities (`NetCashProvidedByUsedInOperatingActivities`).\n* **Competitive Position:** Score: 5/5\n  * **Financial Number:** $284,668,000,000 (Total Assets) and $99,617,000,000 (Stockholders' Equity)\n  * **Filing Line / XBRL Tag:** `Assets` / `StockholdersEquity` (`0000104169-26-000055`)\n  * **Explanation:** Walmart maintains an industry-leading physical and digital footprint, providing unmatched supply chain scale and bargaining power relative to competitors.\n\nInsight: For the fiscal year ended January 31, 2026, Walmart reported payments to acquire property, plant, and equipment of $26,642,000,000, which matters because it highlights the company's aggressive ongoing capital allocation toward supply chain automation and store remodels to maintain its competitive edge (Filing Line: `PaymentsToAcquirePropertyPlantAndEquipment`, accession `0000104169-26-000055`)."
+}

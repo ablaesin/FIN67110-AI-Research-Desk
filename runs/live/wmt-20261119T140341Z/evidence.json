@@ -1,0 +1,664 @@
+{
+  "ticker": "WMT",
+  "company": "Walmart Inc.",
+  "sources": {
+    "latest_10k": {
+      "form": "10-K",
+      "accession": "0000104169-26-000055",
+      "filed": "2026-03-13",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm"
+    },
+    "latest_10q": {
+      "accession": "0000104169-26-000154",
+      "filed": "2026-08-28",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm"
+    },
+    "earnings_release": {
+      "accession": "0000104169-26-000168",
+      "filed": "2026-11-19",
+      "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000168/wmt-20261119.htm"
+    },
+    "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json"
+  },
+  "annual_numbers": {
+    "revenue": {
+      "label": "revenue",
+      "value": 713163000000,
+      "unit": "",
+      "tag": "Revenues",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "operating_income": {
+      "label": "operating_income",
+      "value": 29825000000,
+      "unit": "",
+      "tag": "OperatingIncomeLoss",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "net_income": {
+      "label": "net_income",
+      "value": 21893000000,
+      "unit": "",
+      "tag": "NetIncomeLoss",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "assets": {
+      "label": "assets",
+      "value": 284668000000,
+      "unit": "",
+      "tag": "Assets",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "equity": {
+      "label": "equity",
+      "value": 99617000000,
+      "unit": "",
+      "tag": "StockholdersEquity",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "cash_from_operations": {
+      "label": "cash_from_operations",
+      "value": 41565000000,
+      "unit": "",
+      "tag": "NetCashProvidedByUsedInOperatingActivities",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "capital_expenditures": {
+      "label": "capital_expenditures",
+      "value": 26642000000,
+      "unit": "",
+      "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "depreciation_and_amortization": {
+      "label": "depreciation_and_amortization",
+      "value": 10678000000,
+      "unit": "",
+      "tag": "DepreciationDepletionAndAmortization",
+      "period_end": "2019-01-31",
+      "filed": "2019-03-28",
+      "accession": "0000104169-19-000016",
+      "form": "10-K"
+    },
+    "diluted_eps": {
+      "label": "diluted_eps",
+      "value": 2.73,
+      "unit": "",
+      "tag": "EarningsPerShareDiluted",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "diluted_weighted_average_shares": {
+      "label": "diluted_weighted_average_shares",
+      "value": 8022000000,
+      "unit": "",
+      "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "current_assets": {
+      "label": "current_assets",
+      "value": 84874000000,
+      "unit": "",
+      "tag": "AssetsCurrent",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    },
+    "current_liabilities": {
+      "label": "current_liabilities",
+      "value": 107469000000,
+      "unit": "",
+      "tag": "LiabilitiesCurrent",
+      "period_end": "2026-01-31",
+      "filed": "2026-03-13",
+      "accession": "0000104169-26-000055",
+      "form": "10-K"
+    }
+  },
+  "ratios_calculated_in_code": {
+    "operating_margin": {
+      "formula": "operating_income / revenue",
+      "value": 0.041821
+    },
+    "net_margin": {
+      "formula": "net_income / revenue",
+      "value": 0.030698
+    },
+    "return_on_assets": {
+      "formula": "net_income / assets",
+      "value": 0.076907
+    },
+    "current_ratio": {
+      "formula": "current_assets / current_liabilities",
+      "value": 0.789753
+    },
+    "free_cash_flow": {
+      "formula": "cash_from_operations - capital_expenditures",
+      "value": 14923000000.0
+    }
+  },
+  "revenue_history": [
+    {
+      "start": "2025-02-01",
+      "end": "2026-01-31",
+      "val": 713163000000,
+      "accn": "0000104169-26-000055",
+      "fy": 2026,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2026-03-13",
+      "frame": "CY2025",
+      "tag": "Revenues"
+    },
+    {
+      "start": "2025-02-01",
+      "end": "2026-01-31",
+      "val": 706413000000,
+      "accn": "0000104169-26-000055",
+      "fy": 2026,
+      "fp": "FY",
+      "form": "10-K",
+      "filed": "2026-03-13",
+      "frame": "CY2025",
+      "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+    }
+  ],
+  "price": {
+    "value": 127.36,
+    "date": "2026-11-18",
+    "source": "LSEG Workspace Price History export; WMT.N close; last close before the 2026-11-19 06:58:52 Eastern filing",
+    "definition": "last close before the earnings release"
+  },
+  "release_date": "2026-11-19",
+  "peers": {
+    "TGT": {
+      "numbers": {
+        "revenue": {
+          "label": "revenue",
+          "value": 104780000000,
+          "unit": "",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "label": "operating_income",
+          "value": 5117000000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": 3705000000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 59490000000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 16165000000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": 6562000000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "capital_expenditures": {
+          "label": "capital_expenditures",
+          "value": 3727000000,
+          "unit": "",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "depreciation_and_amortization": {
+          "label": "depreciation_and_amortization",
+          "value": 3134000000,
+          "unit": "",
+          "tag": "DepreciationDepletionAndAmortization",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": 8.13,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "diluted_weighted_average_shares": {
+          "label": "diluted_weighted_average_shares",
+          "value": 455600000,
+          "unit": "",
+          "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 20005000000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 21230000000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-11",
+          "accession": "0000027419-26-000016",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "operating_margin": {
+          "formula": "operating_income / revenue",
+          "value": 0.048836
+        },
+        "net_margin": {
+          "formula": "net_income / revenue",
+          "value": 0.03536
+        },
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": 0.062279
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 0.942299
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": 2835000000.0
+        }
+      }
+    },
+    "COST": {
+      "numbers": {
+        "revenue": {
+          "label": "revenue",
+          "value": 303154000000,
+          "unit": "",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "label": "operating_income",
+          "value": 11685000000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": 9226000000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 89045000000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "label": "liabilities",
+          "value": 53242000000,
+          "unit": "",
+          "tag": "Liabilities",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 35803000000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": 15817000000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "capital_expenditures": {
+          "label": "capital_expenditures",
+          "value": 6435000000,
+          "unit": "",
+          "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "depreciation_and_amortization": {
+          "label": "depreciation_and_amortization",
+          "value": 2674000000,
+          "unit": "",
+          "tag": "DepreciationDepletionAndAmortization",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": 20.76,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "diluted_weighted_average_shares": {
+          "label": "diluted_weighted_average_shares",
+          "value": 444427000,
+          "unit": "",
+          "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 46582000000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 43952000000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2026-08-30",
+          "filed": "2026-10-07",
+          "accession": "0000909832-26-000093",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "operating_margin": {
+          "formula": "operating_income / revenue",
+          "value": 0.038545
+        },
+        "net_margin": {
+          "formula": "net_income / revenue",
+          "value": 0.030433
+        },
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": 0.103611
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 1.059838
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": 9382000000.0
+        }
+      }
+    },
+    "KR": {
+      "numbers": {
+        "revenue": {
+          "label": "revenue",
+          "value": 147642000000,
+          "unit": "",
+          "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "operating_income": {
+          "label": "operating_income",
+          "value": 1890000000,
+          "unit": "",
+          "tag": "OperatingIncomeLoss",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "net_income": {
+          "label": "net_income",
+          "value": 1016000000,
+          "unit": "",
+          "tag": "NetIncomeLoss",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "assets": {
+          "label": "assets",
+          "value": 49953000000,
+          "unit": "",
+          "tag": "Assets",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "liabilities": {
+          "label": "liabilities",
+          "value": 44017000000,
+          "unit": "",
+          "tag": "Liabilities",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "equity": {
+          "label": "equity",
+          "value": 5927000000,
+          "unit": "",
+          "tag": "StockholdersEquity",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "cash_from_operations": {
+          "label": "cash_from_operations",
+          "value": 7311000000,
+          "unit": "",
+          "tag": "NetCashProvidedByUsedInOperatingActivities",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "depreciation_and_amortization": {
+          "label": "depreciation_and_amortization",
+          "value": 3332000000,
+          "unit": "",
+          "tag": "DepreciationDepletionAndAmortization",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "diluted_eps": {
+          "label": "diluted_eps",
+          "value": 1.54,
+          "unit": "",
+          "tag": "EarningsPerShareDiluted",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "diluted_weighted_average_shares": {
+          "label": "diluted_weighted_average_shares",
+          "value": 655000000,
+          "unit": "",
+          "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "current_assets": {
+          "label": "current_assets",
+          "value": 14505000000,
+          "unit": "",
+          "tag": "AssetsCurrent",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        },
+        "current_liabilities": {
+          "label": "current_liabilities",
+          "value": 18108000000,
+          "unit": "",
+          "tag": "LiabilitiesCurrent",
+          "period_end": "2026-01-31",
+          "filed": "2026-03-31",
+          "accession": "0001104659-26-037723",
+          "form": "10-K"
+        }
+      },
+      "ratios": {
+        "operating_margin": {
+          "formula": "operating_income / revenue",
+          "value": 0.012801
+        },
+        "net_margin": {
+          "formula": "net_income / revenue",
+          "value": 0.006882
+        },
+        "return_on_assets": {
+          "formula": "net_income / assets",
+          "value": 0.020339
+        },
+        "current_ratio": {
+          "formula": "current_assets / current_liabilities",
+          "value": 0.801027
+        },
+        "free_cash_flow": {
+          "formula": "cash_from_operations - capital_expenditures",
+          "value": 7311000000.0
+        }
+      }
+    }
+  },
+  "business_and_mda_excerpt": "wmt-20260131 0000104169 2026 FY false http://fasb.org/us-gaap/2025#AccountsPayableCurrent http://fasb.org/us-gaap/2025#AccountsPayableCurrent P1Y P5Y 364 iso4217:USD xbrli:shares iso4217:USD xbrli:shares wmt:segment xbrli:pure iso4217:JPY wmt:state wmt:territory wmt:case wmt:classAction wmt:pharmacist wmt:employee wmt:phase wmt:supplierContribution iso4217:MXN 0000104169 2025-02-01 2026-01-31 0000104169 wmt:CommonStockparvalue0.10pershareMember 2025-02-01 2026-01-31 0000104169 wmt:A2.550NotesDue2026Member 2025-02-01 2026-01-31 0000104169 wmt:A1050NotesDue2026Member 2025-02-01 2026-01-31 0000104169 wmt:A1500NotesDue2028Member 2025-02-01 2026-01-31 0000104169 wmt:A4875NotesDue2029Member 2025-02-01 2026-01-31 0000104169 wmt:A5750NotesDue2030Member 2025-02-01 2026-01-31 0000104169 wmt:A1800NotesDue2031Member 2025-02-01 2026-01-31 0000104169 wmt:A5625NotesDue2034Member 2025-02-01 2026-01-31 0000104169 wmt:A5250NotesDue2035Member 2025-02-01 2026-01-31 0000104169 wmt:A4875NotesDue2039Member 2025-02-01 2026-01-31 0000104169 2025-07-31 0000104169 2026-03-11 0000104169 2024-02-01 2025-01-31 0000104169 2023-02-01 2024-01-31 0000104169 2026-01-31 0000104169 2025-01-31 0000104169 us-gaap:CommonStockMember 2023-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2023-01-31 0000104169 us-gaap:RetainedEarningsMember 2023-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-01-31 0000104169 us-gaap:ParentMember 2023-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2023-01-31 0000104169 2023-01-31 0000104169 us-gaap:RetainedEarningsMember 2023-02-01 2024-01-31 0000104169 us-gaap:ParentMember 2023-02-01 2024-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2023-02-01 2024-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-02-01 2024-01-31 0000104169 us-gaap:CommonStockMember 2023-02-01 2024-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2023-02-01 2024-01-31 0000104169 us-gaap:CommonStockMember 2024-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2024-01-31 0000104169 us-gaap:RetainedEarningsMember 2024-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-01-31 0000104169 us-gaap:ParentMember 2024-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2024-01-31 0000104169 2024-01-31 0000104169 us-gaap:RetainedEarningsMember 2024-02-01 2025-01-31 0000104169 us-gaap:ParentMember 2024-02-01 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2024-02-01 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-02-01 2025-01-31 0000104169 us-gaap:CommonStockMember 2024-02-01 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2024-02-01 2025-01-31 0000104169 us-gaap:CommonStockMember 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-31 0000104169 us-gaap:ParentMember 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-02-01 2026-01-31 0000104169 us-gaap:ParentMember 2025-02-01 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-02-01 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-01 2026-01-31 0000104169 us-gaap:CommonStockMember 2025-02-01 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-02-01 2026-01-31 0000104169 us-gaap:CommonStockMember 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-31 0000104169 us-gaap:ParentMember 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-01-31 0000104169 wmt:AmountsDuefromBanksMember 2026-01-31 0000104169 wmt:AmountsDuefromBanksMember 2025-01-31 0000104169 wmt:NonrepatriableCashAndCashEquivalentsMember 2026-01-31 0000104169 wmt:NonrepatriableCashAndCashEquivalentsMember 2025-01-31 0000104169 us-gaap:LandMember 2026-01-31 0000104169 us-gaap:LandMember 2025-01-31 0000104169 srt:MinimumMember us-gaap:BuildingAndBuildingImprovementsMember 2026-01-31 0000104169 srt:MaximumMember us-gaap:BuildingAndBuildingImprovementsMember 2026-01-31 0000104169 us-gaap:BuildingAndBuildingImprovementsMember 2026-01-31 0000104169 us-gaap:BuildingAndBuildingImprovementsMember 2025-01-31 0000104169 srt:MinimumMember us-gaap:FurnitureAndFixturesMember 2026-01-31 0000104169 srt:MaximumMember us-gaap:FurnitureAndFixturesMember 2026-01-31 0000104169 us-gaap:FurnitureAndFixturesMember 2026-01-31 0000104169 us-gaap:FurnitureAndFixturesMember 2025-01-31 0000104169 srt:MinimumMember us-gaap:TransportationEquipmentMember 2026-01-31 0000104169 srt:MaximumMember us-gaap:TransportationEquipmentMember 2026-01-31 0000104169 us-gaap:TransportationEquipmentMember 2026-01-31 0000104169 us-gaap:TransportationEquipmentMember 2025-01-31 0000104169 us-gaap:ConstructionInProgressMember 2026-01-31 0000104169 us-gaap:ConstructionInProgressMember 2025-01-31 0000104169 wmt:WalmartUSMember 2024-01-31 0000104169 wmt:WalmartInternationalMember 2024-01-31 0000104169 wmt:SamsClubUSMember 2024-01-31 0000104169 wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:WalmartUSMember 2025-01-31 0000104169 wmt:WalmartInternationalMember 2025-01-31 0000104169 wmt:SamsClubUSMember 2025-01-31 0000104169 wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:WalmartUSMember 2026-01-31 0000104169 wmt:WalmartInternationalMember 2026-01-31 0000104169 wmt:SamsClubUSMember 2026-01-31 0000104169 us-gaap:IndemnificationGuaranteeMember 2026-01-31 0000104169 us-gaap:IndemnificationGuaranteeMember 2025-01-31 0000104169 srt:MinimumMember 2026-01-31 0000104169 srt:MaximumMember 2026-01-31 0000104169 wmt:MembershipFeesMember 2025-02-01 2026-01-31 0000104169 wmt:MembershipFeesMember 2024-02-01 2025-01-31 0000104169 wmt:MembershipFeesMember 2023-02-01 2024-01-31 0000104169 us-gaap:CommonStockMember 2026-01-31 0000104169 us-gaap:CommonStockMember 2025-01-31 0000104169 wmt:PhonePeMember 2025-01-31 0000104169 wmt:PhonePeMember 2026-01-31 0000104169 wmt:FlipkartMember 2023-02-01 2024-01-31 0000104169 wmt:PhonePeMember 2024-01-31 0000104169 wmt:FlipkartMember 2023-01-31 0000104169 wmt:FlipkartMember 2024-01-31 0000104169 wmt:PhonePeMember 2023-01-31 0000104169 wmt:PhonePeMember 2024-01-31 0000104169 us-gaap:RestrictedStockMember 2025-02-01 2026-01-31 0000104169 us-gaap:RestrictedStockMember 2024-02-01 2025-01-31 0000104169 us-gaap:RestrictedStockMember 2023-02-01 2024-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2025-02-01 2026-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2024-02-01 2025-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2023-02-01 2024-01-31 0000104169 us-gaap:StockOptionMember 2025-02-01 2026-01-31 0000104169 us-gaap:StockOptionMember 2024-02-01 2025-01-31 0000104169 us-gaap:StockOptionMember 2023-02-01 2024-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember wmt:QuarterlyMember wmt:GrantsMadeInFiscal2023OrLaterMember 2025-02-01 2026-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember wmt:AnnualMember wmt:GrantsMadeInFiscal2023OrLaterMember 2025-02-01 2026-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember wmt:AnnualMember wmt:GrantsMadeInFiscal2020ThroughFiscal2022Member 2025-02-01 2026-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2025-02-01 2026-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2024-02-01 2025-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2023-02-01 2024-01-31 0000104169 us-gaap:PerformanceSharesMember 2025-02-01 2026-01-31 0000104169 srt:MinimumMember us-gaap:PerformanceSharesMember 2025-02-01 2026-01-31 0000104169 srt:MaximumMember us-gaap:PerformanceSharesMember 2025-02-01 2026-01-31 0000104169 srt:MinimumMember us-gaap:RestrictedStockMember 2025-02-01 2026-01-31 0000104169 srt:MaximumMember us-gaap:RestrictedStockMember 2025-02-01 2026-01-31 0000104169 us-gaap:PerformanceSharesMember 2024-02-01 2025-01-31 0000104169 us-gaap:PerformanceSharesMember 2023-02-01 2024-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2025-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2025-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2026-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2026-01-31 0000104169 us-gaap:RestrictedStockUnitsRSUMember 2024-01-31 0000104169 wmt:RestrictedStockAndPerformanceShareAwardsMember 2024-01-31 0000104169 us-gaap:EmployeeStockOptionMember 2026-01-31 0000104169 wmt:ShareRepurchaseProgram2022Member 2022-11-30 0000104169 wmt:ShareRepurchaseProgram2022Member 2026-01-31 0000104169 wmt:ShareRepurchaseProgram2026Member us-gaap:SubsequentEventMember 2026-02-28 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2025-02-01 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2025-01-31 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2025-02-01 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2025-01-31 0000104169 us-gaap:DomesticLineOfCreditMember 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember 2025-01-31 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2025-04-01 2025-04-30 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2025-04-01 2025-04-30 0000104169 wmt:CommittedLinesOfCreditMember srt:MinimumMember 2026-01-31 0000104169 wmt:CommittedLinesOfCreditMember srt:MaximumMember 2026-01-31 0000104169 us-gaap:LetterOfCreditMember 2026-01-31 0000104169 us-gaap:LetterOfCreditMember 2025-01-31 0000104169 wmt:DenominatedUSDollarwithFixedRateMember 2026-01-31 0000104169 wmt:DenominatedUSDollarwithFixedRateMember us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:DenominatedUSDollarwithFixedRateMember 2025-01-31 0000104169 wmt:DenominatedUSDollarwithFixedRateMember us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:DenominatedUSDollarwithVariableRateMember 2026-01-31 0000104169 wmt:DenominatedUSDollarwithVariableRateMember us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:DenominatedUSDollarwithVariableRateMember 2025-01-31 0000104169 wmt:DenominatedUSDollarwithVariableRateMember us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:DenominatedUSDollarMember 2026-01-31 0000104169 wmt:DenominatedUSDollarMember 2025-01-31 0000104169 wmt:DenominatedEurowithFixedRateMember 2026-01-31 0000104169 wmt:DenominatedEurowithFixedRateMember us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:DenominatedEurowithFixedRateMember 2025-01-31 0000104169 wmt:DenominatedEurowithFixedRateMember us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:DenominatedSterlingwithFixedRateMember 2026-01-31 0000104169 wmt:DenominatedSterlingwithFixedRateMember us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:DenominatedSterlingwithFixedRateMember 2025-01-31 0000104169 wmt:DenominatedSterlingwithFixedRateMember us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:DenominatedYenwithFixedRateMember 2026-01-31 0000104169 wmt:DenominatedYenwithFixedRateMember us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:DenominatedYenwithFixedRateMember 2025-01-31 0000104169 wmt:DenominatedYenwithFixedRateMember us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 us-gaap:OtherDebtSecuritiesMember 2026-01-31 0000104169 us-gaap:OtherDebtSecuritiesMember 2025-01-31 0000104169 wmt:FloatingDebtDue2027Member wmt:SeniorUnsecuredNotesMember 2026-01-31 0000104169 wmt:FloatingDebtDue2027Member wmt:SeniorUnsecuredNotesMember 2025-02-01 2026-01-31 0000104169 wmt:A4.100DebtDue2027Member wmt:SeniorUnsecuredNotesMember 2026-01-31 0000104169 wmt:A4.100DebtDue2027Member wmt:SeniorUnsecuredNotesMember 2025-02-01 2026-01-31 0000104169 wmt:A4.350DebtDue2030Member wmt:SeniorUnsecuredNotesMember 2026-01-31 0000104169 wmt:A4.350DebtDue2030Member wmt:SeniorUnsecuredNotesMember 2025-02-01 2026-01-31 0000104169 wmt:A4.900DebtDue2035Member wmt:SeniorUnsecuredNotesMember 2026-01-31 0000104169 wmt:A4.900DebtDue2035Member wmt:SeniorUnsecuredNotesMember 2025-02-01 2026-01-31 0000104169 wmt:SeniorUnsecuredNotesMember 2025-02-01 2026-01-31 0000104169 wmt:A3.550Debt875MillionDueJune2025Member us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:A3.550Debt875MillionDueJune2025Member us-gaap:UnsecuredDebtMember 2025-02-01 2026-01-31 0000104169 wmt:A3.900Debt1750MillionDueSeptember2025Member us-gaap:UnsecuredDebtMember 2026-01-31 0000104169 wmt:A3.900Debt1750MillionDueSeptember2025Member us-gaap:UnsecuredDebtMember 2025-02-01 2026-01-31 0000104169 wmt:A3.30Debt1500MillionDueApril2024Member us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:A3.30Debt1500MillionDueApril2024Member us-gaap:UnsecuredDebtMember 2024-02-01 2025-01-31 0000104169 wmt:A2.85Debt990MillionDueJuly2024Member us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:A2.85Debt990MillionDueJuly2024Member us-gaap:UnsecuredDebtMember 2024-02-01 2025-01-31 0000104169 wmt:A0.298Debt40000MillionDueJuly2024Member us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:A0.298Debt40000MillionDueJuly2024Member us-gaap:UnsecuredDebtMember 2024-02-01 2025-01-31 0000104169 wmt:A2.650Debt630MillionDueDecember2024Member us-gaap:UnsecuredDebtMember 2025-01-31 0000104169 wmt:A2.650Debt630MillionDueDecember2024Member us-gaap:UnsecuredDebtMember 2024-02-01 2025-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel1Member 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel1Member 2025-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member 2025-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel3Member 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel3Member 2025-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember 2025-01-31 0000104169 wmt:JD.comMember 2024-08-01 2024-08-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember 2026-01-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member us-gaap:FairValueHedgingMember 2026-01-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember 2025-01-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member us-gaap:FairValueHedgingMember 2025-01-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember 2026-01-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member us-gaap:CashFlowHedgingMember 2026-01-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember 2025-01-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:FairValueMeasurementsRecurringMember us-gaap:FairValueInputsLevel2Member us-gaap:CashFlowHedgingMember 2025-01-31 0000104169 us-gaap:CarryingReportedAmountFairValueDisclosureMember 2026-01-31 0000104169 us-gaap:EstimateOfFairValueFairValueDisclosureMember us-gaap:FairValueInputsLevel2Member 2026-01-31 0000104169 us-gaap:CarryingReportedAmountFairValueDisclosureMember 2025-01-31 0000104169 us-gaap:EstimateOfFairValueFairValueDisclosureMember us-gaap:FairValueInputsLevel2Member 2025-01-31 0000104169 country:MX 2025-02-01 2026-01-31 0000104169 country:CN 2025-02-01 2026-01-31 0000104169 country:IN 2025-02-01 2026-01-31 0000104169 country:LU 2025-02-01 2026-01-31 0000104169 country:US 2025-02-01 2026-01-31 0000104169 wmt:OtherlongtermassetsMember 2026-01-31 0000104169 wmt:OtherlongtermassetsMember 2025-01-31 0000104169 wmt:DeferredIncomeTaxesandOtherMember 2026-01-31 0000104169 wmt:DeferredIncomeTaxesandOtherMember 2025-01-31 0000104169 wmt:OperatingLossAndCapitalLossCarryforwardExpiringBy2046Member 2026-01-31 0000104169 wmt:OpioidsLitigationMember 2026-01-31 0000104169 wmt:OpioidsLitigationMember 2023-01-31 0000104169 wmt:CanadaOpioidsClassActionComplaintsMember 2026-01-31 0000104169 2025-01-09 0000104169 wmt:AsdaEqualValueClaimsMember 2026-01-31 0000104169 wmt:DriverPlatformMattersMember us-gaap:SubsequentEventMember 2026-03-03 2026-03-03 0000104169 wmt:DriverPlatformMattersMember 2026-01-31 0000104169 us-gaap:PendingLitigationMember wmt:MexicoAntitrustMatterMember 2024-12-12 0000104169 us-gaap:PendingLitigationMember wmt:MexicoAntitrustMatterMember 2024-12-12 2024-12-12 0000104169 country:PR 2025-02-01 2026-01-31 0000104169 country:US 2025-02-01 2026-01-31 0000104169 country:US 2024-02-01 2025-01-31 0000104169 country:US 2023-02-01 2024-01-31 0000104169 us-gaap:ForeignPlanMember 2025-02-01 2026-01-31 0000104169 us-gaap:ForeignPlanMember 2024-02-01 2025-01-31 0000104169 us-gaap:ForeignPlanMember 2023-02-01 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2025-02-01 2026-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2024-02-01 2025-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2023-02-01 2024-01-31 0000104169 wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2024-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2025-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2024-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember wmt:WalmartUSMember 2026-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember wmt:WalmartUSMember 2025-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember wmt:WalmartUSMember 2024-01-31 0000104169 country:US 2025-02-01 2026-01-31 0000104169 country:US 2024-02-01 2025-01-31 0000104169 country:US 2023-02-01 2024-01-31 0000104169 us-gaap:NonUsMember 2025-02-01 2026-01-31 0000104169 us-gaap:NonUsMember 2024-02-01 2025-01-31 0000104169 us-gaap:NonUsMember 2023-02-01 2024-01-31 0000104169 country:US 2026-01-31 0000104169 country:US 2025-01-31 0000104169 country:US 2024-01-31 0000104169 us-gaap:NonUsMember 2026-01-31 0000104169 us-gaap:NonUsMember 2025-01-31 0000104169 us-gaap:NonUsMember 2024-01-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:HealthandWellnessMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:HealthandWellnessMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:HealthandWellnessMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:OtherCategoriesMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:OtherCategoriesMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:OtherCategoriesMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:ECommerceMember wmt:WalmartUSMember 2025-02-01 2026-01-31 0000104169 wmt:ECommerceMember wmt:WalmartUSMember 2024-02-01 2025-01-31 0000104169 wmt:ECommerceMember wmt:WalmartUSMember 2023-02-01 2024-01-31 0000104169 wmt:MexicoandCentralAmericaMember wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 wmt:MexicoandCentralAmericaMember wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 wmt:MexicoandCentralAmericaMember wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 country:CN wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 country:CN wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 country:CN wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 country:CA wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 country:CA wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 country:CA wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 wmt:OtherMember wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 wmt:OtherMember wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 wmt:OtherMember wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 wmt:ECommerceMember wmt:WalmartInternationalMember 2025-02-01 2026-01-31 0000104169 wmt:ECommerceMember wmt:WalmartInternationalMember 2024-02-01 2025-01-31 0000104169 wmt:ECommerceMember wmt:WalmartInternationalMember 2023-02-01 2024-01-31 0000104169 wmt:GroceryMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:GroceryMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:GroceryMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 wmt:FuelAndOtherMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:FuelAndOtherMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:FuelAndOtherMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:GeneralMerchandiseMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 wmt:HealthandWellnessMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:HealthandWellnessMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:HealthandWellnessMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 wmt:ECommerceMember wmt:SamsClubUSMember 2025-02-01 2026-01-31 0000104169 wmt:ECommerceMember wmt:SamsClubUSMember 2024-02-01 2025-01-31 0000104169 wmt:ECommerceMember wmt:SamsClubUSMember 2023-02-01 2024-01-31 0000104169 us-gaap:SubsequentEventMember 2026-02-19 2026-02-19 0000104169 us-gaap:SubsequentEventMember 2026-02-19 0000104169 2025-11-01 2026-01-31 0000104169 wmt:ChrisNicholasMember 2025-11-01 2026-01-31 0000104169 wmt:ChrisNicholasMember 2026-01-31 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________________ FORM 10-K ___________________________________________ \u2612 Annual report pursuant to section 13 or 15(d) of the Securities Exchange Act of 1934 For the fiscal year ended January 31 , 2026 , or \u2610 Transition report pursuant to section 13 or 15(d) of the Securities Exchange Act of 1934 Commission file number 001-06991 . ___________________________________________ Walmart Inc. (Exact name of registrant as specified in its charter) ___________________________________________ Delaware 71-0415188 (State or other jurisdiction of incorporation or organization) (IRS Employer Identification No.) 1 Customer Drive 72716 Bentonville, AR (Address of principal executive offices) (Zip Code) Registrant's telephone number, including area code: ( 479 ) 273-4000 Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, par value $0.10 per share WMT The Nasdaq Stock Market LLC 2.550% Notes due 2026 WMT26 The Nasdaq Stock Market LLC 1.050% Notes due 2026 WMT26A The Nasdaq Stock Market LLC 1.500% Notes due 2028 WMT28C The Nasdaq Stock Market LLC 4.875% Notes due 2029 WMT29B The Nasdaq Stock Market LLC 5.750% Notes due 2030 WMT30B The Nasdaq Stock Market LLC 1.800% Notes due 2031 WMT31A The Nasdaq Stock Market LLC 5.625% Notes due 2034 WMT34 The Nasdaq Stock Market LLC 5.250% Notes due 2035 WMT35A The Nasdaq Stock Market LLC 4.875% Notes due 2039 WMT39 The Nasdaq Stock Market LLC Securities registered pursuant to Section 12(g) of the Act: None ___________________________________________ Indicate by check mark if the registrant is a well-known seasoned issuer, as defined in Rule 405 of the Securities Act. Yes \u00fd No \u00a8 Indicate by check mark if the registrant is not required to file reports pursuant to Section 13 or Section 15(d) of the Exchange Act. Yes \u00a8 No \u00fd Indicate by check mark whether the registrant (1) has filed all reports required to be filed by Section 13 or 15(d) of the Securities Exchange Act of 1934 during the preceding 12 months (or for such shorter period that the registrant was required to file such reports), and (2) has been subject to such filing requirements for at least the past 90 days. Yes \u00fd No \u00a8 Indicate by check mark whether the registrant has submitted electronically every Interactive Data File required to be submitted pursuant to Rule 405 of Regulation S-T (\u00a7232.405 of this chapter) during the preceding 12 months (or for such shorter period that the registrant was required to submit such files). Yes \u00fd No \u00a8 Indicate by check mark whether the registrant is a large accelerated filer, an accelerated filer, a non-accelerated filer, a smaller reporting company or an emerging growth company. See the definitions of \"large accelerated filer,\" \"accelerated filer,\" \"smaller reporting company\" and \"emerging growth company\" in Rule 12b-2 of the Exchange Act. Large Accelerated Filer \u2612 Accelerated Filer \u2610 Non-Accelerated Filer \u2610 Smaller Reporting Company \u2610 Emerging Growth Company \u2610 If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 Indicate by check mark whether the registrant has filed a report on and attestation to its management's assessment of the effectiveness of its internal control over financial reporting under Section 404(b) of the Sarbanes-Oxley Act (15 U.S.C. 7262(b)) by the registered public accounting firm that prepared or issued its audit report. \u2612 If securities are registered pursuant to Section 12(b) of the Act, indicate by check mark whether the financial statements of the registrant included in the filing reflect the correction of an error to previously issued financial statements. \u00a8 Indicate by check mark whether any of those error corrections are restatements that required a recovery analysis of incentive-based compensation received by any of the registrant's executive officers during the relevant recovery period pursuant to \u00a7240.10D-1(b). \u00a8 Indicate by check mark whether the registrant is a shell company (as defined in Rule 12b-2 of the Exchange Act). Yes \u2610 No \u2612 As of July 31, 2025, the aggregate market value of the voting common stock of the registrant held by non-affiliates of the registrant, based on the closing sale price of those shares on the New York Stock Exchange reported on July 31, 2025, was $ 391,703,475,732 . For the purposes of this disclosure only, the registrant has assumed that its directors, executive officers (as defined in Rule 3b-7 under the Exchange Act) and the beneficial owners of 5% or more of the registrant's outstanding common stock are the affiliates of the registrant. The registrant had 7,972,402,501 shares of common stock outstanding as of March 11, 2026. DOCUMENTS INCORPORATED BY REFERENCE Document Parts Into Which Incorporated Portions of the registrant's Proxy Statement for the Annual Meeting of Shareholders to be held June 4, 2026 (the \"Proxy Statement\") Part III Walmart Inc. Form 10-K For the Fiscal Year Ended January 31, 2026 Table of Contents Page Part I Item 1 Business 6 Item 1A Risk Factors 13 Item 1B Unresolved Staff Comments 27 Item 1C Cybersecurity 27 Item 2 Properties 29 Item 3 Legal Proceedings 30 Item 4 Mine Safety Disclosures 30 Part II Item 5 Market for Registrant's Common Equity, Related Stockholder Matters and Issuer Purchases of Equity Securities 31 Item 6 Reserved 32 Item 7 Management's Discussion and Analysis of Financial Condition and Results of Operations 33 Item 7A Quantitative and Qualitative Disclosures About Market Risk 46 Item 8 Financial Statements and Supplementary Data 48 Item 9 Changes in and Disagreements with Accountants on Accounting and Financial Disclosure 80 Item 9A Controls and Procedures 80 Item 9B Other Information 81 Item 9C Disclosure Regarding Foreign Jurisdictions that Prevent Inspections 81 Part III Item 10 Directors, Executive Officers and Corporate Governance 82 Item 11 Executive Compensation 82 Item 12 Security Ownership of Certain Beneficial Owners and Management and Related Stockholder Matters 82 Item 13 Certain Relationships and Related Transactions, and Director Independence 82 Item 14 Principal Accounting Fees and Services 82 Part IV Item 15 Exhibits, Financial Statement Schedules 83 Item 16 Form 10-K Summary 85 Signatures 86 WALMART INC. ANNUAL REPORT ON FORM 10-K FOR THE FISCAL YEAR ENDED JANUARY 31, 2026 All references in this Annual Report on Form 10-K, the information incorporated into this Annual Report on Form 10-K by reference to information in the Proxy Statement of Walmart Inc. for its Annual Shareholders' Meeting to be held on June 4, 2026 and in the exhibits to this Annual Report on Form 10-K to \"Walmart Inc.,\" \"Walmart,\" \"the Company,\" \"our Company,\" \"we,\" \"us\" and \"our\" are to the Delaware corporation named \"Walmart Inc.\" and, except where expressly noted otherwise or the context otherwise requires, that corporation's consolidated subsidiaries. PART I Cautionary Statement Regarding Forward-Looking Statements This Annual Report on Form 10-K and other reports, statements and information that Walmart Inc. (which individually or together with its subsidiaries, as the context otherwise requires, is referred to as \"we,\" \"Walmart\" or the \"Company\") has filed with or furnished to the Securities and Exchange Commission (\"SEC\") or may file with or furnish to the SEC in the future, and prior or future public announcements and presentations that we or our management have made or may make, include or may include, or incorporate or may incorporate by reference, statements that may be deemed to be \"forward-looking statements\" within the meaning of Section 21E of the Securities Exchange Act of 1934, as amended (the \"Exchange Act\"), that are intended to enjoy the protection of the safe harbor for forward-looking statements provided by the Exchange Act as well as protections afforded by other federal securities laws. Nature of Forward-Looking Statements Such forward-looking statements are not statements of historical facts, but instead express our estimates or expectations for our consolidated, or one of our segment's, economic performance or results of operations for future periods or as of future dates or events or developments that may occur in the future or discuss our plans, objectives or goals. These forward-looking statements may relate to: \u2022 macroeconomic, geopolitical, and business conditions, trends and events around the world and in the markets in which we operate, including inflation or deflation, generally, and in certain product categories, the impact of supply chain challenges, tariffs and recessionary pressures; \u2022 changes or modifications in tariff rates, exemptions therefrom or the imposition of new tariffs or new taxes on imports, and changes or modifications in trade restrictions or the imposition of new trade restrictions; \u2022 the growth of our business or change in our competitive position in the future, or in or over particular periods, both generally, and with respect to particular markets, segments or lines of business, including, but not limited to, advertising, fulfillment, healthcare and financial services; \u2022 the amount, number, growth, increase, reduction or decrease in or over certain periods, of or in certain financial items or measures or operating measures, including our earnings per share, net sales, growth rates, comparable store and club sales, our eCommerce sales, liabilities, expenses of certain categories, including share-based compensation, expense leverage, operating income, returns, capital and operating investments or expenditures of particular types and new store and club openings, inventory levels and associated costs, product mix and demand for certain merchandise, consumer confidence, disposable income, credit availability, spending levels, shopping patterns and debt levels; \u2022 our increasing investments in eCommerce, technology (including the use of artificial intelligence \"AI\"), automation, supply chain, new stores and clubs as well as remodels and other omnichannel customer initiatives, such as same day pickup and delivery; \u2022 investments and capital expenditures we will make and how certain of those investments and capital expenditures are expected to be financed; \u2022 our workforce strategy, including the availability of necessary personnel to staff our stores, clubs and other facilities and the potential impact of changes to the costs of labor; \u2022 volatility in currency exchange rates affecting our consolidated, or one or more of our segments' results of operations; \u2022 the Company continuing to provide returns to shareholders through share repurchases and dividends, the use of share repurchase authorization over a certain period or the source of funding of a certain portion of our share repurchases; \u2022 our sources of liquidity, including our cash, continuing to be adequate or sufficient to fund our operations, finance our global investment and expansion activities, pay dividends and fund share repurchases; \u2022 cash flows from operations, our current cash position and access to capital markets or credit will continue to be sufficient to meet our anticipated operating cash needs; \u2022 our effective tax rate for certain periods and the realization of certain net deferred tax assets and the effects of resolutions of tax-related matters; 4 \u2022 the adoption or creation of new, and modification of existing, governmental policies, programs, initiatives and actions in the markets in which we operate and elsewhere and actions with respect to such policies, programs and initiatives (including, but not limited to, changes in the enforcement priorities of regulatory authorities); \u2022 the effect of adverse decisions in, or settlement of, litigation or other proceedings or investigations to which we are subject, and the liabilities, obligations and expenses, if any, that we may incur in connection therewith, including expenses pertaining to general liability claims, for which we self-insure; \u2022 the effect on our results of operations or financial position of our adoption of certain new, or amendments to existing, accounting standards; or \u2022 our commitments, intentions, plans or goals related to our shared value priorities, including, but not limited to, the sustainability of our environment and supply chains, the promotion of economic opportunity or other societal initiatives. Our forward-looking statements may also include statements of our strategies, plans and objectives for our operations, including areas of future focus in our operations, and the assumptions underlying any of the forward-looking statements we make. The forward-looking statements we make can typically be identified by the use therein of words and phrases such as \"aim,\" \"anticipate,\" \"believe,\" \"continue,\" \"could be,\" \"could increase,\" \"could occur,\" \"could result,\" \"estimate,\" \"expansion,\" \"expect,\" \"expectation,\" \"expected to be,\" \"focus,\" \"forecast,\" \"goal,\" \"grow,\" \"guidance,\" \"intend,\" \"invest,\" \"is expected,\" \"may continue,\" \"may fluctuate,\" \"may grow,\" \"may impact,\" \"may result,\" \"objective,\" \"plan,\" \"priority,\" \"project,\" \"should,\" \"strategy,\" \"to be,\" \"we'll,\" \"we will,\" \"will add,\" \"will allow,\" \"will be,\" \"will benefit,\" \"will change,\" \"will come in at,\" \"will continue,\" \"will decrease,\" \"will grow,\" \"will have,\" \"will impact,\" \"will include,\" \"will increase,\" \"will open,\" \"will remain,\" \"will result,\" \"will stay,\" \"will strengthen,\" \"would be,\" \"would decrease\" and \"would increase,\" variations of such words or phrases, other phrases commencing with the word \"will\" or similar words and phrases denoting anticipated or expected occurrences or results. The forward-looking statements that we make or that are made by others on our behalf are based on our knowledge of our business and our operating environment and assumptions that we believe to be or will believe to be reasonable when such forward-looking statements were or are made. As a consequence of the factors described above, the other risks, uncertainties and factors we disclose below and in the other reports as mentioned above, other risks not known to us at this time, changes in facts, assumptions not being realized or other circumstances, our actual results may differ materially from those discussed in or implied or contemplated by our forward-looking statements. Consequently, this cautionary statement qualifies all forward-looking statements we make or that are made on our behalf, including those made herein and incorporated by reference herein. We cannot assure you that the results or developments expected or anticipated by us will be realized or, even if substantially realized, that those results or developments will result in the expected consequences for us or affect us, our business, our operations or our operating results in the manner or to the extent we expect. We caution readers not to place undue reliance on such forward-looking statements, which speak only as of their dates. We undertake no obligation to revise or update any of the forward-looking statements to reflect subsequent events or circumstances except to the extent required by applicable law. 5 ITEM 1. BUSINESS General Walmart Inc. (\"Walmart,\" the \"Company\" or \"we\") is a people-led, technology-powered omnichannel retailer dedicated to helping people around the world save money and live better by providing the opportunity to shop in both retail stores and through eCommerce, and to access our other service offerings. Through innovation, we strive to continuously improve a customer-centric experience that seamlessly integrates our eCommerce and retail stores in an omnichannel offering that saves time for our customers. Each week, we s",
+  "latest_10q_excerpt": "wmt-20260731 0000104169 1/31 2027 Q2 false 534 247 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure iso4217:EUR wmt:case wmt:classAction wmt:pharmacist wmt:employee wmt:phase wmt:supplierContribution iso4217:MXN wmt:segment 0000104169 2026-02-01 2026-07-31 0000104169 wmt:CommonStockparvalue0.10pershareMember 2026-02-01 2026-07-31 0000104169 wmt:A1050NotesDue2026Member 2026-02-01 2026-07-31 0000104169 wmt:A1500NotesDue2028Member 2026-02-01 2026-07-31 0000104169 wmt:A4875NotesDue2029Member 2026-02-01 2026-07-31 0000104169 wmt:A5750NotesDue2030Member 2026-02-01 2026-07-31 0000104169 wmt:A1800NotesDue2031Member 2026-02-01 2026-07-31 0000104169 wmt:A5625NotesDue2034Member 2026-02-01 2026-07-31 0000104169 wmt:A5250NotesDue2035Member 2026-02-01 2026-07-31 0000104169 wmt:A4875NotesDue2039Member 2026-02-01 2026-07-31 0000104169 2026-08-26 0000104169 2026-05-01 2026-07-31 0000104169 2025-05-01 2025-07-31 0000104169 2025-02-01 2025-07-31 0000104169 2026-07-31 0000104169 2026-01-31 0000104169 2025-07-31 0000104169 us-gaap:CommonStockMember 2026-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-31 0000104169 us-gaap:ParentMember 2026-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-01-31 0000104169 us-gaap:RetainedEarningsMember 2026-02-01 2026-04-30 0000104169 us-gaap:ParentMember 2026-02-01 2026-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2026-02-01 2026-04-30 0000104169 2026-02-01 2026-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-02-01 2026-04-30 0000104169 us-gaap:CommonStockMember 2026-02-01 2026-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-02-01 2026-04-30 0000104169 us-gaap:CommonStockMember 2026-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-04-30 0000104169 us-gaap:RetainedEarningsMember 2026-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-30 0000104169 us-gaap:ParentMember 2026-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2026-04-30 0000104169 2026-04-30 0000104169 us-gaap:RetainedEarningsMember 2026-05-01 2026-07-31 0000104169 us-gaap:ParentMember 2026-05-01 2026-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-05-01 2026-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-05-01 2026-07-31 0000104169 us-gaap:CommonStockMember 2026-05-01 2026-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-05-01 2026-07-31 0000104169 us-gaap:CommonStockMember 2026-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2026-07-31 0000104169 us-gaap:RetainedEarningsMember 2026-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-07-31 0000104169 us-gaap:ParentMember 2026-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2026-07-31 0000104169 us-gaap:CommonStockMember 2025-01-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-01-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-31 0000104169 us-gaap:ParentMember 2025-01-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-01-31 0000104169 2025-01-31 0000104169 us-gaap:RetainedEarningsMember 2025-02-01 2025-04-30 0000104169 us-gaap:ParentMember 2025-02-01 2025-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2025-02-01 2025-04-30 0000104169 2025-02-01 2025-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-02-01 2025-04-30 0000104169 us-gaap:CommonStockMember 2025-02-01 2025-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-02-01 2025-04-30 0000104169 us-gaap:CommonStockMember 2025-04-30 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-04-30 0000104169 us-gaap:RetainedEarningsMember 2025-04-30 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-04-30 0000104169 us-gaap:ParentMember 2025-04-30 0000104169 us-gaap:NoncontrollingInterestMember 2025-04-30 0000104169 2025-04-30 0000104169 us-gaap:RetainedEarningsMember 2025-05-01 2025-07-31 0000104169 us-gaap:ParentMember 2025-05-01 2025-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-05-01 2025-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-05-01 2025-07-31 0000104169 us-gaap:CommonStockMember 2025-05-01 2025-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-05-01 2025-07-31 0000104169 us-gaap:CommonStockMember 2025-07-31 0000104169 us-gaap:AdditionalPaidInCapitalMember 2025-07-31 0000104169 us-gaap:RetainedEarningsMember 2025-07-31 0000104169 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-07-31 0000104169 us-gaap:ParentMember 2025-07-31 0000104169 us-gaap:NoncontrollingInterestMember 2025-07-31 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2026-04-01 2026-04-30 0000104169 us-gaap:DomesticLineOfCreditMember us-gaap:RevolvingCreditFacilityMember 2026-04-30 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2026-04-01 2026-04-30 0000104169 us-gaap:DomesticLineOfCreditMember wmt:FiveYearCreditFacilityMember 2026-04-30 0000104169 us-gaap:DomesticLineOfCreditMember 2026-01-31 0000104169 us-gaap:DomesticLineOfCreditMember 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:FloatingDebtDue2029Member 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:FloatingDebtDue2029Member 2026-02-01 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.000DebtDue2029Member 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.000DebtDue2029Member 2026-02-01 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.150DebtDue2031Member 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.150DebtDue2031Member 2026-02-01 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.450DebtDue2033Member 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.450DebtDue2033Member 2026-02-01 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.750DebtDue2036Member 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember wmt:A4.750DebtDue2036Member 2026-02-01 2026-07-31 0000104169 wmt:SeniorUnsecuredNotesMember 2026-02-01 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A2.550DebtDueApril2026Member 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A2.550DebtDueApril2026Member 2026-02-01 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A4.000DebtDueApril2026Member 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A4.000DebtDueApril2026Member 2026-02-01 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A3.050DebtDueJuly2026Member 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember wmt:A3.050DebtDueJuly2026Member 2026-02-01 2026-07-31 0000104169 us-gaap:UnsecuredDebtMember 2026-02-01 2026-07-31 0000104169 us-gaap:FairValueInputsLevel1Member us-gaap:FairValueMeasurementsRecurringMember 2026-07-31 0000104169 us-gaap:FairValueInputsLevel1Member us-gaap:FairValueMeasurementsRecurringMember 2026-01-31 0000104169 us-gaap:FairValueInputsLevel2Member us-gaap:FairValueMeasurementsRecurringMember 2026-07-31 0000104169 us-gaap:FairValueInputsLevel2Member us-gaap:FairValueMeasurementsRecurringMember 2026-01-31 0000104169 us-gaap:FairValueInputsLevel3Member us-gaap:FairValueMeasurementsRecurringMember 2026-07-31 0000104169 us-gaap:FairValueInputsLevel3Member us-gaap:FairValueMeasurementsRecurringMember 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember 2026-07-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember 2026-01-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember 2026-07-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember us-gaap:FairValueInputsLevel2Member 2026-07-31 0000104169 us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:InterestRateSwapMember us-gaap:FairValueHedgingMember us-gaap:FairValueInputsLevel2Member 2026-01-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember 2026-07-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember us-gaap:FairValueInputsLevel2Member 2026-07-31 0000104169 us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember 2026-01-31 0000104169 us-gaap:FairValueMeasurementsRecurringMember us-gaap:CrossCurrencyInterestRateContractMember us-gaap:CashFlowHedgingMember us-gaap:FairValueInputsLevel2Member 2026-01-31 0000104169 us-gaap:CarryingReportedAmountFairValueDisclosureMember 2026-07-31 0000104169 us-gaap:EstimateOfFairValueFairValueDisclosureMember us-gaap:FairValueInputsLevel2Member 2026-07-31 0000104169 us-gaap:CarryingReportedAmountFairValueDisclosureMember 2026-01-31 0000104169 us-gaap:EstimateOfFairValueFairValueDisclosureMember us-gaap:FairValueInputsLevel2Member 2026-01-31 0000104169 wmt:CanadaOpioidsClassActionComplaintsMember 2026-07-31 0000104169 2025-01-09 0000104169 wmt:AsdaEqualValueClaimsMember 2026-07-31 0000104169 wmt:DriverPlatformMattersMember 2026-03-03 2026-03-03 0000104169 wmt:DriverPlatformMattersMember 2026-01-31 0000104169 wmt:MexicoAntitrustMatterMember us-gaap:PendingLitigationMember 2024-12-12 0000104169 wmt:MexicoAntitrustMatterMember us-gaap:PendingLitigationMember 2024-12-12 2024-12-12 0000104169 wmt:IEEPATariffRefundMember 2026-05-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2026-05-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2025-05-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2026-02-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2025-02-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2026-05-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2025-05-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2026-02-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2025-02-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2026-05-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2025-05-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2026-02-01 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2025-02-01 2025-07-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2026-05-01 2026-07-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2025-05-01 2025-07-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2026-02-01 2026-07-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2025-02-01 2025-07-31 0000104169 wmt:SamsClubUSMember 2026-05-01 2026-07-31 0000104169 wmt:SamsClubUSMember 2025-05-01 2025-07-31 0000104169 wmt:SamsClubUSMember 2026-02-01 2026-07-31 0000104169 wmt:SamsClubUSMember 2025-02-01 2025-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartUSMember 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:WalmartInternationalMember 2026-01-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2026-07-31 0000104169 us-gaap:OperatingSegmentsMember wmt:SamsClubUSMember 2026-01-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2026-07-31 0000104169 wmt:CorporateAndReconcilingItemsMember 2026-01-31 0000104169 wmt:WalmartUSMember 2026-02-01 2026-07-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2026-05-01 2026-07-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2025-05-01 2025-07-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2026-02-01 2026-07-31 0000104169 wmt:GroceryMember wmt:WalmartUSMember 2025-02-01 2025-07-31 0000104169 w",
+  "earnings_release_excerpt": "wmt-20261119 0000104169 false 0000104169 2026-11-19 2026-11-19 0000104169 wmt:CommonStockparvalue0.10pershareMember 2026-11-19 2026-11-19 0000104169 wmt:A1500NotesDue2028Member 2026-11-19 2026-11-19 0000104169 wmt:A4875NotesDue2029Member 2026-11-19 2026-11-19 0000104169 wmt:A5750NotesDue2030Member 2026-11-19 2026-11-19 0000104169 wmt:A1800NotesDue2031Member 2026-11-19 2026-11-19 0000104169 wmt:A5625NotesDue2034Member 2026-11-19 2026-11-19 0000104169 wmt:A5250NotesDue2035Member 2026-11-19 2026-11-19 0000104169 wmt:A4875NotesDue2039Member 2026-11-19 2026-11-19 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, DC 20549 ________________________ FORM 8-K CURRENT REPORT PURSUANT TO SECTION 13 or 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 Date of Report (date of earliest event reported) November 19, 2026 WALMART INC. (Exact name of registrant as specified in its charter) DE 001-06991 71-0415188 (State or other jurisdiction of incorporation or organization) (Commission File Number) (I.R.S. Employer Identification No.) 1 Customer Drive Bentonville , AR 72716 (Address of Principal Executive Offices) (Zip code) Registrant's telephone number, including area code: ( 479 ) 273-4000 Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: \u2610 Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) \u2610 Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) \u2610 Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) \u2610 Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, par value $0.10 per share WMT The Nasdaq Stock Market LLC 1.500% Notes due 2028 WMT28C The Nasdaq Stock Market LLC 4.875% Notes due 2029 WMT29B The Nasdaq Stock Market LLC 5.750% Notes due 2030 WMT30B The Nasdaq Stock Market LLC 1.800% Notes due 2031 WMT31A The Nasdaq Stock Market LLC 5.625% Notes due 2034 WMT34 The Nasdaq Stock Market LLC 5.250% Notes due 2035 WMT35A The Nasdaq Stock Market LLC 4.875% Notes due 2039 WMT39 The Nasdaq Stock Market LLC Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (\u00a7230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (\u00a7240.12b-2 of this chapter). Emerging growth company \u2610 If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 Item 2.02. Results of Operations and Financial Condition. In accordance with Item 2.02 of Form 8-K of the Securities and Exchange Commission (the \"SEC\"), Walmart Inc., a Delaware corporation (the \"Company\"), is furnishing to the SEC a press release that the Company will issue on November 19, 2026 (the \"Press Release\") and a financial presentation that will be first posted by the Company on the Company\u2019s website at http://stock.walmart.com on November 19, 2026 (the \"Financial Presentation\"). The Press Release and the Financial Presentation will disclose information regarding the Company's results of operations and cash flows for the three and nine months ended October 31, 2026 and financial condition as of October 31, 2026. In accordance with General Instruction B.2 of Form 8-K, the information in this Item 2.02 of this Current Report on Form 8-K, including Exhibits 99.1 and 99.2 hereto, which are furnished herewith pursuant to and relate to this Item 2.02, shall not be deemed \"filed\" for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the \"Exchange Act\"), or otherwise be subject to the liabilities of Section 18 of the Exchange Act. The information in this Item 2.02 of this Current Report on Form 8-K and Exhibits 99.1 and 99.2 hereto shall not be incorporated by reference into any filing or other document filed by the Company with the SEC pursuant to the Securities Act of 1933, as amended, the rules and regulations of the SEC thereunder, the Exchange Act, or the rules and regulations of the SEC thereunder except as shall be expressly set forth by specific reference in such filing or document. Item 9.01. Financial Statements and Exhibits. (d) Exhibits The following documents are furnished as exhibits to this Current Report on Form 8-K: 99.1 Press Release 99.2 Financial Presentation Exhibit 104 Cover Page Interactive Data File (formatted as Inline XBRL). SIGNATURES Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized. Dated: November 19, 2026 WALMART INC. By: /s/ John David Rainey Name: John David Rainey Title: Executive Vice President and Chief Financial Officer",
+  "worksheet_calculations": {
+    "historic_owner_cash_flow": null,
+    "low_case_per_share": 7.390924956369982,
+    "middle_case_per_share": 11.242548914005598,
+    "price_against_low_case": 16.231943329397875
+  },
+  "market_data": {
+    "median_daily_dollar_volume": 2533336785.0,
+    "source": "Price History_20261119_0902.xlsx",
+    "method": "median(daily value traded)"
+  }
+}

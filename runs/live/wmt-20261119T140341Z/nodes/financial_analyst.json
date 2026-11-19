@@ -1,0 +1,656 @@
+{
+  "input": {
+    "task": "Analyze supplied facts and code ratios only.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "form": "10-K",
+            "accession": "0000104169-26-000055",
+            "filed": "2026-03-13",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000055/wmt-20260131.htm"
+          },
+          "latest_10q": {
+            "accession": "0000104169-26-000154",
+            "filed": "2026-08-28",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000154/wmt-20260731.htm"
+          },
+          "earnings_release": {
+            "accession": "0000104169-26-000168",
+            "filed": "2026-11-19",
+            "url": "https://www.sec.gov/Archives/edgar/data/104169/000010416926000168/wmt-20261119.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000104169.json"
+        },
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 713163000000,
+            "unit": "",
+            "tag": "Revenues",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": 29825000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": 21893000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 284668000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 99617000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 41565000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 26642000000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "depreciation_and_amortization": {
+            "label": "depreciation_and_amortization",
+            "value": 10678000000,
+            "unit": "",
+            "tag": "DepreciationDepletionAndAmortization",
+            "period_end": "2019-01-31",
+            "filed": "2019-03-28",
+            "accession": "0000104169-19-000016",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": 2.73,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "diluted_weighted_average_shares": {
+            "label": "diluted_weighted_average_shares",
+            "value": 8022000000,
+            "unit": "",
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 84874000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 107469000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2026-01-31",
+            "filed": "2026-03-13",
+            "accession": "0000104169-26-000055",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": 0.041821
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": 0.030698
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": 0.076907
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 0.789753
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": 14923000000.0
+          }
+        },
+        "revenue_history": [
+          {
+            "start": "2025-02-01",
+            "end": "2026-01-31",
+            "val": 713163000000,
+            "accn": "0000104169-26-000055",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-03-13",
+            "frame": "CY2025",
+            "tag": "Revenues"
+          },
+          {
+            "start": "2025-02-01",
+            "end": "2026-01-31",
+            "val": 706413000000,
+            "accn": "0000104169-26-000055",
+            "fy": 2026,
+            "fp": "FY",
+            "form": "10-K",
+            "filed": "2026-03-13",
+            "frame": "CY2025",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax"
+          }
+        ],
+        "price": {
+          "value": 127.36,
+          "date": "2026-11-18",
+          "source": "LSEG Workspace Price History export; WMT.N close; last close before the 2026-11-19 06:58:52 Eastern filing",
+          "definition": "last close before the earnings release"
+        },
+        "peers": {
+          "TGT": {
+            "numbers": {
+              "revenue": {
+                "label": "revenue",
+                "value": 104780000000,
+                "unit": "",
+                "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "operating_income": {
+                "label": "operating_income",
+                "value": 5117000000,
+                "unit": "",
+                "tag": "OperatingIncomeLoss",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "net_income": {
+                "label": "net_income",
+                "value": 3705000000,
+                "unit": "",
+                "tag": "NetIncomeLoss",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "assets": {
+                "label": "assets",
+                "value": 59490000000,
+                "unit": "",
+                "tag": "Assets",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "equity": {
+                "label": "equity",
+                "value": 16165000000,
+                "unit": "",
+                "tag": "StockholdersEquity",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "cash_from_operations": {
+                "label": "cash_from_operations",
+                "value": 6562000000,
+                "unit": "",
+                "tag": "NetCashProvidedByUsedInOperatingActivities",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "capital_expenditures": {
+                "label": "capital_expenditures",
+                "value": 3727000000,
+                "unit": "",
+                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "depreciation_and_amortization": {
+                "label": "depreciation_and_amortization",
+                "value": 3134000000,
+                "unit": "",
+                "tag": "DepreciationDepletionAndAmortization",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "diluted_eps": {
+                "label": "diluted_eps",
+                "value": 8.13,
+                "unit": "",
+                "tag": "EarningsPerShareDiluted",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "diluted_weighted_average_shares": {
+                "label": "diluted_weighted_average_shares",
+                "value": 455600000,
+                "unit": "",
+                "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "current_assets": {
+                "label": "current_assets",
+                "value": 20005000000,
+                "unit": "",
+                "tag": "AssetsCurrent",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              },
+              "current_liabilities": {
+                "label": "current_liabilities",
+                "value": 21230000000,
+                "unit": "",
+                "tag": "LiabilitiesCurrent",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-11",
+                "accession": "0000027419-26-000016",
+                "form": "10-K"
+              }
+            },
+            "ratios": {
+              "operating_margin": {
+                "formula": "operating_income / revenue",
+                "value": 0.048836
+              },
+              "net_margin": {
+                "formula": "net_income / revenue",
+                "value": 0.03536
+              },
+              "return_on_assets": {
+                "formula": "net_income / assets",
+                "value": 0.062279
+              },
+              "current_ratio": {
+                "formula": "current_assets / current_liabilities",
+                "value": 0.942299
+              },
+              "free_cash_flow": {
+                "formula": "cash_from_operations - capital_expenditures",
+                "value": 2835000000.0
+              }
+            }
+          },
+          "COST": {
+            "numbers": {
+              "revenue": {
+                "label": "revenue",
+                "value": 303154000000,
+                "unit": "",
+                "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "operating_income": {
+                "label": "operating_income",
+                "value": 11685000000,
+                "unit": "",
+                "tag": "OperatingIncomeLoss",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "net_income": {
+                "label": "net_income",
+                "value": 9226000000,
+                "unit": "",
+                "tag": "NetIncomeLoss",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "assets": {
+                "label": "assets",
+                "value": 89045000000,
+                "unit": "",
+                "tag": "Assets",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "liabilities": {
+                "label": "liabilities",
+                "value": 53242000000,
+                "unit": "",
+                "tag": "Liabilities",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "equity": {
+                "label": "equity",
+                "value": 35803000000,
+                "unit": "",
+                "tag": "StockholdersEquity",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "cash_from_operations": {
+                "label": "cash_from_operations",
+                "value": 15817000000,
+                "unit": "",
+                "tag": "NetCashProvidedByUsedInOperatingActivities",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "capital_expenditures": {
+                "label": "capital_expenditures",
+                "value": 6435000000,
+                "unit": "",
+                "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "depreciation_and_amortization": {
+                "label": "depreciation_and_amortization",
+                "value": 2674000000,
+                "unit": "",
+                "tag": "DepreciationDepletionAndAmortization",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "diluted_eps": {
+                "label": "diluted_eps",
+                "value": 20.76,
+                "unit": "",
+                "tag": "EarningsPerShareDiluted",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "diluted_weighted_average_shares": {
+                "label": "diluted_weighted_average_shares",
+                "value": 444427000,
+                "unit": "",
+                "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "current_assets": {
+                "label": "current_assets",
+                "value": 46582000000,
+                "unit": "",
+                "tag": "AssetsCurrent",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              },
+              "current_liabilities": {
+                "label": "current_liabilities",
+                "value": 43952000000,
+                "unit": "",
+                "tag": "LiabilitiesCurrent",
+                "period_end": "2026-08-30",
+                "filed": "2026-10-07",
+                "accession": "0000909832-26-000093",
+                "form": "10-K"
+              }
+            },
+            "ratios": {
+              "operating_margin": {
+                "formula": "operating_income / revenue",
+                "value": 0.038545
+              },
+              "net_margin": {
+                "formula": "net_income / revenue",
+                "value": 0.030433
+              },
+              "return_on_assets": {
+                "formula": "net_income / assets",
+                "value": 0.103611
+              },
+              "current_ratio": {
+                "formula": "current_assets / current_liabilities",
+                "value": 1.059838
+              },
+              "free_cash_flow": {
+                "formula": "cash_from_operations - capital_expenditures",
+                "value": 9382000000.0
+              }
+            }
+          },
+          "KR": {
+            "numbers": {
+              "revenue": {
+                "label": "revenue",
+                "value": 147642000000,
+                "unit": "",
+                "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "operating_income": {
+                "label": "operating_income",
+                "value": 1890000000,
+                "unit": "",
+                "tag": "OperatingIncomeLoss",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "net_income": {
+                "label": "net_income",
+                "value": 1016000000,
+                "unit": "",
+                "tag": "NetIncomeLoss",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "assets": {
+                "label": "assets",
+                "value": 49953000000,
+                "unit": "",
+                "tag": "Assets",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "liabilities": {
+                "label": "liabilities",
+                "value": 44017000000,
+                "unit": "",
+                "tag": "Liabilities",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "equity": {
+                "label": "equity",
+                "value": 5927000000,
+                "unit": "",
+                "tag": "StockholdersEquity",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "cash_from_operations": {
+                "label": "cash_from_operations",
+                "value": 7311000000,
+                "unit": "",
+                "tag": "NetCashProvidedByUsedInOperatingActivities",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "depreciation_and_amortization": {
+                "label": "depreciation_and_amortization",
+                "value": 3332000000,
+                "unit": "",
+                "tag": "DepreciationDepletionAndAmortization",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "diluted_eps": {
+                "label": "diluted_eps",
+                "value": 1.54,
+                "unit": "",
+                "tag": "EarningsPerShareDiluted",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "diluted_weighted_average_shares": {
+                "label": "diluted_weighted_average_shares",
+                "value": 655000000,
+                "unit": "",
+                "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "current_assets": {
+                "label": "current_assets",
+                "value": 14505000000,
+                "unit": "",
+                "tag": "AssetsCurrent",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              },
+              "current_liabilities": {
+                "label": "current_liabilities",
+                "value": 18108000000,
+                "unit": "",
+                "tag": "LiabilitiesCurrent",
+                "period_end": "2026-01-31",
+                "filed": "2026-03-31",
+                "accession": "0001104659-26-037723",
+                "form": "10-K"
+              }
+            },
+            "ratios": {
+              "operating_margin": {
+                "formula": "operating_income / revenue",
+                "value": 0.012801
+              },
+              "net_margin": {
+                "formula": "net_income / revenue",
+                "value": 0.006882
+              },
+              "return_on_assets": {
+                "formula": "net_income / assets",
+                "value": 0.020339
+              },
+              "current_ratio": {
+                "formula": "current_assets / current_liabilities",
+                "value": 0.801027
+              },
+              "free_cash_flow": {
+                "formula": "cash_from_operations - capital_expenditures",
+                "value": 7311000000.0
+              }
+            }
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown financial section."
+  },
+  "output": "Based on the supplied financial statements and data for the period ending January 31, 2026, the company generated substantial revenue of $713,163,000,000 (XBRL Tag: `Revenues`) and an operating income of $29,825,000,000 (XBRL Tag: `OperatingIncomeLoss`). Net income for the period stood at $21,893,000,000 (XBRL Tag: `NetIncomeLoss`), resulting in a net margin of approximately 3.07%. The company exhibits robust cash-generating capabilities, with net cash provided by operating activities reaching $41,565,000,000 (XBRL Tag: `NetCashProvidedByUsedInOperatingActivities`) against capital expenditures of $26,642,000,000 (XBRL Tag: `PaymentsToAcquirePropertyPlantAndEquipment`), yielding a code-calculated free cash flow of $14,923,000,000. Balance sheet metrics show total assets of $284,668,000,000 (XBRL Tag: `Assets`) and stockholders' equity of $99,617,000,000 (XBRL Tag: `StockholdersEquity`), while short-term liquidity reflects a current ratio of 0.79 based on current assets of $84,874,000,000 (XBRL Tag: `AssetsCurrent`) and current liabilities of $107,469,000,000 (XBRL Tag: `LiabilitiesCurrent`). \n\n### Performance Scoring\n\n* **Revenue Growth**\n  * **Score:** 5 / 5\n  * **Financial Number:** $713,163,000,000\n  * **Filing Line / XBRL Tag:** `Revenues`\n  * **Reasoning:** The company achieved top-tier revenue scale of over $713 billion, demonstrating unrivaled market penetration and top-line volume compared to peer competitors in the retail sector.\n\n* **Operating Margin**\n  * **Score:** 3 / 5\n  * **Financial Number:** 4.18% (Operating Income of $29,825,000,000 divided by Revenue of $713,163,000,000)\n  * **Filing Line / XBRL Tag:** `OperatingIncomeLoss` / `Revenues`\n  * **Reasoning:** The operating margin of 4.18% reflects a standard retail profitability profile. While consistent with industry norms (comparable to peer operating margins such as Costco's 3.85%), it leaves minimal buffer against cost pressures.\n\n* **Financial Stability**\n  * **Score:** 3 / 5\n  * **Financial Number:** 0.79 current ratio (Current Assets of $84,874,000,000 divided by Current Liabilities of $107,469,000,000)\n  * **Filing Line / XBRL Tag:** `AssetsCurrent` / `LiabilitiesCurrent`\n  * **Reasoning:** Stockholders' equity is solid at $99,617,000,000 (`StockholdersEquity`), and return on assets sits at 7.69%. However, the current ratio of 0.79 indicates that current liabilities exceed current assets, pointing to a reliance on continuous cash inflows to meet short-term obligations.\n\n* **Cash Flow**\n  * **Score:** 5 / 5\n  * **Financial Number:** $14,923,000,000 (Cash from Operations of $41,565,000,000 minus Capital Expenditures of $26,642,000,000)\n  * **Filing Line / XBRL Tag:** `NetCashProvidedByUsedInOperatingActivities` / `PaymentsToAcquirePropertyPlantAndEquipment`\n  * **Reasoning:** Exceptional cash generation capacity. Operating cash flow exceeds $41.5 billion, easily funding intensive capital expenditures of over $26.6 billion while leaving nearly $15 billion in positive free cash flow.\n\nInsight: The relationship between the company's substantial net cash provided by operating activities of $41,565,000,000 (XBRL Tag: `NetCashProvidedByUsedInOperatingActivities`) and its lower net income of $21,893,000,000 (XBRL Tag: `NetIncomeLoss`) suggests strong earnings quality driven by significant non-cash charges or favorable working capital management, reinforcing the company's underlying financial stability."
+}

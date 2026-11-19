@@ -1,0 +1,147 @@
+{
+  "input": {
+    "report": "WMT \u2014 filings: 10-K 0000104169-26-000055; 10-Q 0000104169-26-000154; earnings release 8-K 0000104169-26-000168\n\n### Overview\n\nWalmart Inc. operates retail, wholesale, and other units, serving customers worldwide through physical stores, e-commerce websites, and mobile applications. The company generates revenue primarily through the sale of a wide assortment of merchandise\u2014including groceries, consumables, health and wellness products, apparel, home goods, and hardlines\u2014as well as through e-commerce operations, membership fees, and advertising services. \n\nFor the fiscal year ended January 31, 2026, Walmart reported total revenues of $713,163,000,000 (`Revenues`, accession `0000104169-26-000055`), operating income of $29,825,000,000 (`OperatingIncomeLoss`, accession `0000104169-26-000055`), and net income of $21,893,000,000 (`NetIncomeLoss`, accession `0000104169-26-000055`). The company generated net cash provided by operating activities of $41,565,000,000 (`NetCashProvidedByUsedInOperatingActivities`, accession `0000104169-26-000055`) against payments to acquire property, plant, and equipment of $26,642,000,000 (`PaymentsToAcquirePropertyPlantAndEquipment`, accession `0000104169-26-000055`), yielding a code-calculated free cash flow of $14,923,000,000. Balance sheet metrics show total assets of $284,668,000,000 (`Assets`, accession `0000104169-26-000055`) and stockholders' equity of $99,617,000,000 (`StockholdersEquity`, accession `0000104169-26-000055`), with current assets of $84,874,000,000 (`AssetsCurrent`, accession `0000104169-26-000055`) and current liabilities of $107,469,000,000 (`LiabilitiesCurrent`, accession `0000104169-26-000055`), resulting in a current ratio of 0.79.\n\n### Market Positioning and Growth Outlook\n\nWalmart maintains an industry-leading physical and digital footprint, providing unmatched supply chain scale and bargaining power relative to competitors. Factors influencing future performance include macroeconomic conditions, consumer spending trends, inflationary pressures on operating costs, competitive pricing pressures in the global retail sector, and the execution of supply chain efficiencies. The company achieved top-tier revenue scale of over $713 billion, demonstrating unrivaled market penetration and top-line volume compared to peer competitors in the retail sector. Its operating margin stands at 4.18% (Operating Income of $29,825,000,000 divided by Revenue of $713,163,000,000; `OperatingIncomeLoss` / `Revenues`), which reflects a standard retail profitability profile that leaves a minimal buffer against cost pressures, while aligning with peer margins such as Costco's 3.85%, Target's 4.88%, and Kroger's 1.28%.\n\n### Valuation Insights\n\nThe supplied stock price is $127.36 as of November 18, 2026 (source: LSEG Workspace Price History export; WMT.N close; last close before the 2026-11-19 06:58:52 Eastern filing). Valuation ratios based on precise future earnings multiples are not provided within the scope of the supplied analyst outputs beyond this reference stock price.\n\n### Future Developments and Strategic Recommendations\n\nRecent and ongoing developments include strategic investments in digital commerce, supply chain automation, and advertising initiatives to support long-term growth. Walmart reported payments to acquire property, plant, and equipment of $26,642,000,000 (`PaymentsToAcquirePropertyPlantAndEquipment`, accession `0000104169-26-000055`), highlighting aggressive ongoing capital allocation toward supply chain automation and store remodels to maintain its competitive edge. Financial measures to monitor include `NetCashProvidedByUsedInOperatingActivities` and free cash flow to ensure ongoing coverage of capital expenditures and short-term obligations given the current ratio of 0.79 (`AssetsCurrent` / `LiabilitiesCurrent`, accession `0000104169-26-000055`).\n\n### Investment Recommendation\n\n**Recommendation:** Hold\n\n* **Growth Potential Score:** 4 / 5 ($713,163,000,000, `Revenues`, accession `0000104169-26-000055`). Reflects robust top-line scale and continued demand across retail and digital channels, supported by strategic investments in digital commerce and supply chain automation.\n* **Profitability Score:** 3 / 5 (4.18%, `OperatingIncomeLoss` / `Revenues`, accession `0000104169-26-000055`). Reflects a standard retail profitability profile that leaves a minimal buffer against operational cost pressures.\n* **Valuation Score:** not provided (Financial Number: not provided; Filing Line / XBRL Tag: not provided).\n* **Investment Risk Score:** 3 / 5 (0.79 current ratio, `AssetsCurrent` / `LiabilitiesCurrent`, accession `0000104169-26-000055`). A current ratio below 1.0 indicates that current liabilities exceed current assets, pointing toward short-term liquidity risk offset by powerful operating cash flow generation.\n* **Benefits:** Unmatched physical and digital footprint, industry-leading supply chain scale, and exceptional operating cash flow exceeding $41.5 billion (`NetCashProvidedByUsedInOperatingActivities`, accession `0000104169-26-000055`).\n* **Risks:** Tight operating margins (4.18%) and a sub-1.0 current ratio (0.79) leaving little room for error amid macroeconomic and competitive pressures.",
+    "facts": {
+      "revenue": {
+        "label": "revenue",
+        "value": 713163000000,
+        "unit": "",
+        "tag": "Revenues",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "operating_income": {
+        "label": "operating_income",
+        "value": 29825000000,
+        "unit": "",
+        "tag": "OperatingIncomeLoss",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "net_income": {
+        "label": "net_income",
+        "value": 21893000000,
+        "unit": "",
+        "tag": "NetIncomeLoss",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "assets": {
+        "label": "assets",
+        "value": 284668000000,
+        "unit": "",
+        "tag": "Assets",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "equity": {
+        "label": "equity",
+        "value": 99617000000,
+        "unit": "",
+        "tag": "StockholdersEquity",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "cash_from_operations": {
+        "label": "cash_from_operations",
+        "value": 41565000000,
+        "unit": "",
+        "tag": "NetCashProvidedByUsedInOperatingActivities",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "capital_expenditures": {
+        "label": "capital_expenditures",
+        "value": 26642000000,
+        "unit": "",
+        "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "depreciation_and_amortization": {
+        "label": "depreciation_and_amortization",
+        "value": 10678000000,
+        "unit": "",
+        "tag": "DepreciationDepletionAndAmortization",
+        "period_end": "2019-01-31",
+        "filed": "2019-03-28",
+        "accession": "0000104169-19-000016",
+        "form": "10-K"
+      },
+      "diluted_eps": {
+        "label": "diluted_eps",
+        "value": 2.73,
+        "unit": "",
+        "tag": "EarningsPerShareDiluted",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "diluted_weighted_average_shares": {
+        "label": "diluted_weighted_average_shares",
+        "value": 8022000000,
+        "unit": "",
+        "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "current_assets": {
+        "label": "current_assets",
+        "value": 84874000000,
+        "unit": "",
+        "tag": "AssetsCurrent",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      },
+      "current_liabilities": {
+        "label": "current_liabilities",
+        "value": 107469000000,
+        "unit": "",
+        "tag": "LiabilitiesCurrent",
+        "period_end": "2026-01-31",
+        "filed": "2026-03-13",
+        "accession": "0000104169-26-000055",
+        "form": "10-K"
+      }
+    }
+  },
+  "output": {
+    "code_marks": [
+      {
+        "claim": "revenue",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "operating income was",
+        "mark": "Correct",
+        "correction": ""
+      },
+      {
+        "claim": "net income",
+        "mark": "Correct",
+        "correction": ""
+      }
+    ],
+    "semantic_check": "| Claim | Claim Type | Cited Number | Cited Period | Cited Tag / Source | Status | Correction / Notes |\n| --- | --- | --- | --- | --- | --- | --- |\n| Total Revenues | Financial | $713,163,000,000 | FY ended Jan 31, 2026 | `Revenues` (`0000104169-26-000055`) | Correct | Matches saved facts ($713,163,000,000) |\n| Operating Income | Financial | $29,825,000,000 | FY ended Jan 31, 2026 | `OperatingIncomeLoss` (`0000104169-26-000055`) | Correct | Matches saved facts ($29,825,000,000) |\n| Net Income | Financial | $21,893,000,000 | FY ended Jan 31, 2026 | `NetIncomeLoss` (`0000104169-26-000055`) | Correct | Matches saved facts ($21,893,000,000) |\n| Net Cash Provided by Operating Activities | Financial | $41,565,000,000 | FY ended Jan 31, 2026 | `NetCashProvidedByUsedInOperatingActivities` (`0000104169-26-000055`) | Correct | Matches saved facts ($41,565,000,000) |\n| Payments to Acquire Property, Plant, and Equipment | Financial | $26,642,000,000 | FY ended Jan 31, 2026 | `PaymentsToAcquirePropertyPlantAndEquipment` (`0000104169-26-000055`) | Correct | Matches saved facts ($26,642,000,000) |\n| Total Assets | Financial | $284,668,000,000 | FY ended Jan 31, 2026 | `Assets` (`0000104169-26-000055`) | Correct | Matches saved facts ($284,668,000,000) |\n| Stockholders' Equity | Financial | $99,617,000,000 | FY ended Jan 31, 2026 | `StockholdersEquity` (`0000104169-26-000055`) | Correct | Matches saved facts ($99,617,000,000) |\n| Current Assets | Financial | $84,874,000,000 | FY ended Jan 31, 2026 | `AssetsCurrent` (`0000104169-26-000055`) | Correct | Matches saved facts ($84,874,000,000) |\n| Current Liabilities | Financial | $107,469,000,000 | FY ended Jan 31, 2026 | `LiabilitiesCurrent` (`0000104169-26-000055`) | Correct | Matches saved facts ($107,469,000,000) |\n| Operating Margin | Ratio | 4.18% | FY ended Jan 31, 2026 | `OperatingIncomeLoss` / `Revenues` | Correct | Matches calculated code ratio (4.1821%) |\n| Costco Operating Margin | Ratio | 3.85% | FY ended Aug 30, 2026 | Peer COST 10-K | Correct | Matches saved COST operating margin (3.8545%) |\n| Target Operating Margin | Ratio | 4.88% | FY ended Jan 31, 2026 | Peer TGT 10-K | Correct | Matches saved TGT operating margin (4.8836%) |\n| Kroger Operating Margin | Ratio | 1.28% | FY ended Jan 31, 2026 | Peer KR 10-K | Correct | Matches saved KR operating margin (1.2801%) |\n| Stock Price | Price | $127.36 | November 18, 2026 | LSEG Workspace Price History export; WMT.N close | Correct | Matches saved price value and source |"
+  }
+}
