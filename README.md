@@ -2,6 +2,11 @@
 
 Purdue University — Mastering AI for Finance
 
+**Lab 09 join statement:** `one_desk.py` uses a fixed pipeline join: the seeker supplies a
+screened ticker only for `screen`; the agent team writes the verified report; the worksheet adds
+its filing-grounded view; and the worksheet and final-report hooks guard the joined output. The
+team owns the pre-registered factor check in `lab06/factor-check-plan.md`.
+
 ## Team
 
 Abraham Blaesing, Brody Oliver, and Gabriel DePalma.
