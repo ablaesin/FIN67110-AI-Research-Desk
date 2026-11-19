@@ -40,6 +40,17 @@ close through day 180, and no imputation of missing material facts.
 These roles are the team’s recorded starting assignments in `TEAM.md`. Update this section if the
 team changed them in a commit.
 
+## Lab 9 proof runs
+
+Brody Oliver and Gabriel DePalma selected these two names. Both reports were produced by the
+one-command desk, include the accepted earnings filing on the first line, and label spinoff facts
+as not applicable.
+
+| Ticker | Filing accepted time | Official pre-filing close | Verified final report |
+|---|---|---|---|
+| NVDA | Nov. 17, 2026, 4:20:51 PM Eastern | $150.96 on Nov. 17, 2026; LSEG Workspace `NVDA.O` Price History export | [report](https://github.com/ablaesin/FIN67110-AI-Research-Desk/blob/main/runs/nvda-20261119T134352Z/final_report.md) |
+| CRWV | Nov. 10, 2026, 4:05:53 PM Eastern | $60.77 on Nov. 10, 2026; LSEG Workspace `CRWV.O` Price History export | [report](https://github.com/ablaesin/FIN67110-AI-Research-Desk/blob/main/runs/crwv-20261119T134549Z/final_report.md) |
+
 ## Live record so far
 
 Repository path: [runs/live](https://github.com/ablaesin/FIN67110-AI-Research-Desk/tree/main/runs/live)
