@@ -1,0 +1,187 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "form": "10-K",
+            "accession": "0001769628-26-000104",
+            "filed": "2026-03-02",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231.htm"
+          },
+          "latest_10q": {
+            "accession": "0001769628-26-000465",
+            "filed": "2026-11-12",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000465/crwv-20260930.htm"
+          },
+          "earnings_release": {
+            "accession": "0001769628-26-000461",
+            "filed": "2026-11-10",
+            "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/crwv-20261110.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001769628.json"
+        },
+        "business_and_mda_excerpt": "crwv-20251231 false 2025 FY 0001769628 P5Y P3Y P1Y 48 P2Y P5Y P5Y P1Y P2Y 0.0092764 0.0023191 P2Y 182 65 274 357 186 179 iso4217:USD xbrli:shares iso4217:USD xbrli:shares xbrli:pure crwv:segment utr:MW crwv:tradingDay crwv:consecutiveTradingDay utr:D crwv:voting_right 0001769628 2025-01-01 2025-12-31 0001769628 2025-06-30 0001769628 us-gaap:CommonClassAMember 2026-01-31 0001769628 us-gaap:CommonClassBMember 2026-01-31 0001769628 2024-01-01 2024-12-31 0001769628 2023-01-01 2023-12-31 0001769628 2025-12-31 0001769628 2024-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2024-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2025-12-31 0001769628 us-gaap:CommonClassAMember 2024-12-31 0001769628 us-gaap:CommonClassAMember 2025-12-31 0001769628 us-gaap:CommonClassBMember 2024-12-31 0001769628 us-gaap:CommonClassBMember 2025-12-31 0001769628 us-gaap:CommonClassCMember 2025-12-31 0001769628 us-gaap:CommonClassCMember 2024-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2022-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2022-12-31 0001769628 us-gaap:CommonStockMember 2022-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2022-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2022-12-31 0001769628 us-gaap:RetainedEarningsMember 2022-12-31 0001769628 2022-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2023-01-01 2023-12-31 0001769628 crwv:IssuanceOfSeriesBRedeemableConvertiblePreferredStockMember 2023-01-01 2023-12-31 0001769628 crwv:IssuanceOfSeriesBRedeemableConvertiblePreferredStockMember 2023-12-31 0001769628 us-gaap:CommonStockMember 2023-01-01 2023-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2023-01-01 2023-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2023-01-01 2023-12-31 0001769628 us-gaap:RetainedEarningsMember 2023-01-01 2023-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2023-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2023-12-31 0001769628 us-gaap:CommonStockMember 2023-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2023-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2023-12-31 0001769628 us-gaap:RetainedEarningsMember 2023-12-31 0001769628 2023-12-31 0001769628 crwv:IssuanceOfSeriesBRedeemableConvertiblePreferredStockMember 2024-01-01 2024-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2024-01-01 2024-12-31 0001769628 crwv:IssuanceOfSeriesCRedeemableConvertiblePreferredStockMember 2024-01-01 2024-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2024-01-01 2024-12-31 0001769628 us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2024-01-01 2024-12-31 0001769628 crwv:ConversionOfRedeemableConvertiblePreferredStockMember 2024-01-01 2024-12-31 0001769628 crwv:ConversionOfRedeemableConvertiblePreferredStockMember us-gaap:CommonStockMember 2024-01-01 2024-12-31 0001769628 us-gaap:RetainedEarningsMember 2024-01-01 2024-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2024-12-31 0001769628 us-gaap:CommonStockMember 2024-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2024-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001769628 us-gaap:RetainedEarningsMember 2024-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001769628 us-gaap:IPOMember us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001769628 us-gaap:IPOMember us-gaap:AdditionalPaidInCapitalMember 2025-01-01 2025-12-31 0001769628 us-gaap:IPOMember 2025-01-01 2025-12-31 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2025-01-01 2025-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2025-01-01 2025-12-31 0001769628 us-gaap:CommonStockMember 2025-01-01 2025-12-31 0001769628 us-gaap:RetainedEarningsMember 2025-01-01 2025-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2025-12-31 0001769628 us-gaap:CommonStockMember 2025-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2025-12-31 00",
+        "latest_10q_excerpt": "crwv-20260930 12/31 false 2026 Q3 0001769628 48 P1Y P3Y P2Y P7Y 0.0083612 0.0102194 132 132 137 364 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure crwv:segment iso4217:EUR utr:MW crwv:action crwv:tradingDay crwv:consecutiveTradingDay utr:D crwv:voting_right 0001769628 2026-01-01 2026-09-30 0001769628 us-gaap:CommonClassAMember 2026-10-30 0001769628 us-gaap:CommonClassBMember 2026-10-30 0001769628 us-gaap:CommonClassCMember 2026-10-30 0001769628 2026-09-30 0001769628 2025-12-31 0001769628 us-gaap:CommonClassAMember 2026-09-30 0001769628 us-gaap:CommonClassAMember 2025-12-31 0001769628 us-gaap:CommonClassBMember 2026-09-30 0001769628 us-gaap:CommonClassBMember 2025-12-31 0001769628 us-gaap:CommonClassCMember 2025-12-31 0001769628 us-gaap:CommonClassCMember 2026-09-30 0001769628 2026-07-01 2026-09-30 0001769628 2025-07-01 2025-09-30 0001769628 2025-01-01 2025-09-30 0001769628 us-gaap:CommonStockMember 2025-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2025-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2025-12-31 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-12-31 0001769628 us-gaap:RetainedEarningsMember 2025-12-31 0001769628 us-gaap:PrivatePlacementMember us-gaap:CommonStockMember 2026-01-01 2026-03-31 0001769628 us-gaap:PrivatePlacementMember us-gaap:AdditionalPaidInCapitalMember 2026-01-01 2026-03-31 0001769628 us-gaap:PrivatePlacementMember 2026-01-01 2026-03-31 0001769628 us-gaap:CommonStockMember 2026-01-01 2026-03-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-01-01 2026-03-31 0001769628 2026-01-01 2026-03-31 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-01 2026-03-31 0001769628 us-gaap:RetainedEarningsMember 2026-01-01 2026-03-31 0001769628 us-gaap:CommonStockMember 2026-03-31 0001769628 us-gaap:TreasuryStockCommonMember 2026-03-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-03-31 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-03-31 0001769628 us-gaap:RetainedEarningsMember 2026-03-31 0001769628 2026-03-31 0001769628 us-gaap:PrivatePlacementMember us-gaap:CommonStockMember 2026-04-01 2026-06-30 0001769628 us-gaap:PrivatePlacementMember us-gaap:AdditionalPaidInCapitalMember 2026-04-01 2026-06-30 0001769628 us-gaap:PrivatePlacementMember 2026-04-01 2026-06-30 0001769628 us-gaap:CommonStockMember 2026-04-01 2026-06-30 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-04-01 2026-06-30 0001769628 2026-04-01 2026-06-30 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-01 2026-06-30 0001769628 us-gaap:RetainedEarningsMember 2026-04-01 2026-06-30 0001769628 us-gaap:CommonStockMember 2026-06-30 0001769628 us-gaap:TreasuryStockCommonMember 2026-06-30 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-06-30 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-06-30 0001769628 us-gaap:RetainedEarningsMember 2026-06-30 0001769628 2026-06-30 0001769628 us-gaap:CommonStockMember 2026-07-01 2026-09-30 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-07-01 2026-09-30 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-07-01 2026-09-30 0001769628 us-gaap:RetainedEarningsMember 2026-07-01 2026-09-30 0001769628 us-gaap:CommonStockMember 2026-09-30 0001769628 us-gaap:TreasuryStockCommonMember 2026-09-30 0001769628 us-gaap:AdditionalPaidInCapitalMember 2026-09-30 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-09-30 0001769628 us-gaap:RetainedEarningsMember 2026-09-30 0001769628 us-gaap:RedeemableConvertiblePreferredStockMember 2024-12-31 0001769628 crwv:RedeemableClassACommonStockMember 2024-12-31 0001769628 us-gaap:CommonStockMember 2024-12-31 0001769628 us-gaap:TreasuryStockCommonMember 2024-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2024-12-31 0001769628 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-12-31 0001769628 us-gaap:RetainedEarningsMember 2024-12-31 0001769628 2024-12-31 0001769628 us-gaap:AdditionalPaidInCapitalMember 2025-01-0",
+        "earnings_release_excerpt": "crwv-20261110 FALSE 0001769628 0001769628 2026-11-10 2026-11-10 UNITED STATES SECURITIES AND EXCHANGE COMMISSION Washington, D.C. 20549 ___________________________________ FORM 8-K ___________________________________ CURRENT REPORT Pursuant to Section 13 or 15(d) of the Securities Exchange Act of 1934 Date of Report (date of earliest event reported): November 10, 2026 ___________________________________ CoreWeave, Inc. (Exact name of registrant as specified in its charter) ___________________________________ Delaware 001-42563 82-3060021 (State or other jurisdiction of incorporation or organization) (Commission File Number) (I.R.S. Employer Identification Number) 290 W Mt. Pleasant Ave. , Suite 4100 Livingston , NJ 07039 (Address of registrant's principal executive offices) (Zip Code) Registrant's telephone number, including area code: ( 973 ) 270-9737 ___________________________________ Not Applicable (Former name or former address, if changed since last report) ___________________________________ Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions (see General Instruction A.2. below): \u2610 Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) \u2610 Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) \u2610 Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) \u2610 Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol Name of each exchange on which registered Class A Common Stock, $0.000005 par value per share CRWV The Nasdaq Stock Market LLC Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (\u00a7230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (\u00a7240.12b-2 of this chapter). Emerging growth company \u2610 If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 Item 2.02 Results of Operations and Financial Condition On November 10, 2026, CoreWeave, Inc. (the \u201cCompany\u201d) issued a press release announcing its financial results for the fiscal quarter ended September 30, 2026. A copy of the press release is attached hereto as Exhibit 99.1 and is incorporated herein by reference. The information contained in this Item 2.02 of this Current Report on Form 8-K, including the accompanying Exhibit 99.1 hereto, shall not be deemed \u201cfiled\u201d for purposes of Section 18 of the Securities Exchange Act of 1934, as amended (the \u201cExchange Act\u201d), or otherwise subject to the liabilities of that section, nor shall it be deemed incorporated by reference in any filing made by the Company under the Securities Act of 1933, as amended, or the Exchange Act, regardless of any general incorporation language in such filings, unless expressly incorporated by specific reference in such filings. Item 9.01. Financial Statements and Exhibits (d) Exhibits. Exhibit No. Description 99.1 Press release issued by CoreWeave, Inc., dated November 10 , 2026 104 Cover Page Interactive Data File (embedded within the Inline XBRL document) SIGNATURE Pursuant to the requirements of the Securities Exchange Act of 1934, as amended, the registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized. Date: November 10, 2026 COREWEAVE, INC. By: /s/ Nitin Agrawal Name: Nitin Agrawal Title: Chief Financial Officer",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 5131000000,
+            "unit": "",
+            "tag": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": -46000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": -1167000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 49302000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "liabilities": {
+            "label": "liabilities",
+            "value": 45967000000,
+            "unit": "",
+            "tag": "Liabilities",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 3335000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 3058000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 10309000000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "depreciation_and_amortization": {
+            "label": "depreciation_and_amortization",
+            "value": 2454000000,
+            "unit": "",
+            "tag": "DepreciationDepletionAndAmortization",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": -2.81,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "diluted_weighted_average_shares": {
+            "label": "diluted_weighted_average_shares",
+            "value": 436000000,
+            "unit": "",
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 7488000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 16440000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2025-12-31",
+            "filed": "2026-03-02",
+            "accession": "0001769628-26-000104",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": -0.008965
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": -0.227441
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": -0.02367
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 0.455474
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": -7251000000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "# Business Overview\n\nCoreWeave, Inc. operates as a specialized cloud service provider, focusing on infrastructure solutions for compute-intensive workloads. The company generates revenue by providing high-performance computing resources, primarily serving clients that require advanced processing capabilities. CoreWeave\u2019s business model involves significant capital intensity, as evidenced by its substantial investments in property, plant, and equipment (10-K, 2025-12-31).\n\nThe company\u2019s performance is heavily influenced by the high cost of maintaining and expanding its specialized infrastructure, which has resulted in negative net margins and significant free cash flow deficits. Competition within the cloud infrastructure market remains intense, with CoreWeave positioning itself to capture demand for specialized, high-performance compute tasks.\n\n### Scoring\n\n**Revenue Growth: Not Provided**\n*   **Score:** N/A\n*   **Financial Number:** Not provided.\n*   **Explanation:** While 2025 annual revenue is recorded at $5,131,000,000 (Tag: `RevenueFromContractWithCustomerExcludingAssessedTax`), there is insufficient multi-year comparative data in the supplied evidence to calculate or score revenue growth trends.\n\n**Business Performance: 2**\n*   **Score:** 2\n*   **Financial Number:** Net Income of -$1,167,000,000 (Tag: `NetIncomeLoss`) and Free Cash Flow of -$7,251,000,000.\n*   **Explanation:** The company reported a net loss of $1.167 billion and a negative operating margin of approximately -0.9% for fiscal year 2025. The capital-intensive nature of the business is demonstrated by $10.309 billion in capital expenditures, resulting in a significant negative free cash flow.\n\n**Competitive Position: 3**\n*   **Score:** 3\n*   **Financial Number:** Assets of $49,302,000,000 (Tag: `Assets`) and Current Ratio of 0.46.\n*   **Explanation:** CoreWeave has built a substantial asset base, which indicates a strong physical market presence. However, a current ratio of 0.46 (calculated from `AssetsCurrent` of $7.488 billion and `LiabilitiesCurrent` of $16.44 billion) highlights potential liquidity challenges that may impact its competitive agility relative to larger, more diversified cloud competitors.\n\n### Future Outlook\nThe company\u2019s performance will depend on its ability to scale revenue sufficiently to cover its high depreciation and capital expenditure requirements. Changes in the demand for compute-intensive cloud services or shifts in capital funding availability will be primary drivers of future performance.\n\nInsight: The company exhibits a liquidity mismatch, with current liabilities of $16,440,000,000 exceeding current assets of $7,488,000,000 (10-K, 2025-12-31, tags: `LiabilitiesCurrent`, `AssetsCurrent`), which matters because it indicates the company relies on external financing or long-term assets to meet its immediate short-term obligations."
+}

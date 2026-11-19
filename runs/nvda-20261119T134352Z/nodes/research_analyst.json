@@ -1,0 +1,187 @@
+{
+  "input": {
+    "task": "Write the research section from supplied filing evidence.",
+    "context": {
+      "evidence": {
+        "sources": {
+          "latest_10k": {
+            "form": "10-K",
+            "accession": "0001045810-26-000021",
+            "filed": "2026-02-25",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm"
+          },
+          "latest_10q": {
+            "accession": "0001045810-26-000075",
+            "filed": "2026-08-26",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm"
+          },
+          "earnings_release": {
+            "accession": "0001045810-26-000088",
+            "filed": "2026-11-17",
+            "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000088/nvda-20261117.htm"
+          },
+          "company_facts": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001045810.json"
+        },
+        "business_and_mda_excerpt": "nvda-20260125 0001045810 2026 FY false 362 460 P1Y P2Y P1Y P3Y http://fasb.org/us-gaap/2025#AccruedLiabilitiesCurrent iso4217:USD xbrli:shares iso4217:USD xbrli:shares xbrli:pure nvda:period nvda:segment 0001045810 2025-01-27 2026-01-25 0001045810 2025-07-25 0001045810 2026-02-20 0001045810 2025-10-27 2026-01-25 0001045810 nvda:JohnO.DabiriMember 2025-10-27 2026-01-25 0001045810 nvda:JohnO.DabiriMember 2026-01-25 0001045810 nvda:ColetteM.KressMember 2025-10-27 2026-01-25 0001045810 nvda:ColetteM.KressMember 2026-01-25 0001045810 2024-01-29 2025-01-26 0001045810 2023-01-30 2024-01-28 0001045810 2026-01-25 0001045810 2025-01-26 0001045810 us-gaap:CommonStockMember 2023-01-29 0001045810 us-gaap:AdditionalPaidInCapitalMember 2023-01-29 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-01-29 0001045810 us-gaap:RetainedEarningsMember 2023-01-29 0001045810 2023-01-29 0001045810 us-gaap:RetainedEarningsMember 2023-01-30 2024-01-28 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2023-01-30 2024-01-28 0001045810 us-gaap:CommonStockMember 2023-01-30 2024-01-28 0001045810 us-gaap:AdditionalPaidInCapitalMember 2023-01-30 2024-01-28 0001045810 us-gaap:CommonStockMember 2024-01-28 0001045810 us-gaap:AdditionalPaidInCapitalMember 2024-01-28 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-01-28 0001045810 us-gaap:RetainedEarningsMember 2024-01-28 0001045810 2024-01-28 0001045810 us-gaap:RetainedEarningsMember 2024-01-29 2025-01-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2024-01-29 2025-01-26 0001045810 us-gaap:CommonStockMember 2024-01-29 2025-01-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2024-01-29 2025-01-26 0001045810 us-gaap:CommonStockMember 2025-01-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-01-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-26 0001045810 us-gaap:RetainedEarningsMember 2025-01-26 0001045810 us-gaap:RetainedEarningsMember 2025-01-27 2026-01-25 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-27 2026-01-25 0001045810 us-gaap:CommonStockMember 2025-01-27 2026-01-25 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-01-27 2026-01-25 0001045810 us-gaap:CommonStockMember 2026-01-25 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-01-25 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-25 0001045810 us-gaap:RetainedEarningsMember 2026-01-25 0001045810 srt:MinimumMember 2025-01-27 2026-01-25 0001045810 srt:MaximumMember 2025-01-27 2026-01-25 0001045810 srt:MinimumMember 2026-01-25 0001045810 srt:MaximumMember 2026-01-25 0001045810 us-gaap:BuildingMember 2026-01-25 0001045810 nvda:GroqInc.NonExclusiveLicenseAgreementMember 2025-12-31 0001045810 nvda:GroqInc.NonExclusiveLicenseAgreementMember us-gaap:DevelopedTechnologyRightsMember 2025-12-31 0001045810 nvda:GroqInc.NonExclusiveLicenseAgreementMember us-gaap:DevelopedTechnologyRightsMember 2025-12-01 2025-12-31 0001045810 nvda:GroqInc.NonExclusiveLicenseAgreementMember 2025-12-01 2025-12-31 0001045810 us-gaap:CostOfSalesMember 2025-01-27 2026-01-25 0001045810 us-gaap:CostOfSalesMember 2024-01-29 2025-01-26 0001045810 us-gaap:CostOfSalesMember 2023-01-30 2024-01-28 0001045810 us-gaap:ResearchAndDevelopmentExpenseMember 2025-01-27 2026-01-25 0001045810 us-gaap:ResearchAndDevelopmentExpenseMember 2024-01-29 2025-01-26 0001045810 us-gaap:ResearchAndDevelopmentExpenseMember 2023-01-30 2024-01-28 0001045810 us-gaap:SellingGeneralAndAdministrativeExpensesMember 2025-01-27 2026-01-25 0001045810 us-gaap:SellingGeneralAndAdministrativeExpensesMember 2024-01-29 2025-01-26 0001045810 us-gaap:SellingGeneralAndAdministrativeExpensesMember 2023-01-30 2024-01-28 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember 2025-01-27 2026-01-25 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember 2024-01-29 2025-01-26 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember 2023-01-30 2024-01-28 0001045810 us-gaap:EmployeeStockMember 2025-01-27 2026-01-25 0001045",
+        "latest_10q_excerpt": "nvda-20260726 0001045810 1/31 2027 Q2 FALSE P3Y P5Y P7Y http://fasb.org/us-gaap/2026#AccruedLiabilitiesCurrent 372 546 570 xbrli:shares iso4217:USD iso4217:USD xbrli:shares xbrli:pure utr:GW nvda:segment 0001045810 2026-01-26 2026-07-26 0001045810 2026-08-21 0001045810 2026-04-27 2026-07-26 0001045810 2025-04-28 2025-07-27 0001045810 2025-01-27 2025-07-27 0001045810 2026-07-26 0001045810 2026-01-25 0001045810 us-gaap:CommonStockMember 2026-04-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-04-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-26 0001045810 us-gaap:RetainedEarningsMember 2026-04-26 0001045810 2026-04-26 0001045810 us-gaap:RetainedEarningsMember 2026-04-27 2026-07-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-04-27 2026-07-26 0001045810 us-gaap:CommonStockMember 2026-04-27 2026-07-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-04-27 2026-07-26 0001045810 us-gaap:CommonStockMember 2026-07-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-07-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-07-26 0001045810 us-gaap:RetainedEarningsMember 2026-07-26 0001045810 us-gaap:CommonStockMember 2025-04-27 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-04-27 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-04-27 0001045810 us-gaap:RetainedEarningsMember 2025-04-27 0001045810 2025-04-27 0001045810 us-gaap:RetainedEarningsMember 2025-04-28 2025-07-27 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-04-28 2025-07-27 0001045810 us-gaap:CommonStockMember 2025-04-28 2025-07-27 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-04-28 2025-07-27 0001045810 us-gaap:CommonStockMember 2025-07-27 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-07-27 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-07-27 0001045810 us-gaap:RetainedEarningsMember 2025-07-27 0001045810 2025-07-27 0001045810 us-gaap:CommonStockMember 2026-01-25 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-01-25 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-25 0001045810 us-gaap:RetainedEarningsMember 2026-01-25 0001045810 us-gaap:RetainedEarningsMember 2026-01-26 2026-07-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2026-01-26 2026-07-26 0001045810 us-gaap:CommonStockMember 2026-01-26 2026-07-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2026-01-26 2026-07-26 0001045810 us-gaap:CommonStockMember 2025-01-26 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-01-26 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-26 0001045810 us-gaap:RetainedEarningsMember 2025-01-26 0001045810 2025-01-26 0001045810 us-gaap:RetainedEarningsMember 2025-01-27 2025-07-27 0001045810 us-gaap:AccumulatedOtherComprehensiveIncomeMember 2025-01-27 2025-07-27 0001045810 us-gaap:CommonStockMember 2025-01-27 2025-07-27 0001045810 us-gaap:AdditionalPaidInCapitalMember 2025-01-27 2025-07-27 0001045810 us-gaap:CostOfRevenue 2026-04-27 2026-07-26 0001045810 us-gaap:CostOfRevenue 2025-04-28 2025-07-27 0001045810 us-gaap:CostOfRevenue 2026-01-26 2026-07-26 0001045810 us-gaap:CostOfRevenue 2025-01-27 2025-07-27 0001045810 us-gaap:ResearchAndDevelopmentExpense 2026-04-27 2026-07-26 0001045810 us-gaap:ResearchAndDevelopmentExpense 2025-04-28 2025-07-27 0001045810 us-gaap:ResearchAndDevelopmentExpense 2026-01-26 2026-07-26 0001045810 us-gaap:ResearchAndDevelopmentExpense 2025-01-27 2025-07-27 0001045810 us-gaap:SellingGeneralAndAdministrativeExpense 2026-04-27 2026-07-26 0001045810 us-gaap:SellingGeneralAndAdministrativeExpense 2025-04-28 2025-07-27 0001045810 us-gaap:SellingGeneralAndAdministrativeExpense 2026-01-26 2026-07-26 0001045810 us-gaap:SellingGeneralAndAdministrativeExpense 2025-01-27 2025-07-27 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember 2026-01-25 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember 2026-01-26 2026-07-26 0001045810 nvda:RSUsPSUsandMarketbasedPSUsMember ",
+        "earnings_release_excerpt": "nvda-20261117 0001045810 false 0001045810 2026-11-17 2026-11-17 UNITED STATES SECURITIES AND EXCHANGE COMMISSION WASHINGTON, DC 20549 ______________ FORM 8-K CURRENT REPORT PURSUANT TO SECTION 13 OR 15(d) OF THE SECURITIES EXCHANGE ACT OF 1934 Date of Report (Date of earliest event reported): November 17, 2026 NVIDIA CORP ORATION (Exact name of registrant as specified in its charter) Delaware 0-23985 94-3177549 (State or other jurisdiction (Commission (IRS Employer of incorporation) File Number) Identification No.) 2788 San Tomas Expressway , Santa Clara , CA 95051 (Address of principal executive offices) (Zip Code) Registrant\u2019s telephone number, including area code: ( 408 ) 486-2000 Not Applicable (Former name or former address, if changed since last report) Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions: \u2610 Written communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425) \u2610 Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR 240.14a-12) \u2610 Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act (17 CFR 240.14d-2(b)) \u2610 Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act (17 CFR 240.13e-4(c)) Securities registered pursuant to Section 12(b) of the Act: Title of each class Trading Symbol(s) Name of each exchange on which registered Common Stock, $0.001 par value per share NVDA The Nasdaq Global Select Market Indicate by check mark whether the registrant is an emerging growth company as defined in Rule 405 of the Securities Act of 1933 (\u00a7230.405 of this chapter) or Rule 12b-2 of the Securities Exchange Act of 1934 (\u00a7240.12b-2 of this chapter). Emerging Growth Company \u2610 If an emerging growth company, indicate by check mark if the registrant has elected not to use the extended transition period for complying with any new or revised financial accounting standards provided pursuant to Section 13(a) of the Exchange Act. \u2610 Item 2.02 Results of Operations and Financial Condition. On November 17, 2026, NVIDIA Corporation, or the Company, issued a press release announcing its results for the quarter ended October 25, 2026. The press release is attached as Exhibit 99.1 and is incorporated herein by reference. Attached hereto as Exhibit 99.2 and incorporated by reference herein is financial information and commentary by Colette M. Kress, Interim Chief Executive Officer, Executive Vice President and Chief Financial Officer of the Company, regarding results for the quarter ended October 25, 2026, or the CFO Commentary. Attached hereto as Exhibit 99.3 and incorporated by reference herein is supplemental financial information for the quarter ended October 25, 2026, or the Supplemental Financial Information. The CFO Commentary and the Supplemental Financial Information will be posted to https://investor.nvidia.com immediately after the filing of this Current Report. The press release, CFO Commentary, and Supplemental Financial Information are furnished and shall not be deemed \"filed\" for purposes of Section 18 of the Securities Exchange Act of 1934, as amended, or subject to the liabilities of that Section or Sections 11 and 12(a)(2) of the Securities Act of 1933, as amended. The information in this Current Report shall not be incorporated by reference in any filing with the U.S. Securities and Exchange Commission made by the Company, whether made before or after the date hereof, regardless of any general incorporation language in such filing. Item 9.01 Financial Statements and Exhibits. (d) Exhibits Exhibit Description 99.1 Press Release, dated November 17 , 2026, entitled \"NVIDIA Announces Financial Results for Third Quarter Fiscal 2027\" 99.2 CFO Commentary on Third Quarter Fiscal 2027 Results 99.3 Supplemental Financial Information for Third Quarter Fiscal 2027 104 The cover page of this Current Report on Form 8-K, formatted in",
+        "annual_numbers": {
+          "revenue": {
+            "label": "revenue",
+            "value": 215938000000,
+            "unit": "",
+            "tag": "Revenues",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "operating_income": {
+            "label": "operating_income",
+            "value": 130387000000,
+            "unit": "",
+            "tag": "OperatingIncomeLoss",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "net_income": {
+            "label": "net_income",
+            "value": 120067000000,
+            "unit": "",
+            "tag": "NetIncomeLoss",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "assets": {
+            "label": "assets",
+            "value": 206803000000,
+            "unit": "",
+            "tag": "Assets",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "liabilities": {
+            "label": "liabilities",
+            "value": 49510000000,
+            "unit": "",
+            "tag": "Liabilities",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "equity": {
+            "label": "equity",
+            "value": 157293000000,
+            "unit": "",
+            "tag": "StockholdersEquity",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "cash_from_operations": {
+            "label": "cash_from_operations",
+            "value": 102718000000,
+            "unit": "",
+            "tag": "NetCashProvidedByUsedInOperatingActivities",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "capital_expenditures": {
+            "label": "capital_expenditures",
+            "value": 138735000,
+            "unit": "",
+            "tag": "PaymentsToAcquirePropertyPlantAndEquipment",
+            "period_end": "2012-01-29",
+            "filed": "2012-03-13",
+            "accession": "0001045810-12-000013",
+            "form": "10-K"
+          },
+          "depreciation_and_amortization": {
+            "label": "depreciation_and_amortization",
+            "value": 2843000000,
+            "unit": "",
+            "tag": "DepreciationDepletionAndAmortization",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "diluted_eps": {
+            "label": "diluted_eps",
+            "value": 4.9,
+            "unit": "",
+            "tag": "EarningsPerShareDiluted",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "diluted_weighted_average_shares": {
+            "label": "diluted_weighted_average_shares",
+            "value": 24514000000,
+            "unit": "",
+            "tag": "WeightedAverageNumberOfDilutedSharesOutstanding",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "current_assets": {
+            "label": "current_assets",
+            "value": 125605000000,
+            "unit": "",
+            "tag": "AssetsCurrent",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          },
+          "current_liabilities": {
+            "label": "current_liabilities",
+            "value": 32163000000,
+            "unit": "",
+            "tag": "LiabilitiesCurrent",
+            "period_end": "2026-01-25",
+            "filed": "2026-02-25",
+            "accession": "0001045810-26-000021",
+            "form": "10-K"
+          }
+        },
+        "ratios_calculated_in_code": {
+          "operating_margin": {
+            "formula": "operating_income / revenue",
+            "value": 0.603817
+          },
+          "net_margin": {
+            "formula": "net_income / revenue",
+            "value": 0.556025
+          },
+          "return_on_assets": {
+            "formula": "net_income / assets",
+            "value": 0.580586
+          },
+          "current_ratio": {
+            "formula": "current_assets / current_liabilities",
+            "value": 3.905264
+          },
+          "free_cash_flow": {
+            "formula": "cash_from_operations - capital_expenditures",
+            "value": 102579265000.0
+          }
+        }
+      }
+    },
+    "expected_output": "A sourced Markdown research section."
+  },
+  "output": "### Business Overview\nNVIDIA Corporation (operating under CIK 0001045810) is a technology company incorporated in Delaware with its principal executive offices located at 2788 San Tomas Expressway, Santa Clara, CA 95051 (Form 8-K, filed November 17, 2026). The company designs and manufactures computer graphics processors, chipsets, and related software and hardware. \n\n### Revenue Sources and Recent Developments\nThe company generates revenue through its semiconductor and software operations, reporting total annual revenues of $215,938,000,000 for the period ending January 25, 2026 (Tag: `Revenues`, Form 10-K, accession `0001045810-26-000021`). Recent events include the reporting of financial results for the quarter ended October 25, 2026, filed on November 17, 2026 (Form 8-K), which included the CFO Commentary by Colette M. Kress, Interim Chief Executive Officer, Executive Vice President and Chief Financial Officer, and Supplemental Financial Information. Positive and negative factors influencing performance include operational execution, expenses such as research and development and selling, general, and administrative costs, and licensing agreements like the non-exclusive license agreement with Groq Inc. entered into on December 31, 2025 (`nvda:GroqInc.NonExclusiveLicenseAgreementMember`, Form 10-K). Competitor positioning and industry comparisons are not provided in detail within the supplied text.\n\n### Performance Evaluation\n\n*   **Revenue Growth:** Score 5/5\n    *   *Financial Number:* $215,938,000,000\n    *   *Filing Line / XBRL Tag:* `Revenues` (Form 10-K, filed 2026-02-25)\n    *   *Explanation:* The assigned score reflects the substantial scale of annual revenues reported by the company. Insufficient comparative prior-year revenue figures are directly provided in the isolated XBRL annual numbers snippet to calculate exact percentage growth, but the absolute magnitude supports the highest score bracket based on available scale.\n*   **Business Performance:** Score 5/5\n    *   *Financial Number:* $130,387,000,000 (Operating Income), $120,067,000,000 (Net Income)\n    *   *Filing Line / XBRL Tag:* `OperatingIncomeLoss` and `NetIncomeLoss` (Form 10-K, filed 2026-02-25)\n    *   *Explanation:* The company demonstrates exceptionally strong profitability, with an operating margin of approximately 60.38% ($130,387,000,000 / $215,938,000,000) and a net margin of 55.60% ($120,067,000,000 / $215,938,000,000), alongside cash from operations of $102,718,000,000 (`NetCashProvidedByUsedInOperatingActivities`).\n*   **Competitive Position:** Score not provided\n    *   *Financial Number:* not provided\n    *   *Filing Line / XBRL Tag:* not provided\n    *   *Explanation:* There is not enough direct comparative competitor market share or benchmarking information in the supplied filing evidence to make a fair assessment of competitive position.\n\n### Factors Influencing Future Performance\nPerformance going forward will be influenced by the execution of strategic agreements (such as the Groq Inc. non-exclusive license agreement recorded under developed technology rights), ongoing management transitions (including Colette M. Kress serving as Interim Chief Executive Officer, Executive Vice President, and Chief Financial Officer as of November 2026), research and development investments, and market demand for the company's hardware and software offerings. A major change in revenue growth or operating performance in the subsequent filing could alter this view, depending on whether shifts prove temporary or structural.\n\nInsight: On December 31, 2025, the company entered into a non-exclusive license agreement with Groq Inc. involving developed technology rights, which matters because it expands the company's technological capabilities and IP portfolio; filing line / XBRL tag: `nvda:GroqInc.NonExclusiveLicenseAgreementMember` (Form 10-K, accession 0001045810-26-000021)."
+}

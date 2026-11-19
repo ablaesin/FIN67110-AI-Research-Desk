@@ -4,7 +4,7 @@ from __future__ import annotations
 import csv
 import statistics
 import zipfile
-from datetime import date
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
@@ -22,17 +22,35 @@ def value(text: str) -> float:
 
 def xlsx_rows(path: Path) -> list[dict[str, str]]:
     with zipfile.ZipFile(path) as archive:
-        root = ET.fromstring(archive.read("xl/worksheets/sheet1.xml"))
-    rows = []
+        sheet_names = [name for name in archive.namelist() if name.startswith("xl/worksheets/") and name.endswith(".xml")]
+        if not sheet_names: return []
+        root = ET.fromstring(archive.read(sheet_names[0]))
+        shared = []
+        if "xl/sharedStrings.xml" in archive.namelist():
+            strings = ET.fromstring(archive.read("xl/sharedStrings.xml"))
+            shared = ["".join(node.text or "" for node in item.findall(".//x:t", NS)) for item in strings.findall("x:si", NS)]
+    rows: list[dict[str, str]] = []
     for row in root.findall(".//x:sheetData/x:row", NS):
         record = {}
         for cell in row.findall("x:c", NS):
             column = "".join(letter for letter in cell.attrib["r"] if letter.isalpha())
             item = cell.find("x:v", NS)
-            record[column] = item.text if item is not None and item.text else ""
+            text = item.text if item is not None and item.text else ""
+            record[column] = shared[int(text)] if cell.attrib.get("t") == "s" and text else text
         rows.append(record)
-    headers = {column: rows[0].get(column, "") + " " + rows[1].get(column, "") for column in rows[0]}
-    return [{headers[column].strip(): row.get(column, "") for column in headers} for row in rows[2:]]
+    for index, row in enumerate(rows):
+        headers = {column: value.strip() for column, value in row.items()}
+        normalized = {value.lower() for value in headers.values()}
+        if any("date" in value for value in normalized) and "close" in normalized:
+            return [{headers[column]: data.get(column, "") for column in headers if headers[column]} for data in rows[index + 1:]]
+    if len(rows) < 2: return []
+    headers = {column: (rows[0].get(column, "") + " " + rows[1].get(column, "")).strip() for column in rows[0]}
+    return [{headers[column]: row.get(column, "") for column in headers if headers[column]} for row in rows[2:]]
+
+
+def parsed_date(text: str) -> date:
+    try: return date.fromisoformat(text.replace("T00:00:00.000Z", ""))
+    except ValueError: return (datetime(1899, 12, 30) + timedelta(days=float(text))).date()
 
 
 def rows(path: Path) -> list[dict[str, str]]:
@@ -44,14 +62,14 @@ def daily_data(path: Path, ticker: str) -> list[tuple[date, float, float | None]
     data = []
     for row in rows(path):
         normalized = {key.strip().lower(): str(item or "").strip() for key, item in row.items()}
-        date_text = next((item for key, item in normalized.items() if key == "date"), "").replace("T00:00:00.000Z", "")
+        date_text = next((item for key, item in normalized.items() if key in {"date", "exchange date"} or key.endswith(" date")), "")
         close_text = next((item for key, item in normalized.items() if "close" in key), "")
-        traded_text = next((item for key, item in normalized.items() if "daily value traded" in key), "")
+        traded_text = next((item for key, item in normalized.items() if "daily value traded" in key or "turnover" in key), "")
         volume_text = next((item for key, item in normalized.items() if key == "volume" or key.endswith(" volume")), "")
         try:
             close = value(close_text)
             dollars = value(traded_text) if traded_text else close * value(volume_text)
-            data.append((date.fromisoformat(date_text), close, dollars))
+            data.append((parsed_date(date_text), close, dollars))
         except (ValueError, IndexError):
             continue
     return sorted(data)

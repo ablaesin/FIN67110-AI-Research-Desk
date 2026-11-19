@@ -178,7 +178,16 @@ def node_verifier(state: TeamState) -> dict[str, Any]:
     run_dir, report, evidence = Path(state["run_dir"]), state["report"], state["evidence"]
     marks = verifier_marks(report, evidence)
     desk.load_env()
-    filing_texts = {path.name: path.read_text(encoding="utf-8") for path in (run_dir / "filings").glob("*.txt")}
+    filing_texts = {}
+    for path in (run_dir / "filings").glob("*.txt"):
+        text = path.read_text(encoding="utf-8")
+        # Full filings stay in the run folder for audit. The semantic verifier gets a
+        # bounded excerpt so one large filing cannot exhaust the model input quota.
+        if len(text) > 4_000:
+            excerpt = text[:2_000] + "\n\n[... middle of saved filing omitted for model context ...]\n\n" + text[-2_000:]
+        else:
+            excerpt = text
+        filing_texts[path.name] = excerpt
     semantic_check = desk.model_call(
         genai.Client(api_key=os.environ["API_KEY"]), "Verifier",
         "Check cited factual claims only. Do not assess the Investment Recommendation thesis. "

@@ -55,7 +55,12 @@ def support_values(run: Path) -> set[float]:
     if all(isinstance(value, (int, float)) for value in owner_cash_flow_inputs):
         net_income, depreciation, capex = owner_cash_flow_inputs
         supported.update(numeric_forms(net_income + depreciation - capex))
-    if evidence.get("price", {}).get("value") is not None: supported.update(numeric_forms(evidence["price"]["value"]))
+    if evidence.get("price", {}).get("value") is not None:
+        price = evidence["price"]["value"]
+        supported.update(numeric_forms(price))
+        eps = annual.get("diluted_eps", {}).get("value")
+        if isinstance(eps, (int, float)) and eps:
+            supported.update(numeric_forms(price / eps))
     for filing in (run / "filings").glob("*.txt"):
         for token in NUMBER.findall(filing.read_text(encoding="utf-8")):
             supported.update(numeric_forms(parsed(token)))
@@ -64,7 +69,8 @@ def support_values(run: Path) -> set[float]:
 
 def identifier(line: str, token: str) -> bool:
     start = line.find(token); before = line[max(0, start - 24):start].lower()
-    return bool(re.fullmatch(r"20\d{2}", token) or re.fullmatch(r"\d{10}-\d{2}-\d{6}", token)
+    accession_parts = {part for accession in re.findall(r"\d{10}-\d{2}-\d{6}", line) for part in accession.split("-")}
+    return bool(token in accession_parts or re.fullmatch(r"20\d{2}", token) or re.fullmatch(r"\d{10}-\d{2}-\d{6}", token)
                 or any(word in before for word in ("accession", "form ", "item ", "q3", "fy", "line ", "run:")))
 
 
@@ -85,7 +91,10 @@ def verify(report: Path) -> None:
         temporary.unlink(missing_ok=True)
     supported = support_values(report.parent)
     for line_no, line in enumerate(text.splitlines(), 1):
-        for token in NUMBER.findall(line):
+        # A source path can contain dates or export sequence numbers. They identify the
+        # external file; they are not numeric claims in the report.
+        claim_line = re.sub(r"\S+\.(?:csv|xlsx)\b", "", line, flags=re.I)
+        for token in NUMBER.findall(claim_line):
             if not identifier(line, token) and not close_enough(parsed(token), supported):
                 raise SystemExit(f"refused: line {line_no}, {token} is not in saved evidence, a saved filing, or a printed calculation")
 
